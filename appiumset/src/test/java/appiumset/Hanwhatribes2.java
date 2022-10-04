@@ -41,8 +41,10 @@ public class Hanwhatribes2 {
 		while(true)
 		try {
 			hanwhatribes();
-			onboding();
+			onboarding();
 			tribeslist();
+			tribeshome();
+			settings();
 	
 			
 		}catch(Exception exp) {
@@ -89,7 +91,7 @@ public class Hanwhatribes2 {
 		cap.setCapability("autoLaunch", "true");
 		
 		// @갤럭시 플립
-		cap.setCapability("udid", "192.168.0.121:5550");
+		// cap.setCapability("udid", "192.168.0.121:5550");
 		
 		// @갤럭시 폴드
 		//cap.setCapability("udid", "192.168.0.85:5551");
@@ -98,18 +100,19 @@ public class Hanwhatribes2 {
 		driver = new AppiumDriver<MobileElement>(url, cap);
 		
 		
-		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 	}
 		
-
-
 	
-		public static void onboding() throws MalformedURLException, InterruptedException  {
+		public static void onboarding() throws MalformedURLException, InterruptedException  {
 			
 		MobileElement arrow = driver.findElementByAccessibilityId("화살표");
 		arrow.click();
+		Thread.sleep(1000);
 		arrow.click();
+		Thread.sleep(1000);
 		arrow.click();
+		Thread.sleep(1000);
 		System.out.println("온보딩 버튼 클릭 완료 ");
 
 		
@@ -133,7 +136,7 @@ public class Hanwhatribes2 {
 
 		public static void tribeslist() throws MalformedURLException, InterruptedException  {
 			
-			
+			/*
 			WebElement ele01 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]");
 
 			int centerX = ele01.getRect().x + (ele01.getSize().width/2);
@@ -156,127 +159,338 @@ public class Hanwhatribes2 {
 			//Perform the actions
 			driver.perform(Arrays.asList(swipe));
 			Thread.sleep(3000);
+			*/
+			
+			MobileElement element = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator(
+			        "new UiScrollable(new UiSelector().scrollable(true)).setAsVerticalList()" +
+			         ".scrollIntoView(new UiSelector().text(\"뮤직\"))"));
+			Thread.sleep(2000);
+			
+			//요소 찾기
+			//MobileElement elementOne = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
+			//MobileElement elementTwo = (MobileElement) driver.findElementByClassName("SomeClassName");
 
-		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[3]")
-		.click(); 
-		System.out.println("뮤직 트라이브 진입");
+			driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[2]")
+			.click(); 
+			System.out.println("뮤직 트라이브 진입");
 
 
-		MobileElement tribesin = driver.findElementByAccessibilityId("arrow beside text in button");
-		tribesin.click();
-		System.out.println("[입장하기] 버튼 입력 ");
+			MobileElement tribesin = driver.findElementByAccessibilityId("arrow beside text in button");
+			tribesin.click();
+			System.out.println("[입장하기] 버튼 입력 ");
+			
+			WebElement ele2 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView");
+
+			int center2X = ele2.getRect().x + (ele2.getSize().width/2);
+			double start2Y = ele2.getRect().y + (ele2.getSize().height * 0.9);
+			double end2Y = ele2.getRect().y + (ele2.getSize().height * 0.1);
+			//Type of Pointer Input
+			PointerInput finger2 = new PointerInput(PointerInput.Kind.TOUCH,"finger2");
+			//Creating Sequence object to add actions
+			Sequence swipe2 = new Sequence(finger2,1);
+			//Move finger into starting position
+			swipe2.addAction(finger2.createPointerMove(Duration.ofSeconds(0),PointerInput.Origin.viewport(),center2X,(int)start2Y));
+			//Finger comes down into contact with screen
+			swipe2.addAction(finger2.createPointerDown(0));
+			//Finger moves to end position
+			swipe2.addAction(finger2.createPointerMove(Duration.ofMillis(700),
+			        PointerInput.Origin.viewport(),center2X, (int)end2Y));
+			//Get up Finger from Srceen
+			swipe2.addAction(finger2.createPointerUp(0));
+			//Perform the actions
+			driver.perform(Arrays.asList(swipe2));
+			Thread.sleep(3000);
+		
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View/android.widget.TextView")
+			.click(); 
+			System.out.println("[자세히 보기] 버튼 입력");
+			Thread.sleep(3000);
 		
 		
-		MobileElement tribesout = driver.findElementByAccessibilityId("out in TopBar");
-		tribesout.click();
-		System.out.println("[트라이브 나가기]버튼-> 나가기 컨펌 팝업 출력"); 
-		
-		
-		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
-		.click(); 
-		System.out.println("컨펌 팝업 유지하기");
-		Thread.sleep(3000);
-		
-		
-		tribesout.click();
-		System.out.println("[트라이브 나가기]버튼-> 나가기 컨펌 팝업 출력"); 
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.ListView/android.view.View/android.view.View/android.widget.Button")
+			.click(); 
+			System.out.println("[시작하기] 버튼 입력");
+			Thread.sleep(3000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.Button[2]")
+			.click(); 
+			System.out.println("우측 상단 [X] 버튼 입력");
+			Thread.sleep(3000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.ListView/android.view.View/android.view.View/android.widget.Button")
+			.click(); 
+			System.out.println("[시작하기] 버튼 입력");
+			Thread.sleep(3000);
 	
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.TextView")
+			.click(); 
+			System.out.println("[사진 업로드하기(1장)] 버튼 입력");
+			Thread.sleep(3000);
+			
+			
+			//driver.findElementByXPath("android.widget.LinearLayout[@content-desc=\"Screenshot_20220927_144436_QA_.jpg, 156KB, 9월 27일\"]/android.widget.RelativeLayout/android.widget.FrameLayout[1]/android.widget.ImageView[2]")
+			//.click(); 
+			//System.out.println("이미지 선택");
+			//Thread.sleep(3000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.HorizontalScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.ImageView")
+			.click(); 
+			System.out.println("[갤러리)] 버튼 입력");
+			Thread.sleep(3000);
+			
+			
+			driver.findElementByXPath("(//android.widget.FrameLayout[@content-desc=\"버튼\"])[1]/android.widget.FrameLayout[1]/android.widget.ImageView")
+			.click(); 
+			System.out.println("이미지 선택");
+			Thread.sleep(3000);
+
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.TextView")
+			.click(); 
+			System.out.println("[사진 올리기)] 버튼 입력");
+			Thread.sleep(3000);
+			
+			
+			driver.navigate().back();
+			Thread.sleep(2000);
+			System.out.println("안드로이드 H/K Back");
+			
+			
+			driver.navigate().back();
+			Thread.sleep(2000);
+			System.out.println("안드로이드 H/K Back");
+			
+			
+			MobileElement back = driver.findElementByAccessibilityId("Up button in TopBar");
+			back.click();
+			System.out.println("TopBar Back"); 
+	
+			
+		}
 		
-		// 트라이브 나가기 상태를 어떻게 Pass 로 보는지?
-		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View[1]/android.widget.Button")
-		.click(); 
-		System.out.println("컨펌 팝업 나가기");
+		
+		
+		public static void tribeshome() throws MalformedURLException, InterruptedException  {
+
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]")
+			.click(); 
+			System.out.println("트라이브 홈 탭");
+			Thread.sleep(2000);
+		
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.TextView[1]")
+			.click(); 
+			System.out.println("[종료] 탭 입력");
+			Thread.sleep(2000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[3]/android.view.View/android.widget.TextView")
+			.click(); 
+			System.out.println("[당첨] 탭 입력");
+			Thread.sleep(2000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.TextView")
+			.click(); 
+			System.out.println("[진행중] 탭 입력");
+			Thread.sleep(2000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[3]/android.widget.TextView[6]")
+			.click(); 
+			System.out.println("진행중 [당첨 확률] 버튼 입력 -> 당첨확률 바텀시트 출력");
+			Thread.sleep(2000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.widget.ImageView")
+			.click(); 
+			System.out.println("당첨확률 바텀시트 [x]버튼 입력");
+			Thread.sleep(2000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[3]/android.widget.TextView[6]")
+			.click(); 
+			System.out.println("진행중 [당첨 확률] 버튼 입력 -> 당첨확률 바텀시트 출력");
+			Thread.sleep(2000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.Button")
+			.click(); 
+			System.out.println("당첨확률 바텀시트 [확인]버튼 입력");
+			Thread.sleep(2000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[3]/android.widget.TextView[6]")
+			.click(); 
+			System.out.println("진행중 [당첨 확률] 버튼 입력 -> 당첨확률 바텀시트 출력");
+			Thread.sleep(2000);
+			
+			
+			MobileElement sheetclose = driver.findElementByAccessibilityId("시트 닫기");
+			sheetclose.click(); 
+			System.out.println("바텀시트 시트 닫기(외부터치)");
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.TextView[1]")
+			.click(); 
+			System.out.println("[종료] 탭 입력");
+			Thread.sleep(2000);
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[3]/android.widget.TextView[6]")
+			.click(); 
+			System.out.println("종료 [당첨 확률] 버튼 입력 -> 당첨확률 바텀시트 출력");
+			Thread.sleep(2000);
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.widget.ImageView")
+			.click(); 
+			System.out.println("당첨확률 바텀시트 [x]버튼 입력");
+			Thread.sleep(2000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[3]/android.widget.TextView[6]")
+			.click(); 
+			System.out.println("종료 [당첨 확률] 버튼 입력 -> 당첨확률 바텀시트 출력");
+			Thread.sleep(2000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.Button")
+			.click(); 
+			System.out.println("당첨확률 바텀시트 [확인]버튼 입력");
+			Thread.sleep(2000);
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[3]/android.widget.TextView[6]")
+			.click(); 
+			System.out.println("종료 [당첨 확률] 버튼 입력 -> 당첨확률 바텀시트 출력");
+			Thread.sleep(2000);
+			
+			
+			MobileElement sheetclose1 = driver.findElementByAccessibilityId("시트 닫기");
+			sheetclose1.click(); 
+			System.out.println("바텀시트 시트 닫기(외부터치)");
+			
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View")
+			.click(); 
+			System.out.println("나의 트라이브 첫번째 트라이브 진입");
+			Thread.sleep(3000);
+			
+			
+			MobileElement tribesout = driver.findElementByAccessibilityId("out in TopBar");
+			tribesout.click();
+			System.out.println("[트라이브 나가기]버튼-> 나가기 컨펌 팝업 출력"); 
+		
+	
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
+			.click(); 
+			System.out.println("컨펌 팝업 유지하기");
+			Thread.sleep(3000);
+		
+		
+			tribesout.click();
+			System.out.println("[트라이브 나가기]버튼-> 나가기 컨펌 팝업 출력"); 
+			Thread.sleep(3000);
+		
+			
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View[1]/android.widget.Button")
+			.click(); 
+			System.out.println("컨펌 팝업 나가기");
+			Thread.sleep(3000);
 				
 	
-		MobileElement back = driver.findElementByAccessibilityId("Up button in TopBar");
-		back.click();
-		System.out.println("TopBar Back"); 
+			MobileElement back = driver.findElementByAccessibilityId("Up button in TopBar");
+			back.click();
+			System.out.println("TopBar Back"); 
+			
+			
+		}
+		
+		
+		
+		public static void settings() throws MalformedURLException, InterruptedException  {
+			
 	
-		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]")
-		.click(); 
-		System.out.println("트라이브 홈 탭 ");
-		
-		MobileElement settings = driver.findElementByAccessibilityId("setting in TopBar");
-		settings.click(); 
-		System.out.println("설정 입력");
+			MobileElement settings = driver.findElementByAccessibilityId("setting in TopBar");
+			settings.click(); 
+			System.out.println("설정 입력");
 		
 		
-		driver.findElementByXPath(
-		"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[2]/android.widget.TextView")
-		.click(); 
-		System.out.println("설정 > 알림설정 진입");
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[2]/android.widget.TextView")
+			.click(); 
+			System.out.println("설정 > 알림설정 진입");
 		
 		
-		driver.findElementByXPath(
-		"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[2]/android.widget.TextView")
-		.click(); 
-		System.out.println("설정 > 알림설정 > 혜택 및 이벤트 알림 진입");
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[2]/android.widget.TextView")
+			.click(); 
+			System.out.println("설정 > 알림설정 > 혜택 및 이벤트 알림 진입");
 
-		//@ 여기에 토글 off 일 경우 if 문 걸어야함 
-		driver.findElementByXPath(
-		"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]")
-		.click(); 
-		System.out.println("혜택 및 이벤트 알림 토글 클릭");
+
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]")
+			.click(); 
+			System.out.println("혜택 및 이벤트 알림 토글 클릭");
 		
 		
-		driver.findElementByXPath(
-		"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.Button")
-		.click(); 
-		System.out.println("바텀 시트 [끄기] 버튼 입력 ");
-		Thread.sleep(3000);
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.Button")
+			.click(); 
+			System.out.println("바텀 시트 [끄기] 버튼 입력 ");
+			Thread.sleep(3000);
 		
 		
-		driver.findElementByXPath(
-		"/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.widget.Button")
-		.click();
-		System.out.println("컨펌 팝업 [확인] 버튼 입력");
-		Thread.sleep(3000);
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.widget.Button")
+			.click();
+			System.out.println("컨펌 팝업 [확인] 버튼 입력");
+			Thread.sleep(3000);
 
 		
-		driver.findElementByXPath(
-		"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]")
-		.click(); 
-		System.out.println("혜택 및 이벤트 알림 토글 클릭");
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]")
+			.click(); 
+			System.out.println("혜택 및 이벤트 알림 토글 클릭");
 		
-		driver.findElementByXPath(
-		"/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.widget.Button")
-		.click();
-		System.out.println("컨펌 팝업 [확인] 버튼 입력");
-		Thread.sleep(3000);
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.widget.Button")
+			.click();
+			System.out.println("컨펌 팝업 [확인] 버튼 입력");
+			Thread.sleep(3000);
 
-		WebElement yagannoti = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.Switch");
-		if (yagannoti.isEnabled()) {
-			System.out.println("활성화임");
-		}else {yagannoti.click();
-		Thread.sleep(3000);
+			//WebElement yagannoti = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.Switch");
+			//if (yagannoti.isEnabled()) {
+				//	System.out.println("활성화임");
+				//	}else {yagannoti.click();
+				//	Thread.sleep(3000);
 		
-		}		
-		//@ 여기에 토글 off 일 경우 if 문 걸어야
-		driver.findElementByXPath(
-		"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.Switch")
-		.click(); 
-		System.out.println("야간 알림 제한 토글 클릭 ");
-		Thread.sleep(3000);
+				
+			//@ 여기에 토글 off 일 경우 if 문 걸어야
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.Switch")
+			.click(); 
+			System.out.println("야간 알림 제한 토글 클릭 ");
+			Thread.sleep(3000);
 		
 		
-		MobileElement back2 = driver.findElementByAccessibilityId("Up button in TopBar");
-		back2.click();
-		System.out.println("TopBar Back"); 
+			MobileElement back2 = driver.findElementByAccessibilityId("Up button in TopBar");
+			back2.click();
+			System.out.println("TopBar Back"); 
 
 		
-		MobileElement back3 = driver.findElementByAccessibilityId("Up button in TopBar");
-		back3.click();
-		System.out.println("TopBar Back"); 
+			MobileElement back3 = driver.findElementByAccessibilityId("Up button in TopBar");
+			back3.click();
+			System.out.println("TopBar Back"); 
 		
 		
-		MobileElement back4 = driver.findElementByAccessibilityId("Up button in TopBar");
-		back4.click();
+			MobileElement back4 = driver.findElementByAccessibilityId("Up button in TopBar");
+			back4.click();
 		
+		}
 		
-		driver.findElementByXPath
-		("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]")
-		.click();	
-		System.out.println("트라이브 목록 탭");
+		/*
+		
+			driver.findElementByXPath
+			("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]")
+			.click();	
+			System.out.println("트라이브 목록 탭");
 		
 		
 		// @ 뮤직 트라이브 찾을 때 까지 스크롤 -- 근데 스크롤이 정확하지 않아서 xpaht 값이 꼬일 때가 있음 
@@ -483,14 +697,14 @@ public class Hanwhatribes2 {
 		*/
 		
 		
-		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-		desiredCapabilities.setCapability("deviceOrientation", "landscape");
+		//DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+		//desiredCapabilities.setCapability("deviceOrientation", "landscape");
 		
-		System.out.println("앱 종료");
+		//System.out.println("앱 종료");
 	
 		
 		
 		// 어떻게 루프 시켜야 할지 판단해야함 
 		}
 
-	}
+	
