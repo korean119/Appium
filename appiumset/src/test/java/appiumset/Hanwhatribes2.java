@@ -7,6 +7,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -60,8 +61,8 @@ public class Hanwhatribes2 {
 	public static void hanwhatribes() throws MalformedURLException, InterruptedException  {
 		DesiredCapabilities cap = new DesiredCapabilities();
 		
-		cap.setCapability("deviceName", "Galaxy Z Filp3 5G");
-		cap.setCapability("udid", "R3CRB0JNBQA");
+		cap.setCapability("deviceName", "Galaxy S20 FE 5G");
+		cap.setCapability("udid", "R3CN90RNF8M");
 		
 		cap.setCapability("platformName", "Android");
 		cap.setCapability("platformVersion", "12");
@@ -97,7 +98,7 @@ public class Hanwhatribes2 {
 		// @갤럭시 폴드
 		//cap.setCapability("udid", "192.168.0.85:5551");
 		
-		URL url = new URL("http://0.0.0.0:4720/wd/hub");
+		URL url = new URL("http://0.0.0.0:4723/wd/hub");
 		driver = new AppiumDriver<MobileElement>(url, cap);
 		
 		
@@ -171,14 +172,29 @@ public class Hanwhatribes2 {
 			//MobileElement elementOne = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
 			//MobileElement elementTwo = (MobileElement) driver.findElementByClassName("SomeClassName");
 
-			driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[2]")
+			driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[3]")
 			.click(); 
 			System.out.println("뮤직 트라이브 진입");
 
-
+			
+			Boolean displayOk = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")).isDisplayed();
+			if(displayOk){
+				
+			   //Element is present
+				System.out.println("입장하기 버튼 확인");
+			}else	{
+				
+				System.out.println("입장하기 버튼 확인 불가");
+			
+			}
+			   //Element is not present  
+			
+			
 			MobileElement tribesin = driver.findElementByAccessibilityId("arrow beside text in button");
 			tribesin.click();
 			System.out.println("[입장하기] 버튼 입력 ");
+			
+			
 			
 			WebElement ele2 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView");
 
