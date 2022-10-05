@@ -61,7 +61,7 @@ public class Hanwhatribes2 {
 		
 		cap.setCapability("deviceName", "Galaxy Z Filp3 5G");
 		cap.setCapability("udid", "R3CRB0JNBQA");
-		
+	
 		cap.setCapability("platformName", "Android");
 		cap.setCapability("platformVersion", "12");
 		
