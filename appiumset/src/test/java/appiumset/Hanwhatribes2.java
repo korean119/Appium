@@ -59,8 +59,8 @@ public class Hanwhatribes2 {
 	public static void hanwhatribes() throws MalformedURLException, InterruptedException  {
 		DesiredCapabilities cap = new DesiredCapabilities();
 		
-		cap.setCapability("deviceName", "Galaxy Z Filp3 5G");
-		cap.setCapability("udid", "R3CRB0JNBQA");
+		//cap.setCapability("deviceName", "Galaxy Z Filp3 5G");
+		//cap.setCapability("udid", "R3CRB0JNBQA");
 		
 		cap.setCapability("platformName", "Android");
 		cap.setCapability("platformVersion", "12");
