@@ -1,6 +1,6 @@
 package appiumset;
 
-// github token : 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
+// github token : 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
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -91,7 +91,7 @@ public class Hanwhatribes2 {
 		cap.setCapability("autoLaunch", "true");
 		
 		// @갤럭시 플립
-		// cap.setCapability("udid", "192.168.0.121:5550");
+		cap.setCapability("udid", "192.168.0.121:5550");
 		
 		// @갤럭시 폴드
 		//cap.setCapability("udid", "192.168.0.85:5551");
@@ -697,7 +697,7 @@ public class Hanwhatribes2 {
 		*/
 		
 		
-		//DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+		//DesiredCapabilities desiredCapabilities = new DesiredCapabilities();m
 		//desiredCapabilities.setCapability("deviceOrientation", "landscape");
 		
 		//System.out.println("앱 종료");
