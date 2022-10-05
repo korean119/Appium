@@ -1,6 +1,6 @@
 package appiumset;
 
-// github token : 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
+// github token : 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
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -59,10 +59,10 @@ public class Hanwhatribes2 {
 	public static void hanwhatribes() throws MalformedURLException, InterruptedException  {
 		DesiredCapabilities cap = new DesiredCapabilities();
 		
-		//cap.setCapability("deviceName", "Galaxy Z Filp3 5G");
-		//cap.setCapability("udid", "R3CRB0JNBQA");
-		
-		//cap.setCapability("platformName", "Android");
+		cap.setCapability("deviceName", "Galaxy Z Filp3 5G");
+		cap.setCapability("udid", "R3CRB0JNBQA");
+	
+		cap.setCapability("platformName", "Android");
 		cap.setCapability("platformVersion", "12");
 		
 		cap.setCapability("appPackage", "com.hanwha.lifeplus.tribes.app.qa");
