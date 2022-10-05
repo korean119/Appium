@@ -6,6 +6,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -31,6 +32,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.NetworkSpeed;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
+
 
 public class Hanwhatribes2 {
 	
@@ -91,12 +93,20 @@ public class Hanwhatribes2 {
 		cap.setCapability("autoLaunch", "true");
 		
 		// @갤럭시 플립
-		cap.setCapability("udid", "192.168.0.121:5550");
+		//cap.setCapability("udid", "192.168.0.121:5550");
 		
 		// @갤럭시 폴드
 		//cap.setCapability("udid", "192.168.0.85:5551");
 		
-		URL url = new URL("http://0.0.0.0:4720/wd/hub");
+		
+	
+		//URL url = new URL("http://0.0.0.0:4720/wd/hub/");
+		
+		//@ 준오 로컬 호스트 전용
+		URL url = new URL("http://localhost:4720/wd/hub/");
+		
+		
+		
 		driver = new AppiumDriver<MobileElement>(url, cap);
 		
 		
@@ -136,7 +146,7 @@ public class Hanwhatribes2 {
 
 		public static void tribeslist() throws MalformedURLException, InterruptedException  {
 			
-			/*
+			
 			WebElement ele01 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]");
 
 			int centerX = ele01.getRect().x + (ele01.getSize().width/2);
@@ -159,12 +169,12 @@ public class Hanwhatribes2 {
 			//Perform the actions
 			driver.perform(Arrays.asList(swipe));
 			Thread.sleep(3000);
-			*/
 			
-			MobileElement element = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator(
-			        "new UiScrollable(new UiSelector().scrollable(true)).setAsVerticalList()" +
-			         ".scrollIntoView(new UiSelector().text(\"뮤직\"))"));
-			Thread.sleep(2000);
+			
+			//MobileElement element = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator(
+			//        "new UiScrollable(new UiSelector().scrollable(true)).setAsVerticalList()" +
+			//         ".scrollIntoView(new UiSelector().text(\"뮤직\"))"));
+			//Thread.sleep(2000);
 			
 			//요소 찾기
 			//MobileElement elementOne = (MobileElement) driver.findElementByAccessibilityId("SomeAccessibilityID");
@@ -175,9 +185,9 @@ public class Hanwhatribes2 {
 			System.out.println("뮤직 트라이브 진입");
 
 
-			MobileElement tribesin = driver.findElementByAccessibilityId("arrow beside text in button");
-			tribesin.click();
-			System.out.println("[입장하기] 버튼 입력 ");
+			//MobileElement tribesin = driver.findElementByAccessibilityId("arrow beside text in button");
+			//tribesin.click();
+			//System.out.println("[입장하기] 버튼 입력 ");
 			
 			WebElement ele2 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView");
 
@@ -185,17 +195,23 @@ public class Hanwhatribes2 {
 			double start2Y = ele2.getRect().y + (ele2.getSize().height * 0.9);
 			double end2Y = ele2.getRect().y + (ele2.getSize().height * 0.1);
 			//Type of Pointer Input
+			
 			PointerInput finger2 = new PointerInput(PointerInput.Kind.TOUCH,"finger2");
 			//Creating Sequence object to add actions
+			
 			Sequence swipe2 = new Sequence(finger2,1);
 			//Move finger into starting position
+			
 			swipe2.addAction(finger2.createPointerMove(Duration.ofSeconds(0),PointerInput.Origin.viewport(),center2X,(int)start2Y));
 			//Finger comes down into contact with screen
+			
 			swipe2.addAction(finger2.createPointerDown(0));
 			//Finger moves to end position
+			
 			swipe2.addAction(finger2.createPointerMove(Duration.ofMillis(700),
 			        PointerInput.Origin.viewport(),center2X, (int)end2Y));
 			//Get up Finger from Srceen
+			
 			swipe2.addAction(finger2.createPointerUp(0));
 			//Perform the actions
 			driver.perform(Arrays.asList(swipe2));
@@ -213,6 +229,30 @@ public class Hanwhatribes2 {
 			Thread.sleep(3000);
 			
 			
+			Set<String> contextNames = driver.getContextHandles();
+			for (String contextName : contextNames) {
+			    System.out.println(contextName); //prints out something like NATIVE_APP \n WEBVIEW_1
+			}
+		
+			driver.context((String) contextNames.toArray()[2]); // set context to WEBVIEW_1
+		
+			MobileElement myText = driver.findElementByXPath("iv[@id=\\\"notification\\\"]/section/div[2]/div/div[2]/button[1]");
+			myText.click(); 
+			
+			System.out.println("[ddd");
+			
+			
+			Thread.sleep(3000);
+		
+			driver.context("NATIVE_APP");
+			
+			
+			driver.findElementByCssSelector("iv[@id=\"notification\"]/section/div[2]/div/div[2]/button[1]")
+			.click(); 
+			System.out.println("[ddd");
+			Thread.sleep(3000);
+			
+			
 			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.Button[2]")
 			.click(); 
 			System.out.println("우측 상단 [X] 버튼 입력");
@@ -221,6 +261,7 @@ public class Hanwhatribes2 {
 			
 			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.ListView/android.view.View/android.view.View/android.widget.Button")
 			.click(); 
+			
 			System.out.println("[시작하기] 버튼 입력");
 			Thread.sleep(3000);
 	
