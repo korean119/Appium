@@ -79,7 +79,7 @@ public class Hanwhatribes2 {
 		cap.setCapability("autowebview","true");
 		
 		//@ 데이터 속도 최고 느리게 , 적용 되는지는 잘 모르겠음
-		cap.setCapability("networkSpeed", "gsm");
+		//cap.setCapability("networkSpeed", "gsm");
 		
 		//@ 권한을 자동으로 결정하고 설치 시 앱에 부여 합니다
 		//cap.setCapability("ATUO_GRANT_REMISSIONS", "true");
