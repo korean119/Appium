@@ -187,7 +187,7 @@ public class Hanwhatribes2 {
 				System.out.println("입장하기 버튼 확인 불가");
 			
 			}
-			   //Element is not present  
+			   //Element is not presentㅁㅁ  
 			
 			
 			MobileElement tribesin = driver.findElementByAccessibilityId("arrow beside text in button");
