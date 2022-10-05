@@ -10,3 +10,8 @@ adb connect 192.168.0.130:5555
 //자바 코드에 추가  
 cap.setCapability("udid", "192.168.0.130:5555");  
   
+
+
+< Device 갑자기 연결 되지 않을 때 >  
+adb uninstall io.appium.uiautomator2.server  
+adb uninstall io.appium.uiautomator2.server.test  
