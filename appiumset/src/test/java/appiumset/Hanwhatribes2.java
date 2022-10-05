@@ -62,7 +62,7 @@ public class Hanwhatribes2 {
 		//cap.setCapability("deviceName", "Galaxy Z Filp3 5G");
 		//cap.setCapability("udid", "R3CRB0JNBQA");
 		
-		cap.setCapability("platformName", "Android");
+		//cap.setCapability("platformName", "Android");
 		cap.setCapability("platformVersion", "12");
 		
 		cap.setCapability("appPackage", "com.hanwha.lifeplus.tribes.app.qa");
