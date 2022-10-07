@@ -6,6 +6,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -42,25 +44,24 @@ public class Hanwhatribes2 {
 	
 	public static void main(String[] args) {
 	
-
+		int count = 0;
+		
 		try {
 			hanwhatribes();
 			onboarding();
 			
-			
-		int count = 0;
-			
-		for(int i = 1; true; i = i++)
-		{
+		for(int i = 1; true; i = i++) {
 
 			count = count + i;
-			System.out.println( i + "번째 반복 시작");
-		
-			if(i==20) {
-				System.out.println("20회 반복, 반복 종료");
-				driver.close();
-			}
 			
+			if( count <= 100) {
+				System.out.println(" <<<<< " + count + " 번째 반복 시작합니다.>>>> ");
+				
+			}else if(count == 101) {
+				System.out.println( count-1 + "번째 반복 완료 후 종료합니다.");
+				break;
+				
+			}
 			tribeslist();
 			tribeshome();
 			settings();
@@ -72,6 +73,9 @@ public class Hanwhatribes2 {
 			System.out.println(exp.getCause());
 			System.out.println(exp.getMessage());
 			exp.printStackTrace();	
+			
+			System.out.println("에러 발생");
+			
 			
 			}
 		}
@@ -89,9 +93,10 @@ public class Hanwhatribes2 {
 		
 		cap.setCapability("platformName", "Android");
 		cap.setCapability("platformVersion", "12");
-		
+
 		cap.setCapability("appPackage", "com.hanwha.lifeplus.tribes.app.qa");
 		cap.setCapability("appActivity", "com.hanwha.lifeplus.presentation.ui.HomeActivity");
+		
 		cap.setCapability("automationName", "UiAutomator2");
 	
 		cap.setCapability("noReset","false");
@@ -142,15 +147,15 @@ public class Hanwhatribes2 {
 		public static void onboarding() throws MalformedURLException, InterruptedException  {
 			
 			
-		MobileElement arrow = driver.findElementByAccessibilityId("화살표");
-		arrow.click();
-		Thread.sleep(1000);
-		arrow.click();
-		Thread.sleep(1000);
-		arrow.click();
-		Thread.sleep(1000);
-		System.out.println("온보딩 버튼 클릭 완료 ");
-	
+			MobileElement arrow = driver.findElementByAccessibilityId("화살표");
+			arrow.click();
+			Thread.sleep(1000);
+			arrow.click();
+			Thread.sleep(1000);
+			arrow.click();
+			Thread.sleep(1000);
+			System.out.println("온보딩 버튼 클릭 완료 ");
+		
 		}
 
 		
@@ -169,10 +174,9 @@ public class Hanwhatribes2 {
 			Thread.sleep(3000);
 			
 			
-			driver.findElementByXPath(
-					"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]")
-					.click();	
-					System.out.println("트라이브 목록 탭");
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]")
+			.click();	
+			System.out.println("트라이브 목록 탭");
 			
 			
 			new TouchAction(driver)
@@ -191,18 +195,30 @@ public class Hanwhatribes2 {
 			System.out.println("뮤직 트라이브 진입");
 			
 			
-			MobileElement tribesin = driver.findElementByAccessibilityId("arrow beside text in button");
-			tribesin.click();
-			System.out.println("[입장하기] 버튼 입력 ");
+			//MobileElement tribesin = driver.findElementByAccessibilityId("arrow beside text in button");
+			//tribesin.click();
+			//System.out.println("[입장하기] 버튼 입력 ");
 			
 			
+			if (driver.findElementsByAccessibilityId("out in TopBar").isEmpty())
+				{System.out.println("Out in Top 없는 상태 확인");
+					MobileElement tribesin1 = driver.findElementByAccessibilityId("arrow beside text in button");
+					tribesin1.click();
+					System.out.println("없는 상태라면 Out in Top 입력"); 	
+				}else{
+				System.out.println("Out in Top 존재 상태 -- 이슈"); 
+				driver.close();
+
+				
+			}
+			
+			   
 			new TouchAction(driver)
 			.longPress(PointOption.point(550, 1340))
 			.waitAction()
 			.moveTo(PointOption.point(550, 60))
 			.release()
 			.perform();
-			
 			System.out.println("스크롤 동작");
 			Thread.sleep(2000);
 			
@@ -219,6 +235,21 @@ public class Hanwhatribes2 {
 			Thread.sleep(4000);
 			
 	
+			Set<String> contextNames = driver.getContextHandles();
+			for (String contextName : contextNames) {
+			    System.out.println(contextName); //prints out something like NATIVE_APP \n WEBVIEW_1
+			}
+			
+			String myText = driver.findElement(By.cssSelector(".green_button")).click();
+
+			driver.context("NATIVE_APP");
+
+			// do more native testing if we want
+
+			driver.quit();
+
+		
+			   
 			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.Button[2]")
 			.click(); 
 			System.out.println("우측 상단 [X] 버튼 입력");
@@ -265,35 +296,12 @@ public class Hanwhatribes2 {
 			Thread.sleep(2000);
 			
 			
-			
 			MobileElement back = driver.findElementByAccessibilityId("Up button in TopBar");
 			back.click();
 			System.out.println("TopBar Back"); 
 			Thread.sleep(2000);
+
 			
-			/*
-			MobileElement tribesout = driver.findElementByAccessibilityId("out in TopBar");
-			tribesout.click();
-			System.out.println("[트라이브 나가기]버튼-> 나가기 컨펌 팝업 출력"); 
-		
-	
-			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
-			.click(); 
-			System.out.println("컨펌 팝업 유지하기");
-			Thread.sleep(3000);
-		
-		
-			tribesout.click();
-			System.out.println("[트라이브 나가기]버튼-> 나가기 컨펌 팝업 출력"); 
-			Thread.sleep(3000);
-		
-			
-			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View[1]/android.widget.Button")
-			.click(); 
-			System.out.println("컨펌 팝업 나가기");
-			Thread.sleep(3000);
-		
-			*/
 		}
 		
 		
@@ -369,46 +377,7 @@ public class Hanwhatribes2 {
 			sheetclose.click(); 
 			System.out.println("바텀시트 시트 닫기(외부터치)");
 			
-			/*
-			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.TextView[1]")
-			.click(); 
-			System.out.println("[종료] 탭 입력");
-			Thread.sleep(2000);
 			
-			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[3]/android.widget.TextView[6]")
-			.click(); 
-			System.out.println("종료 [당첨 확률] 버튼 입력 -> 당첨확률 바텀시트 출력");
-			Thread.sleep(4000);
-			
-			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.widget.ImageView")
-			.click(); 
-			System.out.println("당첨확률 바텀시트 [x]버튼 입력");
-			Thread.sleep(2000);
-			
-			
-			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[3]/android.widget.TextView[6]")
-			.click(); 
-			System.out.println("종료 [당첨 확률] 버튼 입력 -> 당첨확률 바텀시트 출력");
-			Thread.sleep(4000);
-			
-			
-			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.Button")
-			.click(); 
-			System.out.println("당첨확률 바텀시트 [확인]버튼 입력");
-			Thread.sleep(2000);
-			
-			
-			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[3]/android.widget.TextView[6]")
-			.click(); 
-			System.out.println("종료 [당첨 확률] 버튼 입력 -> 당첨확률 바텀시트 출력");
-			Thread.sleep(4000);
-			
-			
-			MobileElement sheetclose1 = driver.findElementByAccessibilityId("시트 닫기");
-			sheetclose1.click(); 
-			System.out.println("바텀시트 시트 닫기(외부터치)");
-			
-			*/
 			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View[1]/android.view.View")
 			.click(); 
 			System.out.println("나의 트라이브 첫번째 트라이브 진입");
@@ -576,38 +545,30 @@ public class Hanwhatribes2 {
 		}
 		
 		
-			public static void logout() throws MalformedURLException, InterruptedException  {
+		public static void logout() throws MalformedURLException, InterruptedException  {
 
 		
-				MobileElement settings3 = driver.findElementByAccessibilityId("setting in TopBar");
-				settings3.click();
-				System.out.println("설정 입력3");
+			MobileElement settings3 = driver.findElementByAccessibilityId("setting in TopBar");
+			settings3.click();
+			System.out.println("설정 입력3");
 	
-				driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[7]/android.widget.TextView")
-				.click(); 
-				System.out.println("로그아웃");
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[7]/android.widget.TextView")
+			.click(); 
+			System.out.println("로그아웃");
 
-				driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
-				.click(); 
-				System.out.println("컨펌 팝업 나가기 ");
+			driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
+			.click(); 
+			System.out.println("컨펌 팝업 나가기 ");
 				
+			
+	
+			
 			}
-	
-		//driver.rotate(new DeviceRotation(10, 10, 10));
 		
-		//driver.rotate(ScreenOrientation.LANDSCAPE);
-	
-		//DesiredCapabilities desiredCapabilities = new DesiredCapabilities();m
-		//desiredCapabilities.setCapability("deviceOrientation", "landscape");
-		
-		//System.out.println("앱 종료");
-	
-		
-		
-		// 어떻게 루프 시켜야 할지 판단해야함 
-			
-			
-			
 		}
+		 
+		
+		
+		
 
 	
