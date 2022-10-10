@@ -1,6 +1,8 @@
 # Qa
 
-
+< Webview 디버깅 >   
+chrome://inspect  
+  
 < wireless 설치 방법 >  
 cmd 실행  
 //포트 추가  
