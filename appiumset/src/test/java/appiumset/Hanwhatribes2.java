@@ -41,7 +41,7 @@ import io.appium.java_client.touch.offset.PointOption;
 
 
 
-
+//a
 public class Hanwhatribes2 {
 	
 	static AppiumDriver<MobileElement> driver;
