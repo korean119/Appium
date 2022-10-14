@@ -9,12 +9,16 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class Deviceinfo extends Hanwhatribes2 {
+public class _2_Deviceinfo extends _1_Appstart {
     public void Deviceinfo() throws MalformedURLException, InterruptedException  {
 		DesiredCapabilities cap = new DesiredCapabilities();
 	
-		cap.setCapability("deviceName", "Galaxy S20 FE 5G");
-		cap.setCapability("udid", "R3CN90RNF8M");
+		
+		cap.setCapability("deviceName", "Galaxy Z Flip3 5G");
+		cap.setCapability("udid", "R3CRB0JNBQA");
+		
+		//cap.setCapability("deviceName", "Galaxy S20 FE 5G");
+		//cap.setCapability("udid", "R3CN90RNF8M");
 
 		//cap.setCapability("deviceName", "Galaxy S8");
 		//cap.setCapability("udid", "ce0617163a36ce2401");
@@ -65,12 +69,13 @@ public class Deviceinfo extends Hanwhatribes2 {
 		//URL url = new URL("http://0.0.0.0:4720/wd/hub/");
 		
 		//@ 준오 로컬 호스트 전용
-		URL url = new URL("http://localhost:4723/wd/hub/");
+		URL url = new URL("http://localhost:4720/wd/hub/");
 	
 		driver = new AppiumDriver<MobileElement>(url, cap);
 	
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	
+		
     }
 }

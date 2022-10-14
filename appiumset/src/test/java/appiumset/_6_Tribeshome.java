@@ -6,9 +6,11 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class Tribeshome extends Hanwhatribes2 {
+public class _6_Tribeshome extends _1_Appstart {
 
 	public static void tribeshome() throws MalformedURLException, InterruptedException  {
+
+		System.out.println("_6_tribeshome Start");
 
 		
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]")

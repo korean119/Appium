@@ -6,13 +6,15 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class Tribeslist extends Hanwhatribes2 { 
+public class _4_Tribeslist extends _1_Appstart { 
 	public static void tribeslist() throws MalformedURLException, InterruptedException  {
+		
+		System.out.println("_4_tribeslist Start");
 		
 		
 		MobileElement kakao = driver.findElementByAccessibilityId("카카오로 시작하기 로고");
 		kakao.click();
-		System.out.println("카카오 클릭 완료");
+		System.out.println("카카오 시작하기 로고 클릭 완료");
 		 		                 
 
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
@@ -37,20 +39,22 @@ public class Tribeslist extends Hanwhatribes2 {
 		Thread.sleep(2000);
 		
 		
-		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[5]")
+		//@ 트라이브 진입에 대한 단순 동작성 스크립트
+		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[3]")
 		.click();
-		System.out.println("뮤직 트라이브 진입");
+		System.out.println("불꽃축제 트라이브 진입");
 		
 		
+		//@ 트라이브 첫 진입 시 에만 노출 되는 툴팁 존재 여부 확인 
 		if (driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView")
 				.isDisplayed())
-		{System.out.println("토스트 팝업 존재");
+		{System.out.println("툴팁 존재");
 		
 		MobileElement toastView = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView");
 		String text = toastView.getText();
 		System.out.println(toastView.getText()); 	
 		}else{
-			System.out.println("토스트 팝업 없음 -- 이슈");  //@ xpath.isDisplayed로 하면 xpath 자체가 없는걸로 인식되어 fail 됨 = else 미출력 후 에러 상태 
+			System.out.println("툴팁 없음 -- 이슈");  
 			driver.close();
 			
 		}

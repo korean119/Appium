@@ -4,10 +4,13 @@ import java.net.MalformedURLException;
 
 import io.appium.java_client.MobileElement;
 
-public class Settings extends Hanwhatribes2 {
+public class _7_Settings extends _1_Appstart {
 	
 	public static void settings() throws MalformedURLException, InterruptedException  {
 		
+		
+		System.out.println("_7_settings Start");
+
 		
 		MobileElement settings = driver.findElementByAccessibilityId("setting in TopBar");
 		settings.click(); 
