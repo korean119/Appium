@@ -11,7 +11,7 @@ public class Tribesdetail extends Hanwhatribes2 {
 	public static void tribesdetail() throws MalformedURLException, InterruptedException  {
 
 		
-		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[4]")
+		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[5]")
 		.click();
 		System.out.println("뮤직 트라이브 진입");
 		

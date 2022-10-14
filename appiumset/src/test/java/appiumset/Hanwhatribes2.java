@@ -51,7 +51,7 @@ public class Hanwhatribes2 {
 		
 		Deviceinfo a01 = new Deviceinfo();
 		Ondoarding a02 = new Ondoarding();
-		Trinbeslist a03 = new Trinbeslist();
+		Tribeslist a03 = new Tribeslist();
 		Tribesdetail a04 = new Tribesdetail();
 		Tribeshome a05 = new Tribeshome();
 		Settings a06 = new Settings();

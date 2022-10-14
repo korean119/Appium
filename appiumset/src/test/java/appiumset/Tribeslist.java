@@ -6,7 +6,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class Trinbeslist extends Hanwhatribes2 { 
+public class Tribeslist extends Hanwhatribes2 { 
 	public static void tribeslist() throws MalformedURLException, InterruptedException  {
 		
 		
@@ -37,9 +37,9 @@ public class Trinbeslist extends Hanwhatribes2 {
 		Thread.sleep(2000);
 		
 		
-		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[3]")
+		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[5]")
 		.click();
-		System.out.println("런닝 트라이브 진입");
+		System.out.println("뮤직 트라이브 진입");
 		
 		
 		if (driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView")

@@ -13,14 +13,14 @@ public class Deviceinfo extends Hanwhatribes2 {
     public void Deviceinfo() throws MalformedURLException, InterruptedException  {
 		DesiredCapabilities cap = new DesiredCapabilities();
 	
-		cap.setCapability("deviceName", "Galaxy S8");
-		cap.setCapability("udid", "ce0617163a36ce2401");
+		cap.setCapability("deviceName", "Galaxy S20 FE 5G");
+		cap.setCapability("udid", "R3CN90RNF8M");
 
 		//cap.setCapability("deviceName", "Galaxy S8");
 		//cap.setCapability("udid", "ce0617163a36ce2401");
 	
 		cap.setCapability("platformName", "Android");
-		cap.setCapability("platformVersion", "9");
+		cap.setCapability("platformVersion", "12");
 	
 
 		cap.setCapability("appPackage", "com.hanwha.lifeplus.tribes.app.qa");
@@ -65,7 +65,7 @@ public class Deviceinfo extends Hanwhatribes2 {
 		//URL url = new URL("http://0.0.0.0:4720/wd/hub/");
 		
 		//@ 준오 로컬 호스트 전용
-		URL url = new URL("http://localhost:4720/wd/hub/");
+		URL url = new URL("http://localhost:4723/wd/hub/");
 	
 		driver = new AppiumDriver<MobileElement>(url, cap);
 	
