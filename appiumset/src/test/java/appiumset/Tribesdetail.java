@@ -9,8 +9,9 @@ import io.appium.java_client.touch.offset.PointOption;
 
 public class Tribesdetail extends Hanwhatribes2 {
 	public static void tribesdetail() throws MalformedURLException, InterruptedException  {
-
 		
+		System.out.println("<<Tribes_detail 진행>>");
+
 		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[5]")
 		.click();
 		System.out.println("뮤직 트라이브 진입");
@@ -31,7 +32,7 @@ public class Tribesdetail extends Hanwhatribes2 {
 			
 
 		new TouchAction(driver)
-		.longPress(PointOption.point(550, 1340))
+		.longPress(PointOption.point(550, 1600))
 		.waitAction()
 		.moveTo(PointOption.point(550, 60))
 		.release()
@@ -59,8 +60,10 @@ public class Tribesdetail extends Hanwhatribes2 {
 			
 			driver.context((String) contextNames.toArray()[1]);
 			System.out.println("웹뷰 진입"); 
-			
 			MobileElement tribesinconfirm = driver.findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button[1]");
+			
+			Thread.sleep(5000);
+			
 			tribesinconfirm .click();
 			
 			driver.context("NATIVE_APP");
@@ -105,7 +108,7 @@ public class Tribesdetail extends Hanwhatribes2 {
 		Thread.sleep(3000);
 
 		
-		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.TextView")
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.ListView/android.view.View")
 		.click(); 
 		System.out.println("[사진 업로드하기(1장)] 버튼 입력");
 		Thread.sleep(3000);
@@ -123,7 +126,7 @@ public class Tribesdetail extends Hanwhatribes2 {
 		Thread.sleep(3000);
 
 		
-		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.TextView")
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.TextView")
 		.click(); 
 		System.out.println("[사진 올리기)] 버튼 입력");
 		Thread.sleep(4000);

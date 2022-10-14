@@ -10,6 +10,7 @@ public class Tribeshome extends Hanwhatribes2 {
 
 	public static void tribeshome() throws MalformedURLException, InterruptedException  {
 
+		System.out.println("<<Tribes_home 진행>>");
 		
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]")
 		.click(); 

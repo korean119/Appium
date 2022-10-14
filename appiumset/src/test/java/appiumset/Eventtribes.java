@@ -6,6 +6,7 @@ public class Eventtribes extends Hanwhatribes2 {
 	
 	public void Eventtribes() throws MalformedURLException, InterruptedException  {
 
+		System.out.println("<<Event_tribes 진행>>");
 		
 		driver.findElementByXPath("	/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[3]")
 		.click(); 

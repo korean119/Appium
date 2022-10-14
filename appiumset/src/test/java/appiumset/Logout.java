@@ -6,6 +6,9 @@ import io.appium.java_client.MobileElement;
 
 public class Logout extends Hanwhatribes2 {
 	public void Logout() throws MalformedURLException, InterruptedException {
+		
+		System.out.println("<<Loggout 진행>>");
+		
 		MobileElement settings3 = driver.findElementByAccessibilityId("setting in TopBar");
 		settings3.click();
 		System.out.println("설정 입력3");

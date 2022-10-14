@@ -9,6 +9,7 @@ import io.appium.java_client.touch.offset.PointOption;
 public class Tribeslist extends Hanwhatribes2 { 
 	public static void tribeslist() throws MalformedURLException, InterruptedException  {
 		
+		System.out.println("<<Tribes_list 진행>>");
 		
 		MobileElement kakao = driver.findElementByAccessibilityId("카카오로 시작하기 로고");
 		kakao.click();
@@ -37,9 +38,9 @@ public class Tribeslist extends Hanwhatribes2 {
 		Thread.sleep(2000);
 		
 		
-		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[5]")
+		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[1]")
 		.click();
-		System.out.println("뮤직 트라이브 진입");
+		System.out.println("러닝 트라이브 진입");
 		
 		
 		if (driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView")
@@ -54,7 +55,7 @@ public class Tribeslist extends Hanwhatribes2 {
 			driver.close();
 			
 		}
-		
+		Thread.sleep(3000);
 		
 		
 		if (driver.findElementsByAccessibilityId("out in TopBar")

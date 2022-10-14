@@ -8,6 +8,7 @@ public class Settings extends Hanwhatribes2 {
 	
 	public static void settings() throws MalformedURLException, InterruptedException  {
 		
+		System.out.println("<<Settings 진행>>");
 		
 		MobileElement settings = driver.findElementByAccessibilityId("setting in TopBar");
 		settings.click(); 
