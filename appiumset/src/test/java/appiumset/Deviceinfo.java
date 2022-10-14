@@ -13,14 +13,14 @@ public class Deviceinfo extends Hanwhatribes2 {
     public void Deviceinfo() throws MalformedURLException, InterruptedException  {
 		DesiredCapabilities cap = new DesiredCapabilities();
 	
-		cap.setCapability("deviceName", "Galaxy Z Filp3 5G");
-		cap.setCapability("udid", "R3CRB0JNBQA");
+		cap.setCapability("deviceName", "Galaxy S8");
+		cap.setCapability("udid", "ce0617163a36ce2401");
 
 		//cap.setCapability("deviceName", "Galaxy S8");
 		//cap.setCapability("udid", "ce0617163a36ce2401");
 	
 		cap.setCapability("platformName", "Android");
-		cap.setCapability("platformVersion", "12");
+		cap.setCapability("platformVersion", "9");
 	
 
 		cap.setCapability("appPackage", "com.hanwha.lifeplus.tribes.app.qa");
