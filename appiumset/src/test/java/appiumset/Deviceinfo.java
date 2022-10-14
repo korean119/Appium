@@ -8,13 +8,14 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
 
 public class Deviceinfo extends Hanwhatribes2 {
     public void Deviceinfo() throws MalformedURLException, InterruptedException  {
 		DesiredCapabilities cap = new DesiredCapabilities();
 	
-		cap.setCapability("deviceName", "Galaxy S20 FE 5G");
-		cap.setCapability("udid", "R3CN90RNF8M");
+		cap.setCapability("deviceName", "Galaxy S22");
+		cap.setCapability("udid", "192.168.0.100:5555");
 
 		//cap.setCapability("deviceName", "Galaxy S8");
 		//cap.setCapability("udid", "ce0617163a36ce2401");
@@ -70,6 +71,7 @@ public class Deviceinfo extends Hanwhatribes2 {
 		driver = new AppiumDriver<MobileElement>(url, cap);
 	
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		
 	
     }

@@ -4,7 +4,7 @@ import java.net.MalformedURLException;
 
 import io.appium.java_client.MobileElement;
 
-public class Ondoarding extends Hanwhatribes2 { 
+public class Onboarding extends Hanwhatribes2 { 
 	public static void onboarding() throws MalformedURLException, InterruptedException  {
 		
 		

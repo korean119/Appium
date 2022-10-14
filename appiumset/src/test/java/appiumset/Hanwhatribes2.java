@@ -42,27 +42,31 @@ import io.appium.java_client.touch.offset.PointOption;
 
 
 //aa
-public class Hanwhatribes2 {
+public class Hanwhatribes2 implements Runnable {
 	
 	static AppiumDriver<MobileElement> driver;
 	
-	public static void main(String[] args) {
+	static DesiredCapabilities capabilities = new DesiredCapabilities();
 	
-		
-		Deviceinfo a01 = new Deviceinfo();
-		Ondoarding a02 = new Ondoarding();
-		Tribeslist a03 = new Tribeslist();
-		Tribesdetail a04 = new Tribesdetail();
-		Tribeshome a05 = new Tribeshome();
-		Settings a06 = new Settings();
-		Eventtribes a07 = new Eventtribes();
-		Logout a08 = new Logout();
+    
+     //OpenApp open = new OpenApp(null, null);
+	static Deviceinfo a001 = new Deviceinfo();
+	static Deviceinfo2 a002 = new Deviceinfo2();
+	Onboarding a02 = new Onboarding();
+	Tribeslist a03 = new Tribeslist();
+	Tribesdetail a04 = new Tribesdetail();
+	Tribeshome a05 = new Tribeshome();
+	Settings a06 = new Settings();
+	Eventtribes a07 = new Eventtribes();
+	Logout a08 = new Logout();
+    
 
-		int count = 0;
-		
-		
-		try {
-			a01.Deviceinfo();
+	
+    private void openAppAndPerformSomeActions() {
+    	int count = 0;
+    	
+    	try {
+			
 			a02.onboarding();
 			
 			for(int i = 1; true; i = i++) {
@@ -90,6 +94,29 @@ public class Hanwhatribes2 {
 			System.out.println(exp.getMessage());
 			exp.printStackTrace();	
 		}
+    }
+    
+	public static void main(String[] args) {
+
+		try {
+			a001.Deviceinfo();
+			a002.Deviceinfo2();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+		Runnable r = new Hanwhatribes2(); //device id of first mobile device
+        //Runnable r2 = new a002.Deviceinfo(); //device id of second mobile device
+        new Thread(r).start();
+		
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		openAppAndPerformSomeActions();
+		
 	}
 
 		
