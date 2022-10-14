@@ -7,6 +7,11 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class Tribeslist extends Hanwhatribes2 { 
+	public Tribeslist() {
+		super(port, udid, version);
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void tribeslist() throws MalformedURLException, InterruptedException  {
 		
 		

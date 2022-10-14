@@ -11,17 +11,22 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class Deviceinfo extends Hanwhatribes2 {
-    public void Deviceinfo() throws MalformedURLException, InterruptedException  {
+    public Deviceinfo(String port, String udid, String version) {
+		super(port, udid, version);
+		// TODO Auto-generated constructor stub
+	}
+
+	public void Deviceinfo() throws MalformedURLException, InterruptedException  {
 		DesiredCapabilities cap = new DesiredCapabilities();
 	
-		cap.setCapability("deviceName", "Galaxy S22");
-		cap.setCapability("udid", "192.168.0.100:5555");
+		//cap.setCapability("deviceName", "Galaxy S22");
+		//cap.setCapability("udid", "192.168.0.100:5555");
 
 		//cap.setCapability("deviceName", "Galaxy S8");
 		//cap.setCapability("udid", "ce0617163a36ce2401");
 	
 		cap.setCapability("platformName", "Android");
-		cap.setCapability("platformVersion", "12");
+		//cap.setCapability("platformVersion", "12");
 	
 
 		cap.setCapability("appPackage", "com.hanwha.lifeplus.tribes.app.qa");
@@ -61,16 +66,26 @@ public class Deviceinfo extends Hanwhatribes2 {
 		// @갤럭시 폴드
 		//cap.setCapability("udid", "192.168.0.85:5551");
 	
+		cap.setCapability("deviceName", "My Mobile Device");
+		cap.setCapability("udid", udid);
+		cap.setCapability("platformVersion", version);
+		
+		try {
+			driver = new AppiumDriver<MobileElement>(new URL("http:/0.0.0.0:" + port + "/wd/hub"), cap);
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	
 
 		//URL url = new URL("http://0.0.0.0:4720/wd/hub/");
 		
 		//@ 준오 로컬 호스트 전용
-		URL url = new URL("http://localhost:4723/wd/hub/");
+		//URL url = new URL("http://localhost:4723/wd/hub/");
 	
-		driver = new AppiumDriver<MobileElement>(url, cap);
+		//driver = new AppiumDriver<MobileElement>(url, cap);
 	
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		
 	

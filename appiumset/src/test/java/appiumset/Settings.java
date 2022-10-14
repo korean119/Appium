@@ -6,6 +6,11 @@ import io.appium.java_client.MobileElement;
 
 public class Settings extends Hanwhatribes2 {
 	
+	public Settings() {
+		super(port, udid, version);
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void settings() throws MalformedURLException, InterruptedException  {
 		
 		

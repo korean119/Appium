@@ -4,6 +4,11 @@ import java.net.MalformedURLException;
 
 public class Eventtribes extends Hanwhatribes2 {
 	
+	public Eventtribes() {
+		super(port, udid, version);
+		// TODO Auto-generated constructor stub
+	}
+
 	public void Eventtribes() throws MalformedURLException, InterruptedException  {
 
 		

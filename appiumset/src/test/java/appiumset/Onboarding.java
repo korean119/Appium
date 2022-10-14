@@ -5,6 +5,11 @@ import java.net.MalformedURLException;
 import io.appium.java_client.MobileElement;
 
 public class Onboarding extends Hanwhatribes2 { 
+	public Onboarding() {
+		super(port, udid, version);
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void onboarding() throws MalformedURLException, InterruptedException  {
 		
 		

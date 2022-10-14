@@ -11,7 +11,12 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class Deviceinfo2 extends Hanwhatribes2 {
-    public void Deviceinfo2() throws MalformedURLException, InterruptedException  {
+    public Deviceinfo2(String port, String udid, String version) {
+		super(port, udid, version);
+		// TODO Auto-generated constructor stub
+	}
+
+	public void Deviceinfo2() throws MalformedURLException, InterruptedException  {
 		DesiredCapabilities cap = new DesiredCapabilities();
 	
 		cap.setCapability("deviceName", "Galaxy S10");

@@ -8,6 +8,11 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class Tribesdetail extends Hanwhatribes2 {
+	public Tribesdetail() {
+		super(port, udid, version);
+		// TODO Auto-generated constructor stub
+	}
+
 	public static void tribesdetail() throws MalformedURLException, InterruptedException  {
 
 		
