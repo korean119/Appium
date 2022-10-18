@@ -7,7 +7,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class _4_Tribeslist extends _1_Appstart { 
-	public static void tribeslist() throws MalformedURLException, InterruptedException  {
+	public void tribeslist() throws MalformedURLException, InterruptedException  {
 		
 		System.out.println("_4_tribeslist Start");
 		

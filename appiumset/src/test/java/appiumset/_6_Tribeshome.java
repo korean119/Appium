@@ -8,7 +8,7 @@ import io.appium.java_client.touch.offset.PointOption;
 
 public class _6_Tribeshome extends _1_Appstart {
 
-	public static void tribeshome() throws MalformedURLException, InterruptedException  {
+	public void tribeshome() throws MalformedURLException, InterruptedException  {
 
 		System.out.println("_6_tribeshome Start");
 

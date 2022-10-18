@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 import org.openqa.selenium.By;
 import org.openqa.selenium.DeviceRotation;
 import org.openqa.selenium.InvalidSelectorException;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.WebElement;
@@ -23,9 +24,14 @@ import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.interactions.touch.ScrollAction;
 import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 import com.google.j2objc.annotations.ReflectionSupport.Level;
 
@@ -34,22 +40,26 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.NetworkSpeed;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
 
 
 //aa
-public class _1_Appstart {
+public class _1_Appstart extends _2_Deviceinfo {
 	
-	static AppiumDriver<MobileElement> driver;
 	
-	public static void main(String[] args) {
+	@SuppressWarnings("unchecked")
+	@Test
+	public void Appstart() throws InterruptedException, NullPointerException, NoSuchElementException {
 	
 		
-		_2_Deviceinfo a02 = new _2_Deviceinfo();
+		
 		_3_Onboarding a03 = new _3_Onboarding();
 		_4_Tribeslist a04 = new _4_Tribeslist();
 		_5_Tribesdetail a05 = new _5_Tribesdetail();
@@ -62,7 +72,6 @@ public class _1_Appstart {
 		
 		
 		try {
-			a02.Deviceinfo();
 			a03.onboarding();
 			
 			for(int i = 1; true; i = i++) {
@@ -84,6 +93,8 @@ public class _1_Appstart {
 				a08.Eventtribes();
 				a09.Logout();
 			}
+			
+			driver.quit();
 		
 		}catch(Exception exp) {
 			System.out.println(exp.getCause());
