@@ -69,11 +69,11 @@ public class _2_Deviceinfo extends _1_Appstart {
 		//URL url = new URL("http://0.0.0.0:4720/wd/hub/");
 		
 		//@ 준오 로컬 호스트 전용
-		URL url = new URL("http://localhost:4720/wd/hub/");
+		URL url = new URL("http://localhost:4721/wd/hub/");
 	
 		driver = new AppiumDriver<MobileElement>(url, cap);
 	
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		
 	
 		

@@ -34,7 +34,8 @@ public class _6_Tribeshome extends _1_Appstart {
 		MobileElement notification = driver.findElementByAccessibilityId("notification in TopBar");
 		notification.click(); 
 		System.out.println("알림함");
-		
+		Thread.sleep(2000);
+
 		
 		new TouchAction(driver)
 		.longPress(PointOption.point(550, 1340))
