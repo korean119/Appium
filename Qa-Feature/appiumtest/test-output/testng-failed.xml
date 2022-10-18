@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="RealDevice Test2(failed)">
+    <parameter name="activity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"/>
+    <parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"/>
+    <parameter name="appiumServer" value="http://127.0.0.1:5000/wd/hub"/>
+    <parameter name="device" value="192.168.0.130:5555"/>
+    <parameter name="version" value="11"/>
+    <classes>
+      <class name="appiumset._1_Appstart">
+        <methods>
+          <include name="Appstart"/>
+          <include name="tearDown"/>
+          <include name="deviceSetUp"/>
+        </methods>
+      </class> <!-- appiumset._1_Appstart -->
+    </classes>
+  </test> <!-- RealDevice Test2(failed) -->
+  <test thread-count="5" parallel="tests" name="RealDevice Test1(failed)">
+    <parameter name="activity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"/>
+    <parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"/>
+    <parameter name="appiumServer" value="http://127.0.0.1:4723/wd/hub"/>
+    <parameter name="device" value="192.168.0.100:5554"/>
+    <parameter name="version" value="12"/>
+    <classes>
+      <class name="appiumset._1_Appstart">
+        <methods>
+          <include name="Appstart"/>
+          <include name="tearDown"/>
+          <include name="deviceSetUp"/>
+        </methods>
+      </class> <!-- appiumset._1_Appstart -->
+    </classes>
+  </test> <!-- RealDevice Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-18T13:44:45 KST" name="Suite" finished-at="2022-10-18T13:45:31 KST" duration-ms="45048">
+    <groups>
+    </groups>
+    <test started-at="2022-10-18T13:44:45 KST" name="RealDevice Test1" finished-at="2022-10-18T13:45:30 KST" duration-ms="44798">
+      <class name="appiumset._1_Appstart">
+        <test-method is-config="true" signature="deviceSetUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._1_Appstart@6221a451]" started-at="2022-10-18T13:44:46 KST" name="deviceSetUp" finished-at="2022-10-18T13:45:11 KST" duration-ms="25689" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[192.168.0.100:5554]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.hanwha.lifeplus.tribes.app.qa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[com.hanwha.lifeplus.presentation.ui.HomeActivity]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[http://127.0.0.1:4723/wd/hub]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deviceSetUp -->
+        <test-method signature="Appstart()[pri:0, instance:appiumset._1_Appstart@6221a451]" started-at="2022-10-18T13:45:11 KST" name="Appstart" finished-at="2022-10-18T13:45:30 KST" duration-ms="18807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Appstart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:appiumset._1_Appstart@6221a451]" started-at="2022-10-18T13:45:30 KST" name="tearDown" finished-at="2022-10-18T13:45:30 KST" duration-ms="271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- appiumset._1_Appstart -->
+    </test> <!-- RealDevice Test1 -->
+    <test started-at="2022-10-18T13:44:45 KST" name="RealDevice Test2" finished-at="2022-10-18T13:45:31 KST" duration-ms="45048">
+      <class name="appiumset._1_Appstart">
+        <test-method is-config="true" signature="deviceSetUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._1_Appstart@1530c739]" started-at="2022-10-18T13:44:46 KST" name="deviceSetUp" finished-at="2022-10-18T13:45:11 KST" duration-ms="25941" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[192.168.0.130:5555]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.hanwha.lifeplus.tribes.app.qa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[com.hanwha.lifeplus.presentation.ui.HomeActivity]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[http://127.0.0.1:5000/wd/hub]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deviceSetUp -->
+        <test-method signature="Appstart()[pri:0, instance:appiumset._1_Appstart@1530c739]" started-at="2022-10-18T13:45:11 KST" name="Appstart" finished-at="2022-10-18T13:45:31 KST" duration-ms="19089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Appstart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:appiumset._1_Appstart@1530c739]" started-at="2022-10-18T13:45:31 KST" name="tearDown" finished-at="2022-10-18T13:45:31 KST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- appiumset._1_Appstart -->
+    </test> <!-- RealDevice Test2 -->
+  </suite> <!-- Suite -->
+</testng-results>
