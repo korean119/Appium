@@ -22,6 +22,6 @@ System.out.println("_3_Onboarding Start");
 		Thread.sleep(1000);
 		System.out.println("온보딩 버튼 클릭 완료 ");
 		
-		
+		//..
 	}
 }
