@@ -11,12 +11,14 @@ public class _3_Onboarding extends _1_Appstart {
 		
 		
 		MobileElement arrow = driver.findElementByAccessibilityId("화살표");
-		arrow.click();
-		Thread.sleep(1000);
-		arrow.click();
-		Thread.sleep(1000);
-		arrow.click();
-		Thread.sleep(1000);
+		/*
+		 * arrow.click(); Thread.sleep(1000); arrow.click(); Thread.sleep(1000);
+		 * arrow.click(); Thread.sleep(1000);
+		 */
+		while(arrow.isEnabled()) {
+			arrow.click();
+			Thread.sleep(1000);
+		}
 		System.out.println("온보딩 버튼 클릭 완료 ");
 	}
 }
