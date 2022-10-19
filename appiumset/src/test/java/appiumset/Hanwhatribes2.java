@@ -56,27 +56,24 @@ public class Hanwhatribes2 {
 		Tribeshome a05 = new Tribeshome();
 		Settings a06 = new Settings();
 		Eventtribes a07 = new Eventtribes();
-		Logout a08 = new Logout();
-
-		int count = 0;
-		
+		Logout a08 = new Logout();		
 		
 		try {
 			a01.Deviceinfo();
 			a02.onboarding();
 			
-			for(int i = 1; true; i = i++) {
-
-				count = count + i;
-			
-				if( count <= 100) {
-					System.out.println(" <<<<< " + count + " 번째 반복 시작합니다.>>>> ");
+			for(int i=1; i<=3; i++) {
 				
-				}else if(count == 101) {
-					System.out.println( count-1 + "번째 반복 완료 후 종료합니다.");
+				
+				if(i <= 3) {
+					System.out.println(" <<<<< " + i + " 번째 반복 시작합니다.>>>> ");
+				
+				}else if(i > 3) {
+					System.out.println( i + "번째 반복 완료 후 종료합니다.");
 					break;
 					
 				}
+			
 				a03.tribeslist();
 				a04.tribesdetail();
 				a05.tribeshome();

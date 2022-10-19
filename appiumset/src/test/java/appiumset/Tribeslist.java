@@ -1,6 +1,7 @@
 package appiumset;
 
 import java.net.MalformedURLException;
+import java.util.Objects;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
@@ -55,9 +56,8 @@ public class Tribeslist extends Hanwhatribes2 {
 			driver.close();
 			
 		}
-		Thread.sleep(3000);
 		
-		
+
 		if (driver.findElementsByAccessibilityId("out in TopBar")
 				.isEmpty())
 		{System.out.println("Out in Top 없는 상태 확인");
