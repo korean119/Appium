@@ -36,7 +36,7 @@ public class _2_Deviceinfo  {
 			
 			cap.setCapability(MobileCapabilityType.DEVICE_NAME, device);
 			cap.setCapability(MobileCapabilityType.UDID, device);
-			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 120);
+			//cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 120);
 	
 			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
 			//cap.setCapability(MobileCapabilityType., BrowserType.ANDROID);
@@ -53,7 +53,7 @@ public class _2_Deviceinfo  {
 			cap.setCapability("noReset","false");
 			cap.setCapability("FullReset","true");
 		
-			cap.setCapability("APP_WAIT_ACTIVITY", "*");
+			//cap.setCapability("APP_WAIT_ACTIVITY", "*");
 			cap.setCapability("autowebview","false");
 			
 			URL url = new URL(appiumServer);

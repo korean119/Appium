@@ -56,7 +56,7 @@ public class _1_Appstart extends _2_Deviceinfo {
 	
 	@SuppressWarnings("unchecked")
 	@Test
-	public void Appstart() throws InterruptedException, NullPointerException, NoSuchElementException {
+	public void Appstart() throws InterruptedException, NullPointerException/*, NoSuchElementException*/ {
 	
 		
 		
