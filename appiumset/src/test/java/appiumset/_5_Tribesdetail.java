@@ -7,13 +7,10 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class Tribesdetail extends Hanwhatribes2 {
-	public Tribesdetail() {
-		super(port, udid, version);
-		// TODO Auto-generated constructor stub
-	}
-
-	public static void tribesdetail() throws MalformedURLException, InterruptedException  {
+public class _5_Tribesdetail extends _1_Appstart {
+	public void tribesdetail() throws MalformedURLException, InterruptedException  {
+		
+		System.out.println("_5_tribesdetail Start");
 
 		
 		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[5]")
@@ -59,21 +56,19 @@ public class Tribesdetail extends Hanwhatribes2 {
 
 		Set<String> contextNames = driver.getContextHandles();
 		for (String contextName : contextNames) {
-		    System.out.println(contextName); 
-		if((contextName.contains("WEBVIEW_com.hanwha.lifeplus.tribes.app.qa"))) {
-			
+		    System.out.println(contextName); }
+
 			driver.context((String) contextNames.toArray()[1]);
 			System.out.println("웹뷰 진입"); 
 			
 			MobileElement tribesinconfirm = driver.findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button[1]");
 			tribesinconfirm .click();
+			System.out.println("컨펍 팝업 [아니요] 버튼 입력"); 
 			
 			driver.context("NATIVE_APP");
+			Thread.sleep(3000);
+		
 
-			}
-		}
-		
-		
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.ListView/android.view.View/android.view.View/android.widget.Button")
 		.click(); 
 		System.out.println("[시작하기] 버튼 입력");
@@ -82,20 +77,17 @@ public class Tribesdetail extends Hanwhatribes2 {
 		
 		Set<String> contextNames1 = driver.getContextHandles();
 		for (String contextName1 : contextNames1) {
-		    System.out.println(contextName1); 
-		if((contextName1.contains("WEBVIEW_com.hanwha.lifeplus.tribes.app.qa"))) {
+		    System.out.println(contextName1); }	    
 			
 			driver.context((String) contextNames1.toArray()[1]);
 			System.out.println("웹뷰 진입"); 
 			
-			MobileElement tribesinconfirm = driver.findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button[2]");
-			tribesinconfirm .click();
+			MobileElement tribesinconfirm1 = driver.findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button[2]");
+			tribesinconfirm1 .click();
 			System.out.println("컨펌팝업 확인"); 
 			
 			driver.context("NATIVE_APP");
-
-			}
-		}
+			Thread.sleep(3000);
 		
 
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.Button[2]")
@@ -136,8 +128,7 @@ public class Tribesdetail extends Hanwhatribes2 {
 		
 		Set<String> contextNames2 = driver.getContextHandles();
 		for (String contextName2 : contextNames2) {
-		    System.out.println(contextName2); 
-		if((contextName2.contains("WEBVIEW_com.hanwha.lifeplus.tribes.app.qa"))) {
+		    System.out.println(contextName2); }
 			
 			driver.context((String) contextNames2.toArray()[1]);
 			System.out.println("웹뷰 진입"); 
@@ -147,9 +138,8 @@ public class Tribesdetail extends Hanwhatribes2 {
 			System.out.println("미션 완료 팝업 입력"); 
 			
 			driver.context("NATIVE_APP");
-
-			}
-		}
+			Thread.sleep(3000);
+			
 		
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.Button[2]")
 		.click(); 
@@ -169,5 +159,7 @@ public class Tribesdetail extends Hanwhatribes2 {
 		
 		}
 		
-	
 }
+
+
+

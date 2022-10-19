@@ -6,16 +6,11 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class Tribeshome extends Hanwhatribes2 {
+public class _6_Tribeshome extends _1_Appstart {
 
+	public void tribeshome() throws MalformedURLException, InterruptedException  {
 
-
-	public Tribeshome() {
-		super(port, udid, version);
-		// TODO Auto-generated constructor stub
-	}
-
-	public static void tribeshome() throws MalformedURLException, InterruptedException  {
+		System.out.println("_6_tribeshome Start");
 
 		
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]")
@@ -39,7 +34,8 @@ public class Tribeshome extends Hanwhatribes2 {
 		MobileElement notification = driver.findElementByAccessibilityId("notification in TopBar");
 		notification.click(); 
 		System.out.println("알림함");
-		
+		Thread.sleep(2000);
+
 		
 		new TouchAction(driver)
 		.longPress(PointOption.point(550, 1340))

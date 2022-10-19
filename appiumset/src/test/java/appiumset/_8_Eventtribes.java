@@ -2,13 +2,8 @@ package appiumset;
 
 import java.net.MalformedURLException;
 
-public class Eventtribes extends Hanwhatribes2 {
+public class _8_Eventtribes extends _1_Appstart {
 	
-	public Eventtribes() {
-		super(port, udid, version);
-		// TODO Auto-generated constructor stub
-	}
-
 	public void Eventtribes() throws MalformedURLException, InterruptedException  {
 
 		
