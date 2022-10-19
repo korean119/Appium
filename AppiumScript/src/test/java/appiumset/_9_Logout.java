@@ -4,7 +4,7 @@ import java.net.MalformedURLException;
 
 import io.appium.java_client.MobileElement;
 
-public class _9_Logout extends _1_Appstarter {
+public class _9_Logout extends Appstarter {
 	public void Logout() throws MalformedURLException, InterruptedException {
 		MobileElement settings3 = driver.findElementByAccessibilityId("setting in TopBar");
 		settings3.click();

@@ -2,7 +2,7 @@ package appiumset;
 
 import java.net.MalformedURLException;
 
-public class _8_Eventtribes extends _1_Appstarter {
+public class _8_Eventtribes extends Appstarter {
 	
 	public void Eventtribes() throws MalformedURLException, InterruptedException  {
 

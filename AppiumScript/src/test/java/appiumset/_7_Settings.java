@@ -4,7 +4,7 @@ import java.net.MalformedURLException;
 
 import io.appium.java_client.MobileElement;
 
-public class _7_Settings extends _1_Appstarter {
+public class _7_Settings extends Appstarter {
 	
 	public static void settings() throws MalformedURLException, InterruptedException  {
 		

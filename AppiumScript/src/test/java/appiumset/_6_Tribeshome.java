@@ -6,7 +6,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class _6_Tribeshome extends _1_Appstarter {
+public class _6_Tribeshome extends Appstarter {
 
 	public static void tribeshome() throws MalformedURLException, InterruptedException  {
 

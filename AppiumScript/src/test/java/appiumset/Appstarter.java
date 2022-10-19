@@ -42,7 +42,7 @@ import io.appium.java_client.touch.offset.PointOption;
 
 
 
-public class _1_Appstarter {
+public class Appstarter {
 	
 	static AppiumDriver<MobileElement> driver;
 	
