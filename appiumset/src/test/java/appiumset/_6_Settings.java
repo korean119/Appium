@@ -4,7 +4,7 @@ import java.net.MalformedURLException;
 
 import io.appium.java_client.MobileElement;
 
-public class Settings extends Hanwhatribes2 {
+public class _6_Settings extends _0_Automation_Main {
 	
 	public static void settings() throws MalformedURLException, InterruptedException  {
 		

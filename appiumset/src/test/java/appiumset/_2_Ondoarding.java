@@ -4,7 +4,7 @@ import java.net.MalformedURLException;
 
 import io.appium.java_client.MobileElement;
 
-public class Ondoarding extends Hanwhatribes2 { 
+public class _2_Ondoarding extends _0_Automation_Main { 
 	public static void onboarding() throws MalformedURLException, InterruptedException  {
 		
 		MobileElement arrow = driver.findElementByAccessibilityId("화살표");

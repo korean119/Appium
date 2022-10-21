@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class Deviceinfo extends Hanwhatribes2 {
+public class _1_Deviceinfo extends _0_Automation_Main {
     public void Deviceinfo() throws MalformedURLException, InterruptedException  {
 		DesiredCapabilities cap = new DesiredCapabilities();
 	

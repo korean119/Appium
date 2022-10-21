@@ -42,21 +42,21 @@ import io.appium.java_client.touch.offset.PointOption;
 
 
 //aa
-public class Hanwhatribes2 {
+public class _0_Automation_Main {
 	
 	static AppiumDriver<MobileElement> driver;
 	
 	public static void main(String[] args) {
 	
 		
-		Deviceinfo a01 = new Deviceinfo();
-		Ondoarding a02 = new Ondoarding();
-		Tribeslist a03 = new Tribeslist();
-		Tribesdetail a04 = new Tribesdetail();
-		Tribeshome a05 = new Tribeshome();
-		Settings a06 = new Settings();
-		Eventtribes a07 = new Eventtribes();
-		Logout a08 = new Logout();
+		_1_Deviceinfo a01 = new _1_Deviceinfo();
+		_2_Ondoarding a02 = new _2_Ondoarding();
+		_3_Tribeslist a03 = new _3_Tribeslist();
+		_4_Tribesdetail a04 = new _4_Tribesdetail();
+		_5_Tribeshome a05 = new _5_Tribeshome();
+		_6_Settings a06 = new _6_Settings();
+		_7_Eventtribes a07 = new _7_Eventtribes();
+		_8_Logout a08 = new _8_Logout();
 
 		int count = 0;
 		
