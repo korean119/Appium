@@ -15,7 +15,7 @@ public class _0_Automation_Main {
 		
 		_1_Deviceinfo a01 = new _1_Deviceinfo();
 		_2_Ondoarding a02 = new _2_Ondoarding();
-		_3_SingUp a03 = new _3_SingUp();
+		_3_SignUp a03 = new _3_SignUp();
 		_4_Tribeslist a04 = new _4_Tribeslist();
 		_5_Tribesdetail a05 = new _5_Tribesdetail();
 		_6_Tribeshome a06 = new _6_Tribeshome();
@@ -29,7 +29,7 @@ public class _0_Automation_Main {
 		try {
 			a01.Deviceinfo();
 			a02.onboarding();
-			a03.SingUp();
+			a03.SignUp();
 			for(int i = 1; true; i = i++) {
 
 				count = count + i;
