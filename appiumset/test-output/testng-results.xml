@@ -2,65 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-25T11:00:02 KST" name="Suite" finished-at="2022-10-25T11:00:20 KST" duration-ms="18131">
+  <suite started-at="2022-10-25T14:14:00 KST" name="Suite" finished-at="2022-10-25T14:15:29 KST" duration-ms="88514">
     <groups>
     </groups>
-    <test started-at="2022-10-25T11:00:02 KST" name="Device1" finished-at="2022-10-25T11:00:19 KST" duration-ms="17056">
+    <test started-at="2022-10-25T14:14:00 KST" name="Device2" finished-at="2022-10-25T14:14:45 KST" duration-ms="44818">
       <class name="appiumset._0_Automation_Main">
-        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@16610890]" started-at="2022-10-25T11:00:02 KST" name="Deviceinfo" finished-at="2022-10-25T11:00:19 KST" duration-ms="17021" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[R3CT201CM7A]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[com.hanwha.lifeplus.tribes.app.qa]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[com.hanwha.lifeplus.presentation.ui.HomeActivity]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[12]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[http://0.0.0.0:4723/wd/hub]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[8201]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Android]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Deviceinfo -->
-        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@16610890]" started-at="2022-10-25T11:00:19 KST" name="main" finished-at="2022-10-25T11:00:19 KST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- main -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:appiumset._0_Automation_Main@16610890]" started-at="2022-10-25T11:00:19 KST" name="tearDown" finished-at="2022-10-25T11:00:19 KST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- appiumset._0_Automation_Main -->
-    </test> <!-- Device1 -->
-    <test started-at="2022-10-25T11:00:02 KST" name="Device2" finished-at="2022-10-25T11:00:20 KST" duration-ms="18131">
-      <class name="appiumset._0_Automation_Main">
-        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@428640fa]" started-at="2022-10-25T11:00:02 KST" name="Deviceinfo" finished-at="2022-10-25T11:00:20 KST" duration-ms="18104" status="PASS">
+        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@55a147cc]" started-at="2022-10-25T14:14:00 KST" name="Deviceinfo" finished-at="2022-10-25T14:14:07 KST" duration-ms="7303" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -101,15 +48,68 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Deviceinfo -->
-        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@428640fa]" started-at="2022-10-25T11:00:20 KST" name="main" finished-at="2022-10-25T11:00:20 KST" duration-ms="1" status="PASS">
+        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@55a147cc]" started-at="2022-10-25T14:14:07 KST" name="main" finished-at="2022-10-25T14:14:45 KST" duration-ms="37474" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:appiumset._0_Automation_Main@428640fa]" started-at="2022-10-25T11:00:20 KST" name="tearDown" finished-at="2022-10-25T11:00:20 KST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:appiumset._0_Automation_Main@55a147cc]" started-at="2022-10-25T14:14:45 KST" name="tearDown" finished-at="2022-10-25T14:14:45 KST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- appiumset._0_Automation_Main -->
     </test> <!-- Device2 -->
+    <test started-at="2022-10-25T14:14:00 KST" name="Device1" finished-at="2022-10-25T14:15:29 KST" duration-ms="88514">
+      <class name="appiumset._0_Automation_Main">
+        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@7c711375]" started-at="2022-10-25T14:14:00 KST" name="Deviceinfo" finished-at="2022-10-25T14:14:07 KST" duration-ms="7102" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[R3CT201CM7A]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.hanwha.lifeplus.tribes.app.qa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[com.hanwha.lifeplus.presentation.ui.HomeActivity]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[http://0.0.0.0:4723/wd/hub]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[8201]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Deviceinfo -->
+        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@7c711375]" started-at="2022-10-25T14:14:07 KST" name="main" finished-at="2022-10-25T14:15:29 KST" duration-ms="81375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:appiumset._0_Automation_Main@7c711375]" started-at="2022-10-25T14:15:29 KST" name="tearDown" finished-at="2022-10-25T14:15:29 KST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- appiumset._0_Automation_Main -->
+    </test> <!-- Device1 -->
   </suite> <!-- Suite -->
 </testng-results>
