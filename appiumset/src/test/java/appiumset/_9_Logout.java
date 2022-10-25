@@ -4,7 +4,7 @@ import java.net.MalformedURLException;
 
 import io.appium.java_client.MobileElement;
 
-public class _8_Logout extends _0_Automation_Main {
+public class _9_Logout extends _0_Automation_Main {
 	public void Logout() throws MalformedURLException, InterruptedException {
 		
 		System.out.println("<<Loggout 진행>>");

@@ -3,11 +3,12 @@ package appiumset;
 import java.net.MalformedURLException;
 import java.util.Set;
 
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class _4_Tribesdetail extends _0_Automation_Main {
+public class _5_Tribesdetail extends _0_Automation_Main {
 	public static void tribesdetail() throws MalformedURLException, InterruptedException  {
 		
 		System.out.println("<<Tribes_detail 진행>>");
