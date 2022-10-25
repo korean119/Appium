@@ -149,7 +149,7 @@ public class _6_Settings extends _0_Automation_Main {
 		back6.click();
 		System.out.println("설정 Back key");
 		
-		
+
 	}
 
 }

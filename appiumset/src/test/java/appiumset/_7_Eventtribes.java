@@ -29,6 +29,8 @@ public class _7_Eventtribes extends _0_Automation_Main {
 		.click(); 
 		System.out.println("트라이브 홈 탭 ");
 	
+		
+
 	}
 
 }

@@ -10,7 +10,7 @@ import io.appium.java_client.touch.offset.PointOption;
 
 public class _3_Tribeslist extends _0_Automation_Main { 
 	public static void tribeslist() throws MalformedURLException, InterruptedException  {
-		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver(); 
+//		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver(); 
 		System.out.println("<<Tribes_list 진행>>");
 		
 		MobileElement kakao = driver.findElementByAccessibilityId("카카오로 시작하기 로고");
@@ -77,6 +77,6 @@ public class _3_Tribeslist extends _0_Automation_Main {
 		back.click();
 		System.out.println("TopBar Back"); 
 		Thread.sleep(2000);
-		
+//		AppiumDriverManager.removeDriver();
 	}
 }

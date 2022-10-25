@@ -160,7 +160,7 @@ public class _5_Tribeshome extends _0_Automation_Main {
 		back1.click();
 		System.out.println("TopBar Back"); 
 		
-		
+		AppiumDriverManager.removeDriver();
 	}
 	
 }

@@ -16,7 +16,13 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 	@Test
 	public static void main(/* String[] args */) {
 	
-		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver(); 
+		
+		
+//		AppiumDriver<MobileElement> driver = null;
+//		
+//		driver = AppiumDriverManager.getDriver();
+		
+
 		
 		_1_Deviceinfo a01 = new _1_Deviceinfo();
 		_2_Ondoarding a02 = new _2_Ondoarding();
@@ -59,6 +65,7 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 			System.out.println(exp.getMessage());
 			exp.printStackTrace();	
 		}
+		
 	}
 
 		

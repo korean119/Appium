@@ -12,7 +12,13 @@ import org.testng.annotations.Parameters;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class _1_Deviceinfo {
+public class _1_Deviceinfo extends AppiumDriverManager {
+	
+	
+	
+	
+	
+	
 	
 	
 //	private AppiumDriver<MobileElement> driver;
@@ -24,13 +30,15 @@ public class _1_Deviceinfo {
 		
 		
 		
-//		AppiumDriverManager.setDriver(driver);
-//		AppiumDriverManager.getDriver.get();
+		
+		
+//		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver();
+//		AppiumDriver<MobileElement> driver;
 		
 		System.out.println("****************************************");
 		System.out.println("Setting up device and desired capabilities");
 		
-		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver();
+		
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 	
@@ -93,7 +101,7 @@ public class _1_Deviceinfo {
 	
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-	
+		AppiumDriverManager.removeDriver();
     }
 	
 	
@@ -101,5 +109,6 @@ public class _1_Deviceinfo {
 	public void tearDown() {
 		if (AppiumDriverManager.getDriver() != null)
 			AppiumDriverManager.getDriver().quit();
+			AppiumDriverManager.removeDriver();
 	}
 }

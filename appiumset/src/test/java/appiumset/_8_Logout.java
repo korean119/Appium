@@ -8,7 +8,7 @@ import io.appium.java_client.MobileElement;
 public class _8_Logout extends _0_Automation_Main {
 	public void Logout() throws MalformedURLException, InterruptedException {
 		
-		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver(); 
+		
 		
 		System.out.println("<<Loggout 진행>>");
 		
@@ -24,6 +24,7 @@ public class _8_Logout extends _0_Automation_Main {
 		.click(); 
 		System.out.println("컨펌 팝업 나가기 ");
 			
-		}
+		
 	}
+}
 
