@@ -1,4 +1,4 @@
-package appiumset;
+/*package appiumset;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -13,19 +13,17 @@ public class AppiumDriverManager {
 	}
 	
 
-	
 	public static AppiumDriver<MobileElement> getDriver() {
         return appiumDriver.get();
     }
 	
 	public static AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver();
+	*/
 	
-	
-	
-	public static void removeDriver() {
+//	public static void removeDriver() {
 //		driver.get().quit();
-		appiumDriver.remove();
-	}
+//		appiumDriver.remove();
+	
 //	private static ThreadLocal<AppiumDriver> driver = new ThreadLocal<>();
 //	
 //	
@@ -36,4 +34,4 @@ public class AppiumDriverManager {
 //		return this.driver.get();
 //	}
 
-}
+

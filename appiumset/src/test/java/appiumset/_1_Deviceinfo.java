@@ -12,47 +12,39 @@ import org.testng.annotations.Parameters;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class _1_Deviceinfo extends AppiumDriverManager {
+public class _1_Deviceinfo {
 	
 	
+	protected static ThreadLocal<AppiumDriver<MobileElement>> driver = new ThreadLocal<>();
 	
+	public void setDriver(AppiumDriver<MobileElement> driver) { 
+		this.driver.set(driver);
+	}
 	
-	
-	
-	
-	
-//	private AppiumDriver<MobileElement> driver;
 
+	public  AppiumDriver<MobileElement> getDriver() {
+        return this.driver.get();
+    }
+	
+	
+	
 	@Parameters({"device", "apppackage", "appActivity","platformVersion","appiumServer" , "systemPort", "platformName"})
 	@BeforeMethod
     public void Deviceinfo(String device, String apppackage, String appActivity, String platformVersion, String appiumServer, String systemPort, String platformName) throws MalformedURLException, InterruptedException  {
 		
-		
-		
-		
-		
-		
-//		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver();
-//		AppiumDriver<MobileElement> driver;
-		
 		System.out.println("****************************************");
 		System.out.println("Setting up device and desired capabilities");
 		
-		
-		
 		DesiredCapabilities cap = new DesiredCapabilities();
 	
+		
 		cap.setCapability("deviceName", device);
 		cap.setCapability("udid", device);
 		cap.setCapability("systemPort", systemPort);
-
-		//cap.setCapability("deviceName", "Galaxy S8");
-		//cap.setCapability("udid", "ce0617163a36ce2401");
 	
 		cap.setCapability("platformName", platformName);
 		cap.setCapability("platformVersion", platformVersion);
 	
-
 		cap.setCapability("appPackage", apppackage);
 		cap.setCapability("appActivity", appActivity);
 	
@@ -62,9 +54,6 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 		cap.setCapability("FullReset","true");
 	
 		cap.setCapability("APP_WAIT_ACTIVITY", "*");
-
-		//cap.setCapability("browserName", "Chrome");
-	
 		//@ 이건 뭐하는거지
 		//cap.setCapability("skipUnlock","true");
 	
@@ -84,33 +73,19 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 		//@ 앱을 초기화 할지 안할지 설정 -- true 기본값 -- 준오 근데 잘 되는지는 안봤음
 		//cap.setCapability("autoLaunch", "true");
 	
-		// @갤럭시 플립
-		//cap.setCapability("udid", "192.168.0.121:5550");
-	
-		// @갤럭시 폴드
-		//cap.setCapability("udid", "192.168.0.85:5551");
-	
-	
-
-		//URL url = new URL("http://0.0.0.0:4720/wd/hub/");
-		
-		//@ 준오 로컬 호스트 전용
 		URL url = new URL(appiumServer);
 	
-		driver = new AppiumDriver<MobileElement>(url, cap);
+		setDriver(new AppiumDriver<MobileElement>(url, cap));
 	
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
-		AppiumDriverManager.removeDriver();
+	//	AppiumDriverManager.removeDriver();
 		
-		
+	}
     }
 	
-	
-	@AfterMethod
-	public void tearDown() {
-		if (AppiumDriverManager.getDriver() != null)
-			AppiumDriverManager.getDriver().quit();
-			AppiumDriverManager.removeDriver();
-	}
-}
+/*
+ * @AfterMethod public void tearDown() { if (AppiumDriverManager.getDriver() !=
+ * null) AppiumDriverManager.getDriver().quit(); //
+ * AppiumDriverManager.removeDriver(); } }
+ */

@@ -1,0 +1,3 @@
+D:\JavaProjects\Qa-Feature\AppiumGridSetup\node1.json
+
+D:\JavaProjects\Qa-Feature\AppiumGridSetup\node2.json

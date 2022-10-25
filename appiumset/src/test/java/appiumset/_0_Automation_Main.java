@@ -11,22 +11,17 @@ import io.appium.java_client.MobileElement;
 
 public class _0_Automation_Main extends _1_Deviceinfo{
 	
-	
+
 	
 	@Test
 	public static void main(/* String[] args */) {
 	
-		
-		
 //		AppiumDriver<MobileElement> driver = null;
 //		
 //		driver = AppiumDriverManager.getDriver();
 		
-
-		
-		_1_Deviceinfo a01 = new _1_Deviceinfo();
 		_2_Ondoarding a02 = new _2_Ondoarding();
-		_3_SignUp a03 = new _3_SignUp();
+		//_3_SignUp a03 = new _3_SignUp();
 		_4_Tribeslist a04 = new _4_Tribeslist();
 		_5_Tribesdetail a05 = new _5_Tribesdetail();
 		_6_Tribeshome a06 = new _6_Tribeshome();
@@ -38,9 +33,8 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 		
 		
 		try {
-//			a01.Deviceinfo();
 			a02.onboarding();
-			a03.SignUp();
+			//a03.SignUp();
 			for(int i = 1; true; i = i++) {
 
 				count = count + i;
