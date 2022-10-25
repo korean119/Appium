@@ -3,13 +3,14 @@ package appiumset;
 import java.net.MalformedURLException;
 import java.util.Set;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class _4_Tribesdetail extends _0_Automation_Main {
 	public static void tribesdetail() throws MalformedURLException, InterruptedException  {
-		
+		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver(); 
 		System.out.println("<<Tribes_detail 진행>>");
 
 		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[5]")

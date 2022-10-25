@@ -2,10 +2,13 @@ package appiumset;
 
 import java.net.MalformedURLException;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 public class _8_Logout extends _0_Automation_Main {
 	public void Logout() throws MalformedURLException, InterruptedException {
+		
+		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver(); 
 		
 		System.out.println("<<Loggout 진행>>");
 		

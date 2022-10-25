@@ -5,26 +5,48 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class _1_Deviceinfo extends _0_Automation_Main {
-    public void Deviceinfo() throws MalformedURLException, InterruptedException  {
+public class _1_Deviceinfo {
+	
+	
+//	private AppiumDriver<MobileElement> driver;
+
+	@Parameters({"device", "apppackage", "appActivity","platformVersion","appiumServer" , "systemPort", "platformName"})
+	@BeforeMethod
+    public void Deviceinfo(String device, String apppackage, String appActivity, String platformVersion, String appiumServer, String systemPort, String platformName) throws MalformedURLException, InterruptedException  {
+		
+		
+		
+		
+//		AppiumDriverManager.setDriver(driver);
+//		AppiumDriverManager.getDriver.get();
+		
+		System.out.println("****************************************");
+		System.out.println("Setting up device and desired capabilities");
+		
+		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver();
+		
 		DesiredCapabilities cap = new DesiredCapabilities();
 	
-		cap.setCapability("deviceName", "Galaxy S20 FE 5G");
-		cap.setCapability("udid", "R3CN90RNF8M");
+		cap.setCapability("deviceName", device);
+		cap.setCapability("udid", device);
+		cap.setCapability("systemPort", systemPort);
 
 		//cap.setCapability("deviceName", "Galaxy S8");
 		//cap.setCapability("udid", "ce0617163a36ce2401");
 	
-		cap.setCapability("platformName", "Android");
-		cap.setCapability("platformVersion", "12");
+		cap.setCapability("platformName", platformName);
+		cap.setCapability("platformVersion", platformVersion);
 	
 
-		cap.setCapability("appPackage", "com.hanwha.lifeplus.tribes.app.qa");
-		cap.setCapability("appActivity", "com.hanwha.lifeplus.presentation.ui.HomeActivity");
+		cap.setCapability("appPackage", apppackage);
+		cap.setCapability("appActivity", appActivity);
 	
 		cap.setCapability("automationName", "UiAutomator2");
 
@@ -65,7 +87,7 @@ public class _1_Deviceinfo extends _0_Automation_Main {
 		//URL url = new URL("http://0.0.0.0:4720/wd/hub/");
 		
 		//@ 준오 로컬 호스트 전용
-		URL url = new URL("http://localhost:4723/wd/hub/");
+		URL url = new URL(appiumServer);
 	
 		driver = new AppiumDriver<MobileElement>(url, cap);
 	
@@ -73,4 +95,11 @@ public class _1_Deviceinfo extends _0_Automation_Main {
 		
 	
     }
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		if (AppiumDriverManager.getDriver() != null)
+			AppiumDriverManager.getDriver().quit();
+	}
 }

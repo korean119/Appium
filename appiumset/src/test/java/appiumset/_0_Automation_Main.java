@@ -1,53 +1,22 @@
 package appiumset;
 
-// github token : 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
-// https://jigneshparmar.com/blog/appium-capture-screenshot-and-read-the-text-from-the-imageocr
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.time.Duration;
-import java.util.Arrays;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.DeviceRotation;
-import org.openqa.selenium.InvalidSelectorException;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.ScreenOrientation;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.PointerInput;
-import org.openqa.selenium.interactions.Sequence;
-import org.openqa.selenium.interactions.touch.ScrollAction;
-import org.openqa.selenium.interactions.touch.TouchActions;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.google.j2objc.annotations.ReflectionSupport.Level;
+import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.android.NetworkSpeed;
-import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.PointOption;
 
 
 
 //aa
-public class _0_Automation_Main {
+public class _0_Automation_Main extends _1_Deviceinfo{
 	
-	static AppiumDriver<MobileElement> driver;
 	
-	public static void main(String[] args) {
 	
+	
+	@Test
+	public static void main(/* String[] args */) {
+	
+		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver(); 
 		
 		_1_Deviceinfo a01 = new _1_Deviceinfo();
 		_2_Ondoarding a02 = new _2_Ondoarding();
@@ -62,7 +31,7 @@ public class _0_Automation_Main {
 		
 		
 		try {
-			a01.Deviceinfo();
+//			a01.Deviceinfo();
 			a02.onboarding();
 			
 			for(int i = 1; true; i = i++) {
