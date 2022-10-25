@@ -102,6 +102,8 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		AppiumDriverManager.removeDriver();
+		
+		
     }
 	
 	

@@ -18,7 +18,7 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		MobileElement kakao = driver.findElementByAccessibilityId("카카오로 시작하기 로고");
 		kakao.click();
 		System.out.println("카카오 클릭 완료");
-		 		                 
+		Thread.sleep(3000);              
 
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
 		.click();
@@ -45,10 +45,12 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[1]")
 		.click();
 		System.out.println("러닝 트라이브 진입");
+		Thread.sleep(1000);
 		
 		if (driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView")
 				.isDisplayed())
 		{System.out.println("토스트 팝업 존재");
+		Thread.sleep(2000);
 		
 		MobileElement toastView = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView");
 		String text = toastView.getText();
@@ -56,8 +58,10 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		}else{
 			System.out.println("토스트 팝업 없음 -- 이슈");  //@ xpath.isDisplayed로 하면 xpath 자체가 없는걸로 인식되어 fail 됨 = else 미출력 후 에러 상태 
 			driver.close();
-			
+			Thread.sleep(2000);
 		}
+		
+		
 		
 		if (driver.findElementsByAccessibilityId("out in TopBar")
 				.isEmpty())
