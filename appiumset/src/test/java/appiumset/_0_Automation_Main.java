@@ -1,17 +1,28 @@
 package appiumset;
 
+
+import org.testng.annotations.Test;
+
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 
 
-//1123
-public class _0_Automation_Main {
+public class _0_Automation_Main extends _1_Deviceinfo{
 	
-	static AppiumDriver<MobileElement> driver;
 	
-	public static void main(String[] args) {
 	
+	@Test
+	public static void main(/* String[] args */) {
+	
+		
+		
+//		AppiumDriver<MobileElement> driver = null;
+//		
+//		driver = AppiumDriverManager.getDriver();
+		
+
 		
 		_1_Deviceinfo a01 = new _1_Deviceinfo();
 		_2_Ondoarding a02 = new _2_Ondoarding();
@@ -27,7 +38,7 @@ public class _0_Automation_Main {
 		
 		
 		try {
-			a01.Deviceinfo();
+//			a01.Deviceinfo();
 			a02.onboarding();
 			a03.SignUp();
 			for(int i = 1; true; i = i++) {
@@ -55,6 +66,7 @@ public class _0_Automation_Main {
 			System.out.println(exp.getMessage());
 			exp.printStackTrace();	
 		}
+		
 	}
 
 		
