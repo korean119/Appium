@@ -3,16 +3,14 @@ package appiumset;
 import java.net.MalformedURLException;
 import java.util.Objects;
 
-import org.openqa.selenium.InvalidSelectorException;
-
-import io.appium.java_client.MobileBy;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class _4_Tribeslist extends _0_Automation_Main { 
+public class _3_Tribeslist extends _0_Automation_Main { 
 	public static void tribeslist() throws MalformedURLException, InterruptedException  {
-		
+//		AppiumDriver<MobileElement> driver = AppiumDriverManager.getDriver(); 
 		System.out.println("<<Tribes_list 진행>>");
 		
 		MobileElement kakao = driver.findElementByAccessibilityId("카카오로 시작하기 로고");
@@ -46,6 +44,7 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		.click();
 		System.out.println("러닝 트라이브 진입");
 		
+		
 		if (driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView")
 				.isDisplayed())
 		{System.out.println("토스트 팝업 존재");
@@ -59,6 +58,7 @@ public class _4_Tribeslist extends _0_Automation_Main {
 			
 		}
 		
+
 		if (driver.findElementsByAccessibilityId("out in TopBar")
 				.isEmpty())
 		{System.out.println("Out in Top 없는 상태 확인");
@@ -71,9 +71,12 @@ public class _4_Tribeslist extends _0_Automation_Main {
 			driver.close();
 			
 		}
+		
+			
 		MobileElement back = driver.findElementByAccessibilityId("Up button in TopBar");
 		back.click();
 		System.out.println("TopBar Back"); 
 		Thread.sleep(2000);
+//		AppiumDriverManager.removeDriver();
 	}
 }

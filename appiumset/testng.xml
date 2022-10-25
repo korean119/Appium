@@ -3,13 +3,13 @@
 <suite name="Suite" parallel="tests" thread-count="2">
   <test name="Device1"  >
   <!-- S22 : 192.168.0.100:5554 / R3CT201CM7A-->
-  	<parameter name="device" value="R3CN90RNF8M"></parameter>
+  	<parameter name="device" value="R3CT201CM7A"></parameter>
   	<parameter name="platformName" value="Android"></parameter>
   	<parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"></parameter>	
   	<parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"></parameter>	
   	<parameter name="platformVersion" value="12"></parameter>	
-  	<parameter name="systemPort" value="8208"/>
-  	<parameter name="appiumServer" value="http://0.0.0.0:4823/wd/hub"></parameter>
+  	<parameter name="systemPort" value="8201"/>
+  	<parameter name="appiumServer" value="http://0.0.0.0:4723/wd/hub"></parameter>
   	<classes>
   		<class name="appiumset._0_Automation_Main"></class>
   	</classes>
@@ -17,13 +17,13 @@
   
   <test name="Device2"  >
   <!-- S10 : 192.168.0.130:5555 / R39M20CG24R-->
-  	<parameter name="device" value="R3CRB0JNBQA"></parameter>
+  	<parameter name="device" value="R39M20CG24R"></parameter>
   	<parameter name="platformName" value="Android"></parameter>
   	<parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"></parameter>	
   	<parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"></parameter>	
-  	<parameter name="platformVersion" value="12"></parameter>	
-  	<parameter name="systemPort" value="8209"/>
-  	<parameter name="appiumServer" value="http://0.0.0.0:4824/wd/hub"></parameter>
+  	<parameter name="platformVersion" value="11"></parameter>	
+  	<parameter name="systemPort" value="8202"/>
+  	<parameter name="appiumServer" value="http://0.0.0.0:5000/wd/hub"></parameter>
   	<classes>
   		<class name="appiumset._0_Automation_Main"></class>
   	</classes>
