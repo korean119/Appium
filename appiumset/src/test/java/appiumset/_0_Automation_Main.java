@@ -20,7 +20,7 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 //		
 //		driver = AppiumDriverManager.getDriver();
 		
-		_2_Ondoarding a02 = new _2_Ondoarding();
+		_2_Onboarding a02 = new _2_Onboarding();
 		_3_SignUp a03 = new _3_SignUp();
 		_4_Tribeslist a04 = new _4_Tribeslist();
 		_5_Tribesdetail a05 = new _5_Tribesdetail();
@@ -48,6 +48,7 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 					break;
 					
 				}
+
 				a04.tribeslist();
 				a05.tribesdetail();
 				/*

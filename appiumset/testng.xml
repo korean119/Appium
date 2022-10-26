@@ -2,28 +2,40 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="tests" thread-count="2">
   <test name="Device1"  >
+<<<<<<< HEAD
   <!-- 신준오 회사 정보 갤럭시 Z플립 -->
   	<parameter name="device" value="R3CRB0JNBQA"></parameter>
+=======
+  <!-- S22 : 192.168.0.100:5554 / R3CT201CM7A-->
+  	<parameter name="device" value="R3CN90RNF8M"></parameter>
+>>>>>>> refs/remotes/origin/main
   	<parameter name="platformName" value="Android"></parameter>
   	<parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"></parameter>	
   	<parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"></parameter>	
   	<parameter name="platformVersion" value="12"></parameter>	
   	<parameter name="systemPort" value="8208"/>
-  	<parameter name="appiumServer" value="http://0.0.0.0:4720/wd/hub"></parameter>
+  	<parameter name="appiumServer" value="http://0.0.0.0:4823/wd/hub"></parameter>
+
   	<classes>
   		<class name="appiumset._0_Automation_Main"></class>
   	</classes>
   </test> <!-- Test -->
   
   <test name="Device2"  >
+<<<<<<< HEAD
   <!-- 신준오 회사 정보 갤럭시 갤럭시 9 -->
   	<parameter name="device" value="ce0617163a36ce2401"></parameter>
+=======
+  <!-- S10 : 192.168.0.130:5555 / R39M20CG24R-->
+  	<parameter name="device" value="R39M20CG24R"></parameter>
+>>>>>>> refs/remotes/origin/main
   	<parameter name="platformName" value="Android"></parameter>
   	<parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"></parameter>	
   	<parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"></parameter>	
-  	<parameter name="platformVersion" value="9"></parameter>	
+  	<parameter name="platformVersion" value="11"></parameter>	
   	<parameter name="systemPort" value="8209"/>
-  	<parameter name="appiumServer" value="http://0.0.0.0:4721/wd/hub"></parameter>
+  	<parameter name="appiumServer" value="http://0.0.0.0:4824/wd/hub"></parameter>
+
   	<classes>
   		<class name="appiumset._0_Automation_Main"></class>
   	</classes>

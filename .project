@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Qa8</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>
+=======
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>Qa</name>
@@ -9,3 +22,4 @@
 	<natures>
 	</natures>
 </projectDescription>
+>>>>>>> branch 'main' of https://github.com/korean119/Qa.git

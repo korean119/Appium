@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+<<<<<<< HEAD
   <test thread-count="2" parallel="tests" name="Device1(failed)">
     <parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"/>
     <parameter name="platformVersion" value="12"/>
@@ -18,13 +19,19 @@
       </class> <!-- appiumset._0_Automation_Main -->
     </classes>
   </test> <!-- Device1(failed) -->
+=======
+>>>>>>> refs/remotes/origin/main
   <test thread-count="2" parallel="tests" name="Device2(failed)">
     <parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"/>
-    <parameter name="platformVersion" value="9"/>
+    <parameter name="platformVersion" value="11"/>
     <parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"/>
+<<<<<<< HEAD
     <parameter name="appiumServer" value="http://0.0.0.0:4721/wd/hub"/>
+=======
+    <parameter name="appiumServer" value="http://0.0.0.0:4824/wd/hub"/>
+>>>>>>> refs/remotes/origin/main
     <parameter name="platformName" value="Android"/>
-    <parameter name="device" value="ce0617163a36ce2401"/>
+    <parameter name="device" value="R39M20CG24R"/>
     <parameter name="systemPort" value="8209"/>
     <classes>
       <class name="appiumset._0_Automation_Main">
