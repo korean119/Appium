@@ -1,12 +1,27 @@
-/*package appiumset;
+package appiumset;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 public class AppiumDriverManager {
 	
+	protected static ThreadLocal<AppiumDriver<MobileElement>> driver = new ThreadLocal<>();
 	
-	private static ThreadLocal<AppiumDriver<MobileElement>> appiumDriver = new ThreadLocal<>();
+	public void setDriver(AppiumDriver<MobileElement> driver) { 
+		this.driver.set(driver);
+	}
+	
+
+	public  AppiumDriver<MobileElement> getDriver() {
+        return this.driver.get();
+    
+	}
+
+}
+
+
+	
+/*	private static ThreadLocal<AppiumDriver<MobileElement>> appiumDriver = new ThreadLocal<>();
 	
 	public static void setDriver(AppiumDriver<MobileElement> driver) { 
 		appiumDriver.set(driver);
