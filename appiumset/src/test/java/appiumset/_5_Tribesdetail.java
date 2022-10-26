@@ -22,6 +22,7 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 				.isDisplayed()) 
 		{
 		System.out.println("토스트 팝업 존재");
+
 		
 		MobileElement toastView = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView");
 		String text = toastView.getText();
@@ -58,8 +59,9 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		Set<String> contextNames = driver.get().getContextHandles();
 		for (String contextName : contextNames) {
 		    System.out.println(contextName); }
-		
+
 		driver.get().context((String) contextNames.toArray()[1]);
+
 			System.out.println("웹뷰 진입"); 
 			MobileElement tribesinconfirm = driver.get().findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button[1]");
 			tribesinconfirm .click();
@@ -68,6 +70,7 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 			driver.get().context("NATIVE_APP");
 			Thread.sleep(3000);
 	
+
 			driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.ListView/android.view.View/android.view.View/android.widget.Button")
 		.click(); 
 		System.out.println("[시작하기] 버튼 입력");

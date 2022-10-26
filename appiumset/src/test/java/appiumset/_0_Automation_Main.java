@@ -48,6 +48,7 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 					break;
 					
 				}
+
 				a04.tribeslist();
 				a05.tribesdetail();
 				/*

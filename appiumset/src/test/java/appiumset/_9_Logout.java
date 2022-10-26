@@ -12,7 +12,9 @@ public class _9_Logout extends _0_Automation_Main {
 		
 		System.out.println("<<Loggout 진행>>");
 		
-		MobileElement settings3 = driver.get().findElementByAccessibilityId("setting in TopBpackage appiumset");
+
+		MobileElement settings3 = driver.get().findElementByAccessibilityId("setting in TopBar");
+
 		settings3.click();
 		System.out.println("설정 입력3");
 
