@@ -2,10 +2,11 @@ package appiumset;
 
 import java.net.MalformedURLException;
 
-public class _8_Eventtribes extends _1_Appstart {
+public class _8_Eventtribes extends _0_Automation_Main {
 	
 	public void Eventtribes() throws MalformedURLException, InterruptedException  {
 
+		System.out.println("<<Event_tribes 진행>>");
 		
 		driver.findElementByXPath("	/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[3]")
 		.click(); 

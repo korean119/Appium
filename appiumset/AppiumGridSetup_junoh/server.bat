@@ -1,0 +1,1 @@
+java -jar C:\Users\tncls\git\Qa1\appiumset\AppiumGridSetup_junoh\selenium-server-standalone-3.141.59.jar -role hub

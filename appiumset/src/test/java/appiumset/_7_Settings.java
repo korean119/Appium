@@ -4,19 +4,62 @@ import java.net.MalformedURLException;
 
 import io.appium.java_client.MobileElement;
 
-public class _7_Settings extends _1_Appstart {
+public class _7_Settings extends _0_Automation_Main {
 	
-	public void settings() throws MalformedURLException, InterruptedException  {
+	public static void settings() throws MalformedURLException, InterruptedException  {
 		
 		
-		System.out.println("_7_settings Start");
-
 		
 		MobileElement settings = driver.findElementByAccessibilityId("setting in TopBar");
 		settings.click(); 
 		System.out.println("설정 입력");
 	
-	
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]/android.widget.TextView")
+		.click(); 
+		System.out.println("설정 > 자주 묻는 질문");
+		
+		MobileElement button = driver.findElementByAccessibilityId("1:1 문의하기");
+		button.click();
+		System.out.println("1:1문의하기 버튼 입력");
+		
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[5]/android.widget.TextView")
+		.click(); 
+		System.out.println("사진 첨부하기 입력");
+		
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.HorizontalScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.ImageView")
+		.click(); 
+		System.out.println("[갤러리] 버튼 입력");
+		Thread.sleep(3000);
+		
+		
+		driver.findElementByXPath("(//android.widget.FrameLayout[@content-desc=\"버튼\"])[1]/android.widget.FrameLayout[1]/android.widget.ImageView")
+		.click(); 
+		System.out.println("이미지 선택");
+		Thread.sleep(3000);
+		
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[6]/android.widget.Button").click();
+				
+		System.out.println("사진 첨부하기 입력");
+
+		driver.findElementsByXPath("//a[contains(@aria-label, '첨부 이미지 삭제')]");
+		System.out.println("첨부 이미지 삭제");
+
+		
+		
+		
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
+		.click(); 
+		System.out.println("1:1문의 > 자주 묻는 질문");
+		
+		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
+		.click(); 
+		System.out.println("자주 묻는 질문 > 설정");
+		
+		
+		
+		public static void settings_jaju() throws MalformedURLException, InterruptedException  {
+		
+		
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[2]/android.widget.TextView")
 		.click(); 
 		System.out.println("설정 > 알림설정 진입");
