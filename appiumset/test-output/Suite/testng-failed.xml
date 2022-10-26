@@ -5,7 +5,7 @@
     <parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"/>
     <parameter name="platformVersion" value="12"/>
     <parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"/>
-    <parameter name="appiumServer" value="http://0.0.0.0:4723/wd/hub"/>
+    <parameter name="appiumServer" value="http://0.0.0.0:4720/wd/hub"/>
     <parameter name="platformName" value="Android"/>
     <parameter name="device" value="R3CRB0JNBQA"/>
     <parameter name="systemPort" value="8208"/>
@@ -22,7 +22,7 @@
     <parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"/>
     <parameter name="platformVersion" value="9"/>
     <parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"/>
-    <parameter name="appiumServer" value="http://0.0.0.0:4722/wd/hub"/>
+    <parameter name="appiumServer" value="http://0.0.0.0:4721/wd/hub"/>
     <parameter name="platformName" value="Android"/>
     <parameter name="device" value="ce0617163a36ce2401"/>
     <parameter name="systemPort" value="8209"/>
