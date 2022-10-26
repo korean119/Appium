@@ -12,20 +12,7 @@ import org.testng.annotations.Parameters;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
-public class _1_Deviceinfo {
-	
-	
-	protected static ThreadLocal<AppiumDriver<MobileElement>> driver = new ThreadLocal<>();
-	
-	public void setDriver(AppiumDriver<MobileElement> driver) { 
-		this.driver.set(driver);
-	}
-	
-
-	public  AppiumDriver<MobileElement> getDriver() {
-        return this.driver.get();
-    }
-	
+public class _1_Deviceinfo extends AppiumDriverManager {
 	
 	
 	@Parameters({"device", "apppackage", "appActivity","platformVersion","appiumServer" , "systemPort", "platformName"})

@@ -1,12 +1,6 @@
 package appiumset;
 
 import java.net.MalformedURLException;
-import java.util.Objects;
-import java.util.Set;
-
-import org.openqa.selenium.InvalidSelectorException;
-
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
@@ -16,39 +10,36 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		
 		System.out.println("<<Tribes_list 진행>>");
 		
-		MobileElement kakao = driver.get().findElementByAccessibilityId("카카오로 시작하기 로고");
-		kakao.click();
-		System.out.println("카카오 클릭 완료");
-		Thread.sleep(3000);              
-
-		Set<String> contextNames = driver.get().getContextHandles();
-		for (String contextName : contextNames) {
-		    System.out.println(contextName); }
-			
-		driver.get().context((String) contextNames.toArray()[1]);
-			System.out.println("웹뷰 진입"); 
-			
-			driver.get().findElementByXPath("//*[@id=\"mArticle\"]/div/div/div[2]/form/button")
-			.click();
-			System.out.println("카카오 계속하기 클릭 완료 ");
-			Thread.sleep(3000);
-			
-			System.out.println("컨펌팝업 확인"); 
-			
-			driver.get().context("NATIVE_APP");
-			Thread.sleep(3000);
-		
-		
-			/*
-			 * driver.get().findElementByXPath(
-			 * "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
-			 * .click(); System.out.println("카카오 계속하기 클릭 완료 "); Thread.sleep(3000);
-			 */
-		
-		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]")
 		.click();	
 		System.out.println("트라이브 목록 탭");
+		
+		
+		MobileElement notificationinTopBar = driver.get().findElementByAccessibilityId("notification in TopBar");
+		notificationinTopBar.click();
+		System.out.println("[알림] 버튼 입력"); 
+		
+		
+		MobileElement back_UpbuttoninTopBar = driver.get().findElementByAccessibilityId("Up button in TopBar");
+		back_UpbuttoninTopBar.click();
+		System.out.println("[Back] 버튼 입력"); 
+		
+		
+		//@ 원하는 추천 혜택에 들어가서 정합성 여부 판단 필요
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View/android.view.View")
+		.click();	
+		System.out.println("추천혜택 영역 탭");
+		
+		
+		/* @ 정합성 필요 
+		 * MobileElement element = driver.get().findElement(MobileBy.AndroidUIAutomator(
+		 * "new UiScrollable(new UiSelector().scrollable(true))" +
+		 * ".scrollIntoView(new UiSelector().textContains(\"진행중\"))"));
+		 */
+		
+		
+		back_UpbuttoninTopBar.click();
+		System.out.println("[Back] 버튼 입력"); 
 		
 		
 		new TouchAction(driver.get())
@@ -57,7 +48,6 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		.moveTo(PointOption.point(550, 60))
 		.release()
 		.perform();
-		
 		System.out.println("스크롤 동작");
 		Thread.sleep(2000);
 		
@@ -95,9 +85,9 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		}
 		
 		
-		MobileElement back = driver.get().findElementByAccessibilityId("Up button in TopBar");
-		back.click();
-		System.out.println("TopBar Back"); 
-		Thread.sleep(2000);
+		back_UpbuttoninTopBar.click();
+		System.out.println("[Back] 버튼 입력"); 
+		
+	
 	}
 }

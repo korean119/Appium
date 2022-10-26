@@ -10,6 +10,7 @@
   	<parameter name="platformVersion" value="12"></parameter>	
   	<parameter name="systemPort" value="8208"/>
   	<parameter name="appiumServer" value="http://0.0.0.0:4823/wd/hub"></parameter>
+
   	<classes>
   		<class name="appiumset._0_Automation_Main"></class>
   	</classes>
@@ -24,6 +25,7 @@
   	<parameter name="platformVersion" value="11"></parameter>	
   	<parameter name="systemPort" value="8209"/>
   	<parameter name="appiumServer" value="http://0.0.0.0:4824/wd/hub"></parameter>
+
   	<classes>
   		<class name="appiumset._0_Automation_Main"></class>
   	</classes>

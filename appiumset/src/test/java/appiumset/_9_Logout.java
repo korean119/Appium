@@ -7,9 +7,14 @@ import io.appium.java_client.MobileElement;
 public class _9_Logout extends _0_Automation_Main {
 	public void Logout() throws MalformedURLException, InterruptedException {
 		
+		
+	
+		
 		System.out.println("<<Loggout 진행>>");
 		
+
 		MobileElement settings3 = driver.get().findElementByAccessibilityId("setting in TopBar");
+
 		settings3.click();
 		System.out.println("설정 입력3");
 
@@ -23,4 +28,5 @@ public class _9_Logout extends _0_Automation_Main {
 			
 		}
 	}
+
 
