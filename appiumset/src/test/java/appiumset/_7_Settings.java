@@ -44,6 +44,9 @@ public class _7_Settings extends _0_Automation_Main {
 		driver.findElementsByXPath("//a[contains(@aria-label, '첨부 이미지 삭제')]");
 		System.out.println("첨부 이미지 삭제");
 
+		
+		
+		
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
 		.click(); 
 		System.out.println("1:1문의 > 자주 묻는 질문");
@@ -51,6 +54,11 @@ public class _7_Settings extends _0_Automation_Main {
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
 		.click(); 
 		System.out.println("자주 묻는 질문 > 설정");
+		
+		
+		
+		public static void settings_jaju() throws MalformedURLException, InterruptedException  {
+		
 		
 		driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[2]/android.widget.TextView")
 		.click(); 
