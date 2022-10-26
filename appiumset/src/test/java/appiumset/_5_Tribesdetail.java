@@ -13,7 +13,7 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		
 		System.out.println("<<Tribes_detail 진행>>");
 
-		driver.findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[5]")
+		driver.get().findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[5]")
 		.click();
 		System.out.println("뮤직 트라이브 진입");
 		
