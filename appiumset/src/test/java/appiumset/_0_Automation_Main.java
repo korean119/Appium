@@ -22,12 +22,11 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 		
 		_2_Onboarding a02 = new _2_Onboarding();
 		_3_SignUp a03 = new _3_SignUp();
-		_4_Tribeslist a04 = new _4_Tribeslist();
-		_5_Tribesdetail a05 = new _5_Tribesdetail();
-		/*
-		 * _6_Tribeshome a06 = new _6_Tribeshome(); _7_Settings a07 = new _7_Settings();
-		 * _8_Eventtribes a08 = new _8_Eventtribes();
-		 */
+		//_4_Tribeslist a04 = new _4_Tribeslist();
+		//_5_Tribesdetail a05 = new _5_Tribesdetail();
+		//_6_Tribeshome a06 = new _6_Tribeshome(); 
+		_7_Settings a07 = new _7_Settings();
+		_8_Eventtribes a08 = new _8_Eventtribes();
 		_9_Logout a09 = new _9_Logout();
 
 		int count = 0;
@@ -49,11 +48,11 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 					
 				}
 
-				a04.tribeslist();
-				a05.tribesdetail();
-				/*
-				 * a06.tribeshome(); a07.settings(); a08.Eventtribes();
-				 */
+				//a04.tribeslist();
+				//a05.tribesdetail();
+				//a06.tribeshome(); 
+				a07.settings(); 
+				a08.Eventtribes();
 				a09.Logout();
 			}
 		

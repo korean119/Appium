@@ -1,0 +1,3 @@
+D:\Qa3\Qa\appiumset\AppiumGridSetup\node1.json
+
+D:\Qa3\Qa\appiumset\AppiumGridSetup\node2.json
