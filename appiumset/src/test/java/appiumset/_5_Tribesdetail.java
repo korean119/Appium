@@ -2,8 +2,6 @@ package appiumset;
 
 import java.net.MalformedURLException;
 import java.util.Set;
-
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
@@ -19,8 +17,7 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		
 		
 		if (driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView")
-				.isDisplayed()) 
-		{
+				.isDisplayed()) {
 		System.out.println("토스트 팝업 존재");
 
 		
@@ -37,7 +34,7 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		new TouchAction(driver.get())
 		.longPress(PointOption.point(550, 1600))
 		.waitAction()
-		.moveTo(PointOption.point(550, 60))
+		.moveTo(PointOption.point(550, 20))
 		.release()
 		.perform();
 		System.out.println("스크롤 동작");
@@ -59,19 +56,18 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		Set<String> contextNames = driver.get().getContextHandles();
 		for (String contextName : contextNames) {
 		    System.out.println(contextName); }
-
+		
 		driver.get().context((String) contextNames.toArray()[1]);
-
-			System.out.println("웹뷰 진입"); 
-			MobileElement tribesinconfirm = driver.get().findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button[1]");
-			tribesinconfirm .click();
-			System.out.println("컨펌팝업 확인"); 
+		System.out.println("웹뷰 진입"); 
+		
+		MobileElement tribesinconfirm = driver.get().findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button[1]");
+		tribesinconfirm .click();
+		System.out.println("컨펌팝업 확인"); 
 			
-			driver.get().context("NATIVE_APP");
-			Thread.sleep(3000);
+		driver.get().context("NATIVE_APP");
+		Thread.sleep(3000);
 	
-
-			driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.ListView/android.view.View/android.view.View/android.widget.Button")
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.ListView/android.view.View/android.view.View/android.widget.Button")
 		.click(); 
 		System.out.println("[시작하기] 버튼 입력");
 		Thread.sleep(3000);
@@ -80,22 +76,18 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		Set<String> contextNames1 = driver.get().getContextHandles();
 		for (String contextName1 : contextNames1) {
 		    System.out.println(contextName1); }
-		//if((contextName1.contains("WEBVIEW_com.hanwha.lifeplus.tribes.app.qa"))) {
 			
 		driver.get().context((String) contextNames1.toArray()[1]);
-			System.out.println("웹뷰 진입"); 
+		System.out.println("웹뷰 진입"); 
 			
-			MobileElement tribesinconfirm1 = driver.get().findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button[2]");
-			tribesinconfirm1 .click();
-			System.out.println("컨펌팝업 확인"); 
-			
-			driver.get().context("NATIVE_APP");
-
-			Thread.sleep(3000);
-		
+		MobileElement tribesinconfirm1 = driver.get().findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button[2]");
+		tribesinconfirm1 .click();
+		System.out.println("컨펌팝업 확인"); 
+		driver.get().context("NATIVE_APP");
+		Thread.sleep(3000);
 		
 
-			driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.Button[2]")
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.Button[2]")
 		.click(); 
 		System.out.println("우측 상단 [X] 버튼 입력");
 		Thread.sleep(3000);
@@ -134,21 +126,19 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		Set<String> contextNames2 = driver.get().getContextHandles();
 		for (String contextName2 : contextNames2) {
 		    System.out.println(contextName2); }
-		//if((contextName2.contains("WEBVIEW_com.hanwha.lifeplus.tribes.app.qa"))) {
 			
 		driver.get().context((String) contextNames2.toArray()[1]);
-			System.out.println("웹뷰 진입"); 
+		System.out.println("웹뷰 진입"); 
 			
-			MobileElement imagedone = driver.get().findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button");
-			imagedone .click();
-			System.out.println("미션 완료 팝업 입력"); 
+		MobileElement imagedone = driver.get().findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button");
+		imagedone .click();
+		System.out.println("미션 완료 팝업 입력"); 
 			
-			driver.get().context("NATIVE_APP");
-
-			Thread.sleep(3000);
+		driver.get().context("NATIVE_APP");
+		Thread.sleep(3000);
 		
 		
-			driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.Button[2]")
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.Button[2]")
 		.click(); 
 		System.out.println("우측 상단 [X] 버튼 입력");
 		Thread.sleep(3000);

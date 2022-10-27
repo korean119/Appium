@@ -7,7 +7,6 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class _6_Tribeshome extends _0_Automation_Main {
-
 	public static void tribeshome() throws MalformedURLException, InterruptedException  {
 
 		System.out.println("<<Tribes_home 진행>>");

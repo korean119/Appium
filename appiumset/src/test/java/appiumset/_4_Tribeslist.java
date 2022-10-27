@@ -37,9 +37,13 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		 * ".scrollIntoView(new UiSelector().textContains(\"진행중\"))"));
 		 */
 		
+		driver.get().navigate().back();
+		System.out.println("안드로이드 H/K Back");
+		Thread.sleep(2000);
 		
-		back_UpbuttoninTopBar.click();
-		System.out.println("[Back] 버튼 입력"); 
+		/*
+		 * back_UpbuttoninTopBar.click(); System.out.println("[Back] 버튼 입력");
+		 */
 		
 		
 		new TouchAction(driver.get())
@@ -85,9 +89,11 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		}
 		
 		
-		back_UpbuttoninTopBar.click();
-		System.out.println("[Back] 버튼 입력"); 
+		driver.get().navigate().back();
+		System.out.println("안드로이드 H/K Back");
+		Thread.sleep(2000);
 		
+	
 	
 	}
 }

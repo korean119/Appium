@@ -1,5 +1,7 @@
 package appiumset;
 
+import java.util.concurrent.TimeUnit;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
@@ -15,6 +17,8 @@ public class AppiumDriverManager {
 	public  AppiumDriver<MobileElement> getDriver() {
         return this.driver.get();
     
+        
+        
 	}
 
 }
