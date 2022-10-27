@@ -11,7 +11,7 @@ public class _7_Settings extends _0_Automation_Main {
 		
 		System.out.println("<< Settings 진행>>");
 		
-		//-----------------------
+		/*-----------------------
 		
 		MobileElement kakao = driver.get().findElementByAccessibilityId("카카오로 시작하기 로고");
 		kakao.click();
@@ -35,7 +35,7 @@ public class _7_Settings extends _0_Automation_Main {
 			driver.get().context("NATIVE_APP");
 			Thread.sleep(3000);
 		
-		//-----------------------
+		//----------------------- */
 		
 		MobileElement settings = driver.get().findElementByAccessibilityId("setting in TopBar");
 		settings.click(); 
@@ -137,22 +137,18 @@ public class _7_Settings extends _0_Automation_Main {
 		signout.click(); 
 		System.out.println("탈퇴 [여기] 버튼 입력");
 		
-		MobileElement Xbutton = driver.get().findElementByAccessibilityId("	\r\n"
-				+ "00000000-0000-055b-0000-009200000004");
-		Xbutton.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		
-			
-		//중복 닉네임 얼럿 확인 방법, 비속어 얼럿 확인 방법(엑셀파일 외부 라이브러리로 import?)
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView")
+		.click(); 
+		System.out.println("[X] 버튼 입력 -> 회원정보 관리");
+		
 		
 		MobileElement back5 = driver.get().findElementByAccessibilityId("Up button in TopBar");
 		back5.click(); 
-		System.out.println("회원정보 관리 Back key"); 
+		System.out.println("[Back key] 입력 -> 설정"); 
 		
-		
-		MobileElement back6 = driver.get().findElementByAccessibilityId("Up button in TopBar");
-		back6.click();
-		System.out.println("설정 Back key");
+
 		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[2]/android.widget.TextView")
 		.click(); 
@@ -223,6 +219,8 @@ public class _7_Settings extends _0_Automation_Main {
 		MobileElement button = driver.get().findElementByAccessibilityId("1:1 문의하기");
 		button.click();
 		System.out.println("1:1문의하기 버튼 입력");
+		Thread.sleep(2000);
+		
 		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[5]/android.widget.TextView")
 		.click(); 
@@ -239,9 +237,6 @@ public class _7_Settings extends _0_Automation_Main {
 		System.out.println("이미지 선택");
 		Thread.sleep(3000);
 		
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[6]/android.widget.Button").click();
-				
-		System.out.println("사진 첨부하기 입력");
 
 		driver.get().findElementsByXPath("//a[contains(@aria-label, '첨부 이미지 삭제')]");
 		System.out.println("첨부 이미지 삭제");
@@ -254,7 +249,9 @@ public class _7_Settings extends _0_Automation_Main {
 		.click(); 
 		System.out.println("자주 묻는 질문 > 설정");
 		
-		
+		MobileElement back6 = driver.get().findElementByAccessibilityId("Up button in TopBar");
+		back6.click(); 
+		System.out.println("[Back key] 설정 -> MY트라이브");
 	}
 
 }

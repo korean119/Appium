@@ -7,8 +7,8 @@
 			"maxInstances": 1,
 			"platformName": "Android",
 			"automationName": "UiAutomator2",
-			"systemPort": "8203",
-			"devcieName": "R3CRB0JNBQA"
+			"systemPort": "8208",
+			"devcieName": "R3CN90RNF8M"
 		}
 	],
 	"configuration":
@@ -16,14 +16,14 @@
 		"cleanUpCycle": 2000,
 		"timeout": 30000,
 		"proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
-		"url": "http://0.0.0.0:4720/wd/hub",
+		"url": "http://0.0.0.0:4823/wd/hub",
 		"host": "0.0.0.0",
-		"port": 4720,
+		"port": 4823,
 		"maxSession": 1,
 		"register": true,
 		"registerCycle": 5000,
-		"hubPort": 4444,
-		"hubHost": "192.168.0.83",
+		"hubPort": 4822,
+		"hubHost": "192.168.0.118",
 		"hubProtocol": "http"
 	}
 }

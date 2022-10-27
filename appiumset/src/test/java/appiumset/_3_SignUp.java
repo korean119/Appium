@@ -5,7 +5,7 @@
   io.appium.java_client.MobileElement;
   
   
-  public class _3_SignUp extends _0_Automation_Main { public static void
+  public class _3_SignUp extends AppiumDriverManager { public static void
   SignUp() throws MalformedURLException, InterruptedException {
   
 	  // @ 갤럭시 9에서 Context 전환하지 않으면 버튼 입력 되지 않아 전체 스크립트에 Context 변경 추가
