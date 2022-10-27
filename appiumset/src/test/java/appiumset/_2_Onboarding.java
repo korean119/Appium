@@ -12,15 +12,17 @@ public class _2_Onboarding extends AppiumDriverManager {
 		
 		MobileElement arrow = driver.get().findElementByAccessibilityId("화살표");
 		arrow.click(); 
-		System.out.println("온보딩 1 클릭 ");
+		System.out.println("P# 온보딩 화면_[>] 버튼 입력");
 		Thread.sleep(2000); 
 		
+		//@정합성 필요 
+		
 		arrow.click(); 
-	    System.out.println("온보딩 2 클릭 ");
+	    System.out.println("P# 온보딩 화면_[>] 버튼2 입력");
 	    Thread.sleep(2000); 
 	    
 		arrow.click(); 
-		System.out.println("온보딩 3 클릭 ");
+		System.out.println("P# 온보딩 화면_[>] 버튼3 입력");
 		Thread.sleep(2000); 
 
 	}

@@ -12,23 +12,23 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]")
 		.click();	
-		System.out.println("트라이브 목록 탭");
+		System.out.println("P# 메인화면_트라이브 목록 탭");
 		
 		
 		MobileElement notificationinTopBar = driver.get().findElementByAccessibilityId("notification in TopBar");
 		notificationinTopBar.click();
-		System.out.println("[알림] 버튼 입력"); 
+		System.out.println("P# 트라이브 목록 화면_[알림] 버튼 입력"); 
 		
 		
 		MobileElement back_UpbuttoninTopBar = driver.get().findElementByAccessibilityId("Up button in TopBar");
 		back_UpbuttoninTopBar.click();
-		System.out.println("[Back] 버튼 입력"); 
+		System.out.println("P# 알림함 화면_[Back] 버튼 입력"); 
 		
 		
 		//@ 원하는 추천 혜택에 들어가서 정합성 여부 판단 필요
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View/android.view.View")
 		.click();	
-		System.out.println("추천혜택 영역 탭");
+		System.out.println("P# 트라이브 목록 화면_추천혜택 영역 탭");
 		
 		
 		/* @ 정합성 필요 
@@ -38,7 +38,7 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		 */
 		
 		driver.get().navigate().back();
-		System.out.println("안드로이드 H/K Back");
+		System.out.println("S# 안드로이드 H/K Back");
 		Thread.sleep(2000);
 		
 		/*
