@@ -5,8 +5,10 @@
   import io.appium.java_client.MobileElement;
   
   
+
   public class _3_SignUp extends AppiumDriverManager { 
 	  public static void SignUp() throws MalformedURLException, InterruptedException {
+
   
 		  System.out.println("<SignUp 진행>>");
 	

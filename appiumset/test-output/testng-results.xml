@@ -8,6 +8,7 @@
     <test started-at="2022-10-27T10:15:22 KST" name="Device1" finished-at="2022-10-27T10:15:59 KST" duration-ms="36130">
       <class name="appiumset._0_Automation_Main">
         <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@485966cc]" started-at="2022-10-27T10:15:23 KST" name="Deviceinfo" finished-at="2022-10-27T10:15:30 KST" duration-ms="7990" status="PASS">
+
           <params>
             <param index="0">
               <value>
@@ -49,6 +50,7 @@
           </reporter-output>
         </test-method> <!-- Deviceinfo -->
         <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@485966cc]" started-at="2022-10-27T10:15:30 KST" name="main" finished-at="2022-10-27T10:15:59 KST" duration-ms="28109" status="PASS">
+        
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
@@ -57,6 +59,7 @@
     <test started-at="2022-10-27T10:15:22 KST" name="Device2" finished-at="2022-10-27T10:16:03 KST" duration-ms="40665">
       <class name="appiumset._0_Automation_Main">
         <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@20140db9]" started-at="2022-10-27T10:15:23 KST" name="Deviceinfo" finished-at="2022-10-27T10:15:37 KST" duration-ms="14357" status="PASS">
+
           <params>
             <param index="0">
               <value>
@@ -97,8 +100,9 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Deviceinfo -->
+
         <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@20140db9]" started-at="2022-10-27T10:15:37 KST" name="main" finished-at="2022-10-27T10:16:03 KST" duration-ms="26282" status="PASS">
-          <reporter-output>
+                 <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
       </class> <!-- appiumset._0_Automation_Main -->
