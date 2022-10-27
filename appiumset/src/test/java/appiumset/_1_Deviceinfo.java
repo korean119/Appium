@@ -3,17 +3,13 @@ package appiumset;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 public class _1_Deviceinfo extends AppiumDriverManager {
-	
 	
 	@Parameters({"device", "apppackage", "appActivity","platformVersion","appiumServer" , "systemPort", "platformName"})
 	@BeforeMethod
@@ -24,7 +20,6 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 	
-		
 		cap.setCapability("deviceName", device);
 		cap.setCapability("udid", device);
 		cap.setCapability("systemPort", systemPort);
@@ -41,21 +36,16 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 		cap.setCapability("FullReset","true");
 	
 		cap.setCapability("APP_WAIT_ACTIVITY", "*");
-		//@ 이건 뭐하는거지
-		//cap.setCapability("skipUnlock","true");
-	
-		//
 		cap.setCapability("autowebview","false");
 	
-
-		//@ 데이터 속도 최고 느리게 , 적용 되는지는 잘 모르겠음
+		//@ 데이터 속도 최고 느리게 -- 준오 적용 되는지는 잘 모르겠음
 		//cap.setCapability("networkSpeed", "gsm");
 	
-		//@ 권한을 자동으로 결정하고 설치 시 앱에 부여 합니다
+		//@ 권한을 자동으로 결정하고 설치 시 앱에 부여 합니다 -- 준오 적용되는지는 잘 모르게음
 		//cap.setCapability("ATUO_GRANT_REMISSIONS", "true");
 	
 		//@ 버전 체크 후 설치, 재설치 판단 -- fail 버전 같을 시 재설치 안함
-			//cap.setCapability("enforceAppinstall", "fail");
+		//cap.setCapability("enforceAppinstall", "fail");
 		
 		//@ 앱을 초기화 할지 안할지 설정 -- true 기본값 -- 준오 근데 잘 되는지는 안봤음
 		//cap.setCapability("autoLaunch", "true");
@@ -64,7 +54,9 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 	
 		setDriver(new AppiumDriver<MobileElement>(url, cap));
 	
+		
 		driver.get().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
 		
 	//	AppiumDriverManager.removeDriver();
 		
