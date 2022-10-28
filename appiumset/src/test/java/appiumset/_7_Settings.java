@@ -240,14 +240,17 @@ public class _7_Settings extends _0_Automation_Main {
 
 		driver.get().findElementsByXPath("//a[contains(@aria-label, '첨부 이미지 삭제')]");
 		System.out.println("첨부 이미지 삭제");
+		
 
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
 		.click(); 
 		System.out.println("1:1문의 > 자주 묻는 질문");
 		
+		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
 		.click(); 
 		System.out.println("자주 묻는 질문 > 설정");
+		
 		
 		MobileElement back6 = driver.get().findElementByAccessibilityId("Up button in TopBar");
 		back6.click(); 

@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import io.appium.java_client.AppiumDriver;
@@ -55,7 +56,8 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 		setDriver(new AppiumDriver<MobileElement>(url, cap));
 	
 		
-		driver.get().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.get().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 	
 		
 	//	AppiumDriverManager.removeDriver();
