@@ -27,7 +27,7 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		.click();	
 		System.out.println("P# 메인화면_트라이브 목록 탭");
 		
-		
+		/*
 		MobileElement notificationinTopBar = driver.get().findElementByAccessibilityId("notification in TopBar");
 		notificationinTopBar.click();
 		System.out.println("P# 트라이브 목록 화면_[알림] 버튼 입력"); 
@@ -44,13 +44,14 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		System.out.println("P# 트라이브 목록 화면_추천혜택 영역 탭");
 		Thread.sleep(2000); // H/K 사용 Sleep 사용 
 
+
 		
 		driver.get().navigate().back();
 		System.out.println("S# 트라이브 목록 화면_안드로이드 H/K Back");
 		Thread.sleep(2000);
 		
 	
-		
+		*/
 		
 		new TouchAction(driver.get())
 		.longPress(PointOption.point(550, 1340))
