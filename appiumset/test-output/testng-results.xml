@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="1" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-31T17:50:59 KST" name="Suite" finished-at="2022-10-31T17:52:05 KST" duration-ms="65658">
+  <suite started-at="2022-10-31T21:31:30 KST" name="Suite" finished-at="2022-10-31T21:32:41 KST" duration-ms="71706">
     <groups>
     </groups>
-    <test started-at="2022-10-31T17:50:59 KST" name="Device2" finished-at="2022-10-31T17:51:01 KST" duration-ms="2434">
+    <test started-at="2022-10-31T21:31:30 KST" name="Device2" finished-at="2022-10-31T21:31:32 KST" duration-ms="2336">
       <class name="appiumset._0_Automation_Main">
-        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@20140db9]" started-at="2022-10-31T17:50:59 KST" name="Deviceinfo" finished-at="2022-10-31T17:51:01 KST" duration-ms="2390" status="FAIL">
+        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@20140db9]" started-at="2022-10-31T21:31:30 KST" name="Deviceinfo" finished-at="2022-10-31T21:31:32 KST" duration-ms="2308" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -49,13 +49,13 @@
             <message>
               <![CDATA[Connection refused: no further information
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-H9VDVB7', ip: '192.168.0.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+System info: host: 'DESKTOP-F3B2TKP', ip: '112.148.26.247', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
 Driver info: driver.version: AppiumDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-H9VDVB7', ip: '192.168.0.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+System info: host: 'DESKTOP-F3B2TKP', ip: '112.148.26.247', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
 Driver info: driver.version: AppiumDriver
 at io.appium.java_client.remote.AppiumCommandExecutor.lambda$5(AppiumCommandExecutor.java:251)
 at java.base/java.util.Optional.orElseGet(Optional.java:364)
@@ -138,18 +138,18 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Deviceinfo -->
-        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@20140db9]" started-at="2022-10-31T17:51:01 KST" name="main" finished-at="2022-10-31T17:51:01 KST" duration-ms="0" status="SKIP">
+        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@20140db9]" started-at="2022-10-31T21:31:32 KST" name="main" finished-at="2022-10-31T21:31:32 KST" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[Connection refused: no further information
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-H9VDVB7', ip: '192.168.0.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+System info: host: 'DESKTOP-F3B2TKP', ip: '112.148.26.247', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
 Driver info: driver.version: AppiumDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-H9VDVB7', ip: '192.168.0.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+System info: host: 'DESKTOP-F3B2TKP', ip: '112.148.26.247', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
 Driver info: driver.version: AppiumDriver
 at io.appium.java_client.remote.AppiumCommandExecutor.lambda$5(AppiumCommandExecutor.java:251)
 at java.base/java.util.Optional.orElseGet(Optional.java:364)
@@ -234,9 +234,9 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
         </test-method> <!-- main -->
       </class> <!-- appiumset._0_Automation_Main -->
     </test> <!-- Device2 -->
-    <test started-at="2022-10-31T17:50:59 KST" name="Device1" finished-at="2022-10-31T17:52:05 KST" duration-ms="65658">
+    <test started-at="2022-10-31T21:31:30 KST" name="Device1" finished-at="2022-10-31T21:32:41 KST" duration-ms="71706">
       <class name="appiumset._0_Automation_Main">
-        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@485966cc]" started-at="2022-10-31T17:50:59 KST" name="Deviceinfo" finished-at="2022-10-31T17:51:06 KST" duration-ms="7227" status="PASS">
+        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@485966cc]" started-at="2022-10-31T21:31:30 KST" name="Deviceinfo" finished-at="2022-10-31T21:31:37 KST" duration-ms="6907" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -277,7 +277,7 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Deviceinfo -->
-        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@485966cc]" started-at="2022-10-31T17:51:06 KST" name="main" finished-at="2022-10-31T17:52:05 KST" duration-ms="58400" status="PASS">
+        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@485966cc]" started-at="2022-10-31T21:31:37 KST" name="main" finished-at="2022-10-31T21:32:41 KST" duration-ms="64783" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
