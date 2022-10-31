@@ -1,8 +1,6 @@
 package appiumset;
 
 import java.net.MalformedURLException;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,10 +17,10 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		
 		
 		MobileElement Sheetclose = driver.get().findElementByAccessibilityId("시트 닫기");
-		wait.until(ExpectedConditions.visibilityOf(Sheetclose))
-		.click();    
+		wait.until(ExpectedConditions.visibilityOf(Sheetclose)).click();    
 		System.out.println("P# 메인화면_시트 닫기 동작");
 		
+		Thread.sleep(3000);
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]")
 		.click();	
 		System.out.println("P# 메인화면_트라이브 목록 탭");

@@ -1,18 +1,14 @@
 package appiumset;
 
 import java.net.MalformedURLException;
-import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
@@ -26,7 +22,7 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		WebDriverWait wait = new WebDriverWait(driver.get(), 20);
 		
 		
-		driver.get().findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[2]")
+		driver.get().findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[5]")
 		.click();
 		System.out.println("뮤직 트라이브 진입");
 		Thread.sleep(3000);
@@ -162,17 +158,59 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		wait.until(ExpectedConditions.visibilityOf(혜택상세닫기)).sendKeys(Keys.ENTER); 
 		System.out.println("혜택상세 닫기"); 
 		
-		*/
+		
 		
 		MobileElement 초대하기버튼 = driver.get().findElementByXPath("//*[@id='invite-in-mission']");
 		wait.until(ExpectedConditions.visibilityOf(초대하기버튼)).click();
 		System.out.println("초대하기버튼 입력"); 
 		
 		
+		MobileElement 초대하기버튼 = driver.get().findElementByXPath("//*[@id='invite-in-mission']");
+		wait.until(ExpectedConditions.visibilityOf(초대하기버튼)).click();
+		System.out.println("초대하기버튼 입력"); 
+		*/
+		
+		MobileElement 사진업로드버튼 = driver.get().findElementByXPath("//button[@id='image-upload-in-mission']");
+		wait.until(ExpectedConditions.visibilityOf(사진업로드버튼)).click();
+		System.out.println("사진업로드 버튼 입력"); 
+				
+				
+		MobileElement 이미지업로드예시이미지1 = driver.get().findElementByXPath("//div[@aria-label='이미지 업로드 예시']");
+		wait.until(ExpectedConditions.visibilityOf(이미지업로드예시이미지1));
+		System.out.println("예시 이미지 선택 "); 
+		
+		MobileElement 이미지업로드예시이미지2 = driver.get().findElementByXPath("//div[@aria-label='이미지 업로드 예시']");
+		wait.until(ExpectedConditions.visibilityOf(이미지업로드예시이미지2));
+		System.out.println("예시 이미지 선택 "); 
+		
+		/* @ 스크롤 연구중, 지금은 안하는데 아마도 드라이버를 웹으로 사용하면 동작할듯
+		Actions action = new Actions(driver.get());
+        action.dragAndDropBy(5000, 0);
+    	System.out.println("예시 이미지 선택 스크롤 "); 
+        action.dragAndDropBy(이미지업로드예시이미지1, 200, 1000);
+    	System.out.println("예시 이미지 선택 스크롤2"); 
+ */
+        
+        
 		driver.get().context("NATIVE_APP");
 		System.out.println("S# Context NATIVE로 변경"); 
 		Thread.sleep(3000);
 		
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.HorizontalScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.ImageView")
+		.click(); 
+		System.out.println("[갤러리] 버튼 입력");
+		Thread.sleep(3000);
+		
+		
+		driver.get().findElementByXPath("(//android.widget.FrameLayout[@content-desc=\"버튼\"])[1]/android.widget.FrameLayout[1]/android.widget.ImageView")
+		.click(); 
+		System.out.println("이미지 선택");
+		Thread.sleep(3000);
+		
+		MobileElement UpbuttoninTopBar= driver.get().findElementByAccessibilityId("Up button in TopBar");
+		wait.until(ExpectedConditions.visibilityOf(UpbuttoninTopBar)).click();    
+		System.out.println("P# 갤러리 back 버튼 ");
+	
 		
 		//MobileElement 동의하기팝업 = driver.get().findElementByXPath("//button[@id='notification' and @[class='sc-3p7tai-0 ccMooN']");
 		//wait.until(ExpectedConditions.visibilityOf(동의하기팝업)).click();
