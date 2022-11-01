@@ -15,7 +15,8 @@ import io.appium.java_client.touch.offset.PointOption;
 
 
 public class _5_Tribesdetail extends _0_Automation_Main {
-	public static void tribesdetail() throws MalformedURLException, InterruptedException  {
+	
+	public static void tribesdetail() throws MalformedURLException, InterruptedException {
 		
 		System.out.println("<<Tribes_detail 진행>>");
 		
@@ -26,6 +27,7 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		.click();
 		System.out.println("뮤직 트라이브 진입");
 		Thread.sleep(3000);
+		
 		
 		/*
 		 * if (driver.get().findElementByXPath(
@@ -81,11 +83,11 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		System.out.println("알림받기버튼"); 
 		*/
 		
+		
 		MobileElement 미션시작하기버튼 = driver.get().findElementByXPath("//button[@id='mission-start-in-benefit']");
 		wait.until(ExpectedConditions.visibilityOf(미션시작하기버튼)).sendKeys(Keys.ENTER); 
 		System.out.println("미션시작하기버튼 입력"); 
 		Thread.sleep(3000);
-		
 		
 		
 		/*
@@ -115,7 +117,6 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		wait.until(ExpectedConditions.visibilityOf(바텀팝업개인정보수집약관진입버튼)).sendKeys(Keys.ENTER);
 		System.out.println("바텀팝업개인정보수집약관진입버튼");
 		
-
 		MobileElement 바텀팝업개인정보수집 = driver.get().findElementByXPath("//label[@for='OPTIONAL_PRIVACY_POLICY_AGREE']");
 		wait.until(ExpectedConditions.visibilityOf(바텀팝업개인정보수집)).click();
 		System.out.println("바텀팝업개인정보수집 입력");
@@ -152,7 +153,6 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		MobileElement 바텀팝업동의하기= driver.get().findElementByXPath("//*[@id='term-agree-in-benefit']");
 		wait.until(ExpectedConditions.visibilityOf(바텀팝업동의하기)).click();
 		System.out.println("바텀팝업동의하기 입력");
-
 		
 		MobileElement 혜택상세닫기 = driver.get().findElementByXPath("//button[@aria-label='혜택 상세 닫기']");
 		wait.until(ExpectedConditions.visibilityOf(혜택상세닫기)).sendKeys(Keys.ENTER); 
@@ -183,15 +183,17 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		wait.until(ExpectedConditions.visibilityOf(이미지업로드예시이미지2));
 		System.out.println("예시 이미지 선택 "); 
 		
-		/* @ 스크롤 연구중, 지금은 안하는데 아마도 드라이버를 웹으로 사용하면 동작할듯
+		/*
+	  //@스크롤 연구중, 지금은 안하는데 아마도 드라이버를 웹으로 사용하면 동작할듯
 		Actions action = new Actions(driver.get());
         action.dragAndDropBy(5000, 0);
     	System.out.println("예시 이미지 선택 스크롤 "); 
         action.dragAndDropBy(이미지업로드예시이미지1, 200, 1000);
     	System.out.println("예시 이미지 선택 스크롤2"); 
- */
-        
-        
+
+        action.dragAndDrop(이미지업로드예시이미지1, 이미지업로드예시이미지1);
+		*/
+		
 		driver.get().context("NATIVE_APP");
 		System.out.println("S# Context NATIVE로 변경"); 
 		Thread.sleep(3000);
@@ -253,7 +255,6 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		.click(); 
 		System.out.println("이미지 선택");
 		Thread.sleep(3000);
-
 		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.TextView")
 		.click(); 
@@ -289,9 +290,8 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		.click(); 
 		System.out.println("트라이브 홈 탭");
 		Thread.sleep(2000);
-		
-		}
-
-		
 	
 }
+}
+
+
