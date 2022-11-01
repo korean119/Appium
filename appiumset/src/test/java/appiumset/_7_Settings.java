@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.PointOption;
 
 public class _7_Settings extends _0_Automation_Main {
 	
@@ -27,10 +29,12 @@ public class _7_Settings extends _0_Automation_Main {
 		
 		//----------------------- 바텀시트
 		
-		MobileElement settings = driver.get().findElementByAccessibilityId("setting in TopBar");
+		
+		
+		 MobileElement settings = driver.get().findElementByAccessibilityId("setting in TopBar");
 		settings.click(); 
 		System.out.println("설정 입력");
-	
+		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]/android.widget.TextView\r\n")
 		.click(); 
 		System.out.println("설정 -> 회원정보 관리");
@@ -127,8 +131,7 @@ public class _7_Settings extends _0_Automation_Main {
 		
 		Thread.sleep(5000);
 		
-		MobileElement signout = driver.get().findElementByXPath("	\r\n"
-				+ "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView[3]");
+		MobileElement signout = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView[3]");
 		signout.click(); 
 		System.out.println("탈퇴 [여기] 버튼 입력");
 		
@@ -324,11 +327,11 @@ public class _7_Settings extends _0_Automation_Main {
 		System.out.println("[뒤로가기] 버튼 입력 -> 설정 **(이슈)** ");
 		Thread.sleep(3000);
 		
-		/*
-		 * driver.get().findElementByXPath(
-		 * "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
-		 * .click(); System.out.println("자주 묻는 질문 > 설정"); Thread.sleep(2000);
-		 */
+		
+		  //driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
+		 // .click();
+		//  System.out.println("자주 묻는 질문 > 설정"); Thread.sleep(2000);
+		 
 		
 		driver.get().context("NATIVE_APP");
 		Thread.sleep(3000);
@@ -387,21 +390,6 @@ public class _7_Settings extends _0_Automation_Main {
 		back7.click(); 
 		System.out.println("[Back key] 설정 -> MY트라이브"); 
 		
-		//-------------------------------------- 로그아웃
-		MobileElement settings3 = driver.get().findElementByAccessibilityId("setting in TopBar");
-
-		settings3.click();
-		System.out.println("설정 입력3");
-
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[7]/android.widget.TextView")
-		.click(); 
-		System.out.println("로그아웃");
-
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
-		.click(); 
-		System.out.println("컨펌 팝업 나가기 ");
-		
-		//-------------------------------------- 로그아웃
 	}
 
 }

@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="1" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-31T17:29:18 KST" name="Suite" finished-at="2022-10-31T17:31:43 KST" duration-ms="145271">
+  <suite started-at="2022-11-01T14:46:40 KST" name="Suite" finished-at="2022-11-01T14:50:29 KST" duration-ms="229828">
     <groups>
     </groups>
-    <test started-at="2022-10-31T17:29:18 KST" name="Device2" finished-at="2022-10-31T17:29:20 KST" duration-ms="2416">
+    <test started-at="2022-11-01T14:46:40 KST" name="Device2" finished-at="2022-11-01T14:46:42 KST" duration-ms="2528">
       <class name="appiumset._0_Automation_Main">
-        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@6e6f2380]" started-at="2022-10-31T17:29:18 KST" name="Deviceinfo" finished-at="2022-10-31T17:29:20 KST" duration-ms="2377" status="FAIL">
+        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@6e6f2380]" started-at="2022-11-01T14:46:40 KST" name="Deviceinfo" finished-at="2022-11-01T14:46:42 KST" duration-ms="2480" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -138,7 +138,7 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Deviceinfo -->
-        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@6e6f2380]" started-at="2022-10-31T17:29:20 KST" name="main" finished-at="2022-10-31T17:29:20 KST" duration-ms="0" status="SKIP">
+        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@6e6f2380]" started-at="2022-11-01T14:46:42 KST" name="main" finished-at="2022-11-01T14:46:42 KST" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[Connection refused: no further information
@@ -234,9 +234,9 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
         </test-method> <!-- main -->
       </class> <!-- appiumset._0_Automation_Main -->
     </test> <!-- Device2 -->
-    <test started-at="2022-10-31T17:29:18 KST" name="Device1" finished-at="2022-10-31T17:31:43 KST" duration-ms="145271">
+    <test started-at="2022-11-01T14:46:40 KST" name="Device1" finished-at="2022-11-01T14:50:29 KST" duration-ms="229828">
       <class name="appiumset._0_Automation_Main">
-        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@21282ed8]" started-at="2022-10-31T17:29:18 KST" name="Deviceinfo" finished-at="2022-10-31T17:29:25 KST" duration-ms="7087" status="PASS">
+        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@21282ed8]" started-at="2022-11-01T14:46:40 KST" name="Deviceinfo" finished-at="2022-11-01T14:46:47 KST" duration-ms="7649" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -277,7 +277,7 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Deviceinfo -->
-        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@21282ed8]" started-at="2022-10-31T17:29:25 KST" name="main" finished-at="2022-10-31T17:31:43 KST" duration-ms="138159" status="PASS">
+        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@21282ed8]" started-at="2022-11-01T14:46:47 KST" name="main" finished-at="2022-11-01T14:50:29 KST" duration-ms="222148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
