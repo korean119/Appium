@@ -1,4 +1,4 @@
-# APPIUM 사용 시 유용하게 사용 되는 명령어 및 정보 
+# 유용하게 사용 되는 명령어 및 정보 
 
 < Webview 디버깅 >   
 chrome://inspect  
