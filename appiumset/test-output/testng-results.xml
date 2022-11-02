@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
@@ -12,6 +13,7 @@
             <param index="0">
               <value>
                 <![CDATA[ce0617163a36ce2401]]>
+
               </value>
             </param>
             <param index="1">
@@ -31,7 +33,9 @@
             </param>
             <param index="4">
               <value>
+
                 <![CDATA[http://0.0.0.0:4721/wd/hub]]>
+
               </value>
             </param>
             <param index="5">
@@ -49,13 +53,17 @@
             <message>
               <![CDATA[Connection refused: no further information
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+
 System info: host: 'DESKTOP-H9VDVB7', ip: '192.168.0.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+
 Driver info: driver.version: AppiumDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+
 System info: host: 'DESKTOP-H9VDVB7', ip: '192.168.0.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+
 Driver info: driver.version: AppiumDriver
 at io.appium.java_client.remote.AppiumCommandExecutor.lambda$5(AppiumCommandExecutor.java:251)
 at java.base/java.util.Optional.orElseGet(Optional.java:364)
@@ -68,7 +76,9 @@ at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
 at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:38)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:84)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:94)
+
 at appiumset._1_Deviceinfo.Deviceinfo(_1_Deviceinfo.java:56)
+
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -138,18 +148,24 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Deviceinfo -->
+
         <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@20140db9]" started-at="2022-11-01T14:43:23 KST" name="main" finished-at="2022-11-01T14:43:23 KST" duration-ms="0" status="SKIP">
+
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[Connection refused: no further information
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+
 System info: host: 'DESKTOP-H9VDVB7', ip: '192.168.0.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+
 Driver info: driver.version: AppiumDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+
 System info: host: 'DESKTOP-H9VDVB7', ip: '192.168.0.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+
 Driver info: driver.version: AppiumDriver
 at io.appium.java_client.remote.AppiumCommandExecutor.lambda$5(AppiumCommandExecutor.java:251)
 at java.base/java.util.Optional.orElseGet(Optional.java:364)
@@ -162,7 +178,9 @@ at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
 at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:38)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:84)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:94)
+
 at appiumset._1_Deviceinfo.Deviceinfo(_1_Deviceinfo.java:56)
+
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -234,6 +252,7 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
         </test-method> <!-- main -->
       </class> <!-- appiumset._0_Automation_Main -->
     </test> <!-- Device2 -->
+
     <test started-at="2022-11-01T14:43:20 KST" name="Device1" finished-at="2022-11-01T14:43:23 KST" duration-ms="2441">
       <class name="appiumset._0_Automation_Main">
         <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@485966cc]" started-at="2022-11-01T14:43:20 KST" name="Deviceinfo" finished-at="2022-11-01T14:43:23 KST" duration-ms="2404" status="FAIL">
@@ -241,6 +260,7 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
             <param index="0">
               <value>
                 <![CDATA[R3CRB0JNBQA]]>
+
               </value>
             </param>
             <param index="1">
@@ -260,7 +280,9 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
             </param>
             <param index="4">
               <value>
+
                 <![CDATA[http://0.0.0.0:4720/wd/hub]]>
+
               </value>
             </param>
             <param index="5">
@@ -367,6 +389,7 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Deviceinfo -->
+
         <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@485966cc]" started-at="2022-11-01T14:43:23 KST" name="main" finished-at="2022-11-01T14:43:23 KST" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
@@ -458,6 +481,7 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.WebDriverException -->
+
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
