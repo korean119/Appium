@@ -1,0 +1,1 @@
+java -jar C:\Users\user\git\Hanwha\Qa8\Qa-Feature\AppiumGridSetup\selenium-server-standalone-3.141.59.jar -role hub
