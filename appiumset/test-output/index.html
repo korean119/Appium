@@ -51,7 +51,9 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\Qa5\Qa\appiumset\testng.xml</span>
+
+                    <span>C:\Users\user\git\Hanwha\Qa8\appiumset\testng.xml</span>
+
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +95,9 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  1 skipped,  1 passed</span>
+
+                    <span class="method-stats">2 methods,  2 skipped,  </span>
+
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -107,21 +111,14 @@
                         <a href="#" panel-name="suite-Suite" title="appiumset._0_Automation_Main" class="method navigator-link" hash-for-method="main">main</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
+
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="appiumset._0_Automation_Main" class="method navigator-link" hash-for-method="main">main</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content skipped suite-Suite -->
+
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -146,7 +143,9 @@
                   <span class="method-name">main</span>
                   <div class="stack-trace">org.openqa.selenium.WebDriverException: Connection refused: no further information
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-3MTVBSA&apos;, ip: &apos;192.168.0.118&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+
+System info: host: &apos;DESKTOP-H9VDVB7&apos;, ip: &apos;192.168.0.83&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+
 Driver info: driver.version: AppiumDriver
 	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$5(AppiumCommandExecutor.java:251)
 	at java.base/java.util.Optional.orElseGet(Optional.java:364)
@@ -159,7 +158,9 @@ Driver info: driver.version: AppiumDriver
 	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
-	at appiumset._1_Deviceinfo.Deviceinfo(_1_Deviceinfo.java:65)
+
+	at appiumset._1_Deviceinfo.Deviceinfo(_1_Deviceinfo.java:56)
+
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
@@ -214,14 +215,71 @@ Caused by: java.net.ConnectException: Connection refused: no further information
                   <a name="main">
                   </a> <!-- main -->
                   <span class="method-name">main</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Connection refused: no further information
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-H9VDVB7&apos;, ip: &apos;192.168.0.83&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: driver.version: AppiumDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$5(AppiumCommandExecutor.java:251)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
+	at appiumset._1_Deviceinfo.Deviceinfo(_1_Deviceinfo.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+	at okhttp3.RealCall.execute(RealCall.java:77)
+	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	... 36 more
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-skipped -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Qa5\Qa\appiumset\testng.xml</span>
+
+            <span class="header-content">C:\Users\user\git\Hanwha\Qa8\appiumset\testng.xml</span>
+
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -232,9 +290,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
     &lt;parameter name=&quot;appActivity&quot; value=&quot;com.hanwha.lifeplus.presentation.ui.HomeActivity&quot;/&gt;
     &lt;parameter name=&quot;platformVersion&quot; value=&quot;12&quot;/&gt;
     &lt;parameter name=&quot;apppackage&quot; value=&quot;com.hanwha.lifeplus.tribes.app.qa&quot;/&gt;
-    &lt;parameter name=&quot;appiumServer&quot; value=&quot;http://0.0.0.0:4823/wd/hub&quot;/&gt;
+    &lt;parameter name=&quot;appiumServer&quot; value=&quot;http://0.0.0.0:4720/wd/hub&quot;/&gt;
     &lt;parameter name=&quot;platformName&quot; value=&quot;Android&quot;/&gt;
-    &lt;parameter name=&quot;device&quot; value=&quot;R3CN90RNF8M&quot;/&gt;
+    &lt;parameter name=&quot;device&quot; value=&quot;R3CRB0JNBQA&quot;/&gt;
     &lt;parameter name=&quot;systemPort&quot; value=&quot;8208&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;appiumset._0_Automation_Main&quot;/&gt;
@@ -244,9 +302,9 @@ Caused by: java.net.ConnectException: Connection refused: no further information
     &lt;parameter name=&quot;appActivity&quot; value=&quot;com.hanwha.lifeplus.presentation.ui.HomeActivity&quot;/&gt;
     &lt;parameter name=&quot;platformVersion&quot; value=&quot;11&quot;/&gt;
     &lt;parameter name=&quot;apppackage&quot; value=&quot;com.hanwha.lifeplus.tribes.app.qa&quot;/&gt;
-    &lt;parameter name=&quot;appiumServer&quot; value=&quot;http://0.0.0.0:4824/wd/hub&quot;/&gt;
+    &lt;parameter name=&quot;appiumServer&quot; value=&quot;http://0.0.0.0:4721/wd/hub&quot;/&gt;
     &lt;parameter name=&quot;platformName&quot; value=&quot;Android&quot;/&gt;
-    &lt;parameter name=&quot;device&quot; value=&quot;R39M20CG24R&quot;/&gt;
+    &lt;parameter name=&quot;device&quot; value=&quot;ce0617163a36ce2401&quot;/&gt;
     &lt;parameter name=&quot;systemPort&quot; value=&quot;8209&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;appiumset._0_Automation_Main&quot;/&gt;
@@ -296,7 +354,9 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'main')
 data.setCell(0, 2, 'appiumset._0_Automation_Main')
-data.setCell(0, 3, 222148);
+
+data.setCell(0, 3, 0);
+
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'main')
 data.setCell(1, 2, 'appiumset._0_Automation_Main')
@@ -305,7 +365,9 @@ window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+
+              <span class="suite-total-time">Total running time: 2 seconds</span>
+
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -333,22 +395,28 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">appiumset._0_Automation_Main</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">Deviceinfo(R3CN90RNF8M, com.hanwha.lifeplus.tribes.app.qa, com.hanwha.lifeplus.presentation.ui.HomeActivity, 12...)</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Deviceinfo(R3CRB0JNBQA, com.hanwha.lifeplus.tribes.app.qa, com.hanwha.lifeplus.presentation.ui.HomeActivity, 12...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Deviceinfo(R39M20CG24R, com.hanwha.lifeplus.tribes.app.qa, com.hanwha.lifeplus.presentation.ui.HomeActivity, 11...)</span>
+
+                <span class="method-name">Deviceinfo(ce0617163a36ce2401, com.hanwha.lifeplus.tribes.app.qa, com.hanwha.lifeplus.presentation.ui.HomeActiv...)</span>
+
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">main</span>
-                <span class="method-start">2492 ms</span>
+
+                <span class="method-start">2407 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">main</span>
-                <span class="method-start">7649 ms</span>
+                <span class="method-start">2407 ms</span>
+
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

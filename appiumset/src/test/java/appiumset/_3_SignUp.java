@@ -1,36 +1,47 @@
+ package appiumset;
+  
+  import java.net.MalformedURLException; 
+  import java.util.Set;
 
-  package appiumset;
-  
-  import java.net.MalformedURLException; import java.util.Set; import
-  io.appium.java_client.MobileElement;
-  
-  
-  public class _3_SignUp extends AppiumDriverManager { public static void
-  SignUp() throws MalformedURLException, InterruptedException {
-  
-	  // @ 갤럭시 9에서 Context 전환하지 않으면 버튼 입력 되지 않아 전체 스크립트에 Context 변경 추가
-		MobileElement kakao = driver.get().findElementByAccessibilityId("카카오로 시작하기 로고");
-		kakao.click();
-		System.out.println("카카오 클릭 완료");
-		Thread.sleep(3000);              
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-		Set<String> contextNames = driver.get().getContextHandles();
-		for (String contextName : contextNames) {
-		    System.out.println(contextName); }
+import io.appium.java_client.MobileElement;
+  
+  
+
+  public class _3_SignUp extends AppiumDriverManager { 
+	  public static void SignUp() throws MalformedURLException, InterruptedException {
+
+		  System.out.println("<SignUp 진행>>");
+		  
+		  WebDriverWait wait = new WebDriverWait(driver.get(), 10);
+		  
+		  MobileElement kakao = driver.get().findElementByAccessibilityId("카카오로 시작하기 로고");
+		  wait.until(ExpectedConditions.visibilityOf(kakao)).click();      
+		  System.out.println("P# 로그인&회원가입 화면_[카카오 시작하기 로고] 버튼 입력");
+		  Thread.sleep(3000);
+
+		  Set<String> contextNames = driver.get().getContextHandles();
+		  for (String contextName : contextNames) {
+			  System.out.println(contextName); }
 			
-		driver.get().context((String) contextNames.toArray()[1]);
-			System.out.println("웹뷰 진입"); 
-			
-			driver.get().findElementByXPath("//*[@id=\"mArticle\"]/div/div/div[2]/form/button")
-			.click();
-			System.out.println("카카오 계속하기 클릭 완료 ");
-			Thread.sleep(3000);
-			
-			System.out.println("컨펌팝업 확인"); 
-			
-			driver.get().context("NATIVE_APP");
-			Thread.sleep(3000);
+	
+		  driver.get().context((String) contextNames.toArray()[1]);
+		  Thread.sleep(3000); // context 변경 할 시간 필요하기 떄문에 sleep 사용 
+		  System.out.println("S# Context WebView로 변경");  
 		
+		 
+		  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"mArticle\"]/div/div/div[2]/form/button"))).click();    
+		  System.out.println("P# 로그인&회원가입 화면_[카카오 계속하기 클릭] 버튼 입력");
+
+		  
+		  driver.get().context("NATIVE_APP");
+		  System.out.println("S# Context NATIVE로 변경"); 
+		  Thread.sleep(3000);
+			
+	  }
   }
-  }
+  
   
