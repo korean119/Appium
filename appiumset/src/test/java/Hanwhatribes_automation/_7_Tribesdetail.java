@@ -1,4 +1,4 @@
-package appiumset;
+package Hanwhatribes_automation;
 
 import java.net.MalformedURLException;
 import java.util.Set;
@@ -14,9 +14,9 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
 
-public class _5_Tribesdetail extends _0_Automation_Main {
+public class _7_Tribesdetail extends _0_Automation_Main {
 	
-	public static void tribesdetail() throws MalformedURLException, InterruptedException {
+	public static void Tribesdetail() throws MalformedURLException, InterruptedException {
 		
 		System.out.println("<<Tribes_detail 진행>>");
 		
@@ -182,7 +182,7 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		MobileElement 이미지업로드예시이미지2 = driver.get().findElementByXPath("//div[@aria-label='이미지 업로드 예시']");
 		wait.until(ExpectedConditions.visibilityOf(이미지업로드예시이미지2));
 		System.out.println("예시 이미지 선택 "); 
-		
+	
 		/*
 	  //@스크롤 연구중, 지금은 안하는데 아마도 드라이버를 웹으로 사용하면 동작할듯
 		Actions action = new Actions(driver.get());
@@ -212,11 +212,6 @@ public class _5_Tribesdetail extends _0_Automation_Main {
 		MobileElement UpbuttoninTopBar= driver.get().findElementByAccessibilityId("Up button in TopBar");
 		wait.until(ExpectedConditions.visibilityOf(UpbuttoninTopBar)).click();    
 		System.out.println("P# 갤러리 back 버튼 ");
-	
-		
-		//MobileElement 동의하기팝업 = driver.get().findElementByXPath("//button[@id='notification' and @[class='sc-3p7tai-0 ccMooN']");
-		//wait.until(ExpectedConditions.visibilityOf(동의하기팝업)).click();
-		//System.out.println("바텀팝업동의하기 입력");
 	
 
 		

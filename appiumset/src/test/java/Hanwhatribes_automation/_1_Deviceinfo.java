@@ -1,4 +1,4 @@
-package appiumset;
+package Hanwhatribes_automation;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -32,7 +32,7 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 		cap.setCapability("appActivity", appActivity);
 	
 		cap.setCapability("automationName", "UiAutomator2");
-
+		
 		cap.setCapability("noReset","false");
 		cap.setCapability("FullReset","true");
 	
@@ -54,9 +54,11 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 		URL url = new URL(appiumServer);
 	
 		setDriver(new AppiumDriver<MobileElement>(url, cap));
-	
+
 		
 		//driver.get().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		
 		
 	
 		

@@ -1,3 +1,4 @@
+package Hanwhatribes_automation;
 /*
  * package appiumset;
  * 

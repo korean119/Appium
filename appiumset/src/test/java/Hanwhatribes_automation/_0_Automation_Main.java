@@ -1,11 +1,10 @@
-package appiumset;
+package Hanwhatribes_automation;
 
 
 import org.testng.annotations.Test;
 
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 
 
 
@@ -16,44 +15,40 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 	@Test
 	public static void main(/* String[] args */) {
 	
-//		AppiumDriver<MobileElement> driver = null;
-//		
-//		driver = AppiumDriverManager.getDriver();
-		
 		_2_Onboarding a02 = new _2_Onboarding();
 		_3_SignUp a03 = new _3_SignUp();
-		_4_Tribeslist a04 = new _4_Tribeslist();
-		_5_Tribesdetail a05 = new _5_Tribesdetail();
-		_6_Tribeshome a06 = new _6_Tribeshome(); 
-		_7_Settings a07 = new _7_Settings();
-		_8_Eventtribes a08 = new _8_Eventtribes();
+		_4_MyTribes a04 = new _4_MyTribes();
+		_5_Tribeslist a05 = new _5_Tribeslist();
+		_6_Eventtribes a06 = new _6_Eventtribes();
+		_7_Tribesdetail a07 = new _7_Tribesdetail();
+		_8_Settings a08 = new _8_Settings();
 		_9_Logout a09 = new _9_Logout();
 
 		int count = 0;
 		
 		
 		try {
-			a02.onboarding();
-			a03.SignUp();
+			_2_Onboarding.onboarding();
+			_3_SignUp.SignUp();
 			for(int i = 1; true; i = i++) {
 
 				count = count + i;
 			
-				if( count <= 3) {
+				if( count <= 999) {
 					System.out.println(" <<<<< " + count + " 번째 반복 시작합니다.>>>> ");
 				
-				}else if(count == 4) {
+				}else if(count == 999) {
 					System.out.println( count-1 + "번째 반복 완료 후 종료합니다.");
 					break;
 					
 				}
-
-				a04.tribeslist();
-				a05.tribesdetail();
-				a06.tribeshome(); 
-				a07.settings(); 
-				a08.Eventtribes();
-				a09.Logout();
+				_4_MyTribes.MyTribes();
+				_5_Tribeslist.Tribeslist();
+				_6_Eventtribes.Eventtribes();
+				_7_Tribesdetail.Tribesdetail();
+				_8_Settings.settings();
+				_9_Logout.Logout();
+				
 			}
 		
 		}catch(Exception exp) {
