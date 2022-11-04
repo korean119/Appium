@@ -3,13 +3,13 @@
 <suite name="Suite" parallel="tests" thread-count="2">
   <test name="Device1"  >
   <!-- 신준오 회사 정보 갤럭시 Z플립 -->
-  	<parameter name="device" value="R3CRB0JNBQA"></parameter>
+  	<parameter name="device" value="R3CN90RNF8M"></parameter>
   	<parameter name="platformName" value="Android"></parameter>
   	<parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"></parameter>	
   	<parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"></parameter>	
   	<parameter name="platformVersion" value="12"></parameter>	
   	<parameter name="systemPort" value="8208"/>
-  	<parameter name="appiumServer" value="http://0.0.0.0:4720/wd/hub"></parameter>
+  	<parameter name="appiumServer" value="http://0.0.0.0:4823/wd/hub"></parameter>
 
   	<classes>
   		<class name="appiumset._0_Automation_Main"></class>
@@ -24,7 +24,7 @@
   	<parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"></parameter>	
   	<parameter name="platformVersion" value="11"></parameter>	
   	<parameter name="systemPort" value="8209"/>
-  	<parameter name="appiumServer" value="http://0.0.0.0:4721/wd/hub"></parameter>
+  	<parameter name="appiumServer" value="http://0.0.0.0:4824/wd/hub"></parameter>
 
   	<classes>
   		<class name="appiumset._0_Automation_Main"></class>

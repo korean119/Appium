@@ -18,7 +18,47 @@ public class _7_Settings extends _0_Automation_Main {
 		System.out.println("<< Settings 진행>>");
 		
 
+		WebDriverWait wait = new WebDriverWait(driver.get(), 10);
+//----------------
+		MobileElement Sheetclose = driver.get().findElementByAccessibilityId("시트 닫기");
+		wait.until(ExpectedConditions.visibilityOf(Sheetclose)).click();    
+		System.out.println("P# 메인화면_시트 닫기 동작");
+		
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[3]/android.view.View")
+		.click(); 
+		System.out.println("당첨탭");
+		Thread.sleep(1000);
+		
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[3]/android.view.View[2]/android.view.View/android.widget.TextView")
+		.click(); 
+		System.out.println("당첨상세 버튼");
+		Thread.sleep(1000);
 
+		Set<String> contextNames1 = driver.get().getContextHandles();
+		for (String contextName : contextNames1) {
+			System.out.println(contextName); }
+			
+	
+		driver.get().context((String) contextNames1.toArray()[1]);
+		Thread.sleep(3000); // context 변경 할 시간 필요하기 떄문에 sleep 사용
+		System.out.println("S# Context WebView로 변경");
+		Thread.sleep(3000);
+		
+		MobileElement 배송지입력 = driver.get().findElementByXPath("//button[@id='open-winner-address']");
+		wait.until(ExpectedConditions.visibilityOf(배송지입력)).sendKeys(Keys.ENTER);
+		System.out.println("");
+		Thread.sleep(3000);
+
+		MobileElement 체크 = driver.get().findElementByXPath("//label[@for='agreement']");
+		wait.until(ExpectedConditions.visibilityOf(체크)).click();
+		System.out.println("체크");
+		
+
+		
+		
+
+	
+//------------------		
 		 MobileElement settings = driver.get().findElementByAccessibilityId("setting in TopBar");
 		settings.click(); 
 		System.out.println("설정 입력");
@@ -41,24 +81,21 @@ public class _7_Settings extends _0_Automation_Main {
 		driver.get().getKeyboard().sendKeys("Donggyu");
 		System.out.println("닉네임 입력");
 		Thread.sleep(2000);
-
-
 		
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]/android.widget.TextView")
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.widget.Button")
 		.click(); 
-
 		System.out.println("회원정보 관리 -> 저장");
 		Thread.sleep(2000);
 
 		MobileElement changename = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.EditText[1]");
 		MobileElement changename2 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.EditText[1]");
-
 		
-		Set<String> contextNames = driver.get().getContextHandles();
-		for (String contextName : contextNames) {
-			System.out.println(contextName); }
+		String text = changename.getText();
+		System.out.println("입력된 닉네임: " + changename.getText());
+		
+		if(changename.equals(changename2)) {
+			System.out.println("지정한 닉네임< " + changename2.getText() + " >와 일치");
 			
-
 		}else {
 			System.out.println("지정한 닉네임< " + changename2.getText() + " >와 불일치 --> 이슈");
 			driver.get().close();
@@ -153,24 +190,36 @@ public class _7_Settings extends _0_Automation_Main {
 		.click(); 
 		System.out.println("혜택 및 이벤트 알림 토글 클릭");
 	
-
 	
-		driver.get().context((String) contextNames.toArray()[1]);
-		Thread.sleep(3000); // context 변경 할 시간 필요하기 떄문에 sleep 사용 
-		System.out.println("S# 트라이브 홈 화면_혜택 상세 화면 Context WebView로 변경");  
-	
-		
-		MobileElement 일대일문의하기버튼 = driver.get().findElementByXPath("//a[@id='inquiry-in-faq']");
-		wait.until(ExpectedConditions.visibilityOf(일대일문의하기버튼)).sendKeys(Keys.ENTER);
-		System.out.println("일대일문의하기버튼"); 
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.Button")
+		.click(); 
+		System.out.println("바텀 시트 [끄기] 버튼 입력 ");
 		Thread.sleep(3000);
-		
-		
-		MobileElement 나의문의하기내역버튼 = driver.get().findElementByXPath("//button[@id='inquiry-list-tab']");
-		wait.until(ExpectedConditions.visibilityOf(나의문의하기내역버튼)).sendKeys(Keys.ENTER);  
-		System.out.println("나의문의하기내역버튼"); 
+	
+	
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.widget.Button")
+		.click();
+		System.out.println("컨펌 팝업 [확인] 버튼 입력");
 		Thread.sleep(3000);
 
+	
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]")
+		.click(); 
+		System.out.println("혜택 및 이벤트 알림 토글 클릭");
+	
+		
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.widget.Button")
+		.click();
+		System.out.println("컨펌 팝업 [확인] 버튼 입력");
+		Thread.sleep(3000);
+
+		
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.Switch")
+		.click(); 
+		System.out.println("야간 알림 제한 토글 클릭 ");
+		Thread.sleep(3000);
+	
+	
 		MobileElement back2 = driver.get().findElementByAccessibilityId("Up button in TopBar");
 		back2.click();
 		System.out.println("TopBar Back"); 
@@ -183,31 +232,27 @@ public class _7_Settings extends _0_Automation_Main {
 	
 		MobileElement back4 = driver.get().findElementByAccessibilityId("Up button in TopBar");
 		back4.click();
-
 		
-
+		MobileElement settings2 = driver.get().findElementByAccessibilityId("setting in TopBar");
+		settings2.click();
+		System.out.println("설정 입력2");
+		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]/android.widget.TextView")
 		.click(); 
 		System.out.println("설정 > 자주 묻는 질문");
 		Thread.sleep(3000);
 		
-		Set<String> contextNames1 = driver.get().getContextHandles();
-		for (String contextName : contextNames1) {
+		Set<String> contextNames2 = driver.get().getContextHandles();
+		for (String contextName : contextNames2) {
 			System.out.println(contextName); }
 			
 	
-		driver.get().context((String) contextNames1.toArray()[1]);
+		driver.get().context((String) contextNames2.toArray()[1]);
 		Thread.sleep(3000); // context 변경 할 시간 필요하기 떄문에 sleep 사용
 		System.out.println("S# Context WebView로 변경");
 		Thread.sleep(3000);
-
 		
-		MobileElement 사진첨부하기 = driver.get().findElementByXPath("//label[@id='add-inquiry-photo']");
-		wait.until(ExpectedConditions.visibilityOf(사진첨부하기)).sendKeys(Keys.ENTER); 
-		System.out.println("사진첨부하기"); 
-		Thread.sleep(3000);
 		
-
 		MobileElement 일대일문의하기버튼 = driver.get().findElementByXPath("//a[@id='inquiry-in-faq']");
 		wait.until(ExpectedConditions.visibilityOf(일대일문의하기버튼)).sendKeys(Keys.ENTER);
 		System.out.println("[1:1문의하기] 버튼 입력");
@@ -233,7 +278,6 @@ public class _7_Settings extends _0_Automation_Main {
 		Thread.sleep(2000);
 		
 		driver.get().context("NATIVE_APP");
-
 		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.HorizontalScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.ImageView")
 		.click(); 
@@ -246,7 +290,6 @@ public class _7_Settings extends _0_Automation_Main {
 		System.out.println("이미지 선택");
 		Thread.sleep(3000);
 		
-
 		Set<String> contextNames = driver.get().getContextHandles();
 		for (String contextName : contextNames) {
 			System.out.println(contextName); }
@@ -326,7 +369,6 @@ public class _7_Settings extends _0_Automation_Main {
 		System.out.println("공지사항 진입");
 		Thread.sleep(2000);
 				
-
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
 		.click(); 
 		System.out.println("[뒤로가기] 버튼 입력");
@@ -341,7 +383,6 @@ public class _7_Settings extends _0_Automation_Main {
 		.click(); 
 		System.out.println("서비스 이용약관 진입");
 		Thread.sleep(2000);
-		
 		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
 		.click(); 
@@ -367,7 +408,6 @@ public class _7_Settings extends _0_Automation_Main {
 		.click(); 
 		System.out.println("[X] 버튼 입력");
 		Thread.sleep(2000);
-		
 		
 		MobileElement back6 = driver.get().findElementByAccessibilityId("Up button in TopBar");
 		back6.click(); 
