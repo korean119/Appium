@@ -10,12 +10,12 @@
     <parameter name="device" value="ce0617163a36ce2401"/>
     <parameter name="systemPort" value="8209"/>
     <classes>
-      <class name="appiumset._0_Automation_Main">
+      <class name="Hanwhatribes_automation._0_Automation_Main">
         <methods>
-          <include name="main"/>
           <include name="Deviceinfo"/>
+          <include name="main"/>
         </methods>
-      </class> <!-- appiumset._0_Automation_Main -->
+      </class> <!-- Hanwhatribes_automation._0_Automation_Main -->
     </classes>
   </test> <!-- Device2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

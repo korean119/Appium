@@ -33,7 +33,7 @@ public class _2_Onboarding extends AppiumDriverManager {
 		{System.out.println("M# 온보딩 화면_[건너뛰기] 버튼 노출 확인");
  			
 		}else{
-			System.out.println("(\"M# 온보딩 화면_[건너뛰기] 버튼 노출 안됨 -- FAIL");  //@ xpath.isDisplayed로 하면 xpath 자체가 없는걸로 인식되어 fail 됨 = else 미출력 후 에러 상태 
+			System.out.println("M# 온보딩 화면_[건너뛰기] 버튼 노출 안됨 -- FAIL");  //@ xpath.isDisplayed로 하면 xpath 자체가 없는걸로 인식되어 fail 됨 = else 미출력 후 에러 상태 
 			driver.get().close();
 	
 		}

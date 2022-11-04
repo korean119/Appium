@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="1" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-03T14:37:30 KST" name="Suite" finished-at="2022-11-03T14:38:04 KST" duration-ms="34125">
+  <suite started-at="2022-11-04T17:52:10 KST" name="Suite" finished-at="2022-11-04T17:53:03 KST" duration-ms="53044">
     <groups>
     </groups>
-    <test started-at="2022-11-03T14:37:30 KST" name="Device2" finished-at="2022-11-03T14:37:32 KST" duration-ms="2467">
-      <class name="appiumset._0_Automation_Main">
-        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@6574a52c]" started-at="2022-11-03T14:37:30 KST" name="Deviceinfo" finished-at="2022-11-03T14:37:32 KST" duration-ms="2425" status="FAIL">
+    <test started-at="2022-11-04T17:52:10 KST" name="Device2" finished-at="2022-11-04T17:52:13 KST" duration-ms="2469">
+      <class name="Hanwhatribes_automation._0_Automation_Main">
+        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Hanwhatribes_automation._0_Automation_Main@6574a52c]" started-at="2022-11-04T17:52:10 KST" name="Deviceinfo" finished-at="2022-11-04T17:52:13 KST" duration-ms="2423" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -69,7 +69,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
 at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
-at appiumset._1_Deviceinfo.Deviceinfo(_1_Deviceinfo.java:56)
+at Hanwhatribes_automation._1_Deviceinfo.Deviceinfo(_1_Deviceinfo.java:56)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -139,7 +139,7 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Deviceinfo -->
-        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@6574a52c]" started-at="2022-11-03T14:37:32 KST" name="main" finished-at="2022-11-03T14:37:32 KST" duration-ms="0" status="SKIP">
+        <test-method signature="main()[pri:0, instance:Hanwhatribes_automation._0_Automation_Main@6574a52c]" started-at="2022-11-04T17:52:13 KST" name="main" finished-at="2022-11-04T17:52:13 KST" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[Connection refused: no further information
@@ -164,7 +164,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
 at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:88)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:98)
-at appiumset._1_Deviceinfo.Deviceinfo(_1_Deviceinfo.java:56)
+at Hanwhatribes_automation._1_Deviceinfo.Deviceinfo(_1_Deviceinfo.java:56)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -234,11 +234,11 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-      </class> <!-- appiumset._0_Automation_Main -->
+      </class> <!-- Hanwhatribes_automation._0_Automation_Main -->
     </test> <!-- Device2 -->
-    <test started-at="2022-11-03T14:37:30 KST" name="Device1" finished-at="2022-11-03T14:38:04 KST" duration-ms="34125">
-      <class name="appiumset._0_Automation_Main">
-        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:appiumset._0_Automation_Main@43dac38f]" started-at="2022-11-03T14:37:30 KST" name="Deviceinfo" finished-at="2022-11-03T14:37:38 KST" duration-ms="7893" status="PASS">
+    <test started-at="2022-11-04T17:52:10 KST" name="Device1" finished-at="2022-11-04T17:53:03 KST" duration-ms="53044">
+      <class name="Hanwhatribes_automation._0_Automation_Main">
+        <test-method is-config="true" signature="Deviceinfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Hanwhatribes_automation._0_Automation_Main@43dac38f]" started-at="2022-11-04T17:52:10 KST" name="Deviceinfo" finished-at="2022-11-04T17:52:18 KST" duration-ms="7936" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -279,11 +279,11 @@ at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Deviceinfo -->
-        <test-method signature="main()[pri:0, instance:appiumset._0_Automation_Main@43dac38f]" started-at="2022-11-03T14:37:38 KST" name="main" finished-at="2022-11-03T14:38:04 KST" duration-ms="26205" status="PASS">
+        <test-method signature="main()[pri:0, instance:Hanwhatribes_automation._0_Automation_Main@43dac38f]" started-at="2022-11-04T17:52:18 KST" name="main" finished-at="2022-11-04T17:53:03 KST" duration-ms="45082" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-      </class> <!-- appiumset._0_Automation_Main -->
+      </class> <!-- Hanwhatribes_automation._0_Automation_Main -->
     </test> <!-- Device1 -->
   </suite> <!-- Suite -->
 </testng-results>
