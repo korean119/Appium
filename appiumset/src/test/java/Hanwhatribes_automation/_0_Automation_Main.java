@@ -19,8 +19,8 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 		_3_SignUp a03 = new _3_SignUp();
 		_4_MyTribes a04 = new _4_MyTribes();
 		_5_Tribeslist a05 = new _5_Tribeslist();
-		_6_Eventtribes a06 = new _6_Eventtribes();
-		_7_Tribesdetail a07 = new _7_Tribesdetail();
+		_6_Tribesdetail a07 = new _6_Tribesdetail();
+		_7_Eventtribes a06 = new _7_Eventtribes();
 		_8_Settings a08 = new _8_Settings();
 		_9_Logout a09 = new _9_Logout();
 
@@ -44,8 +44,8 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 				}
 				_4_MyTribes.MyTribes();
 				_5_Tribeslist.Tribeslist();
-				_6_Eventtribes.Eventtribes();
-				_7_Tribesdetail.Tribesdetail();
+				_6_Tribesdetail.Tribesdetail();
+				_7_Eventtribes.Eventtribes();
 				_8_Settings.settings();
 				_9_Logout.Logout();
 				

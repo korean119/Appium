@@ -72,3 +72,9 @@ public class AppiumDriverManager {
 //
 //driver = AppiumDriverManager.getDriver();
 
+// @트라이 캐치로 끊기지 않게 계속 자동화 가능 
+//try {
+//} catch (Exception e) {
+//    e.printStackTrace();
+// }
+

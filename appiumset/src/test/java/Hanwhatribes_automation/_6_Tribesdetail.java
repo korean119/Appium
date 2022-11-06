@@ -14,7 +14,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
 
-public class _7_Tribesdetail extends _0_Automation_Main {
+public class _6_Tribesdetail extends _0_Automation_Main {
 	
 	public static void Tribesdetail() throws MalformedURLException, InterruptedException {
 		

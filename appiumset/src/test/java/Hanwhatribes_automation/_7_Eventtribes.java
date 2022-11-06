@@ -2,12 +2,12 @@ package Hanwhatribes_automation;
 
 import java.net.MalformedURLException;
 
-public class _6_Eventtribes extends _0_Automation_Main {
+public class _7_Eventtribes extends _0_Automation_Main {
 	
 	public static void Eventtribes() throws MalformedURLException, InterruptedException  {
 		System.out.println("<<Event_tribes 진행>>");
 		
-		driver.get().findElementByXPath("	/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[3]")
+		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[3]")
 		.click(); 
 		System.out.println("이벤트 탭");
 	
