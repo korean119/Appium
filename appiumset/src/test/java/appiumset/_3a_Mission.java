@@ -54,7 +54,7 @@ public class _3a_Mission extends _0_Automation_Main {
 							"new UiScrollable(new UiSelector().scrollable(true)).setAsVerticalList().flingBackward()" +
 							".scrollIntoView(new UiSelector().text(\"러닝 트라이브에서 알려주는 Tips\"))"));
 			
-					
+					//aa
 					System.out.println("AAA");
 					
 					
