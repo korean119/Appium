@@ -63,10 +63,6 @@ public class _4_MyTribes extends _0_Automation_Main {
 			}
 		 
 		 
-		 
-		 
-		 
-		 
 		MobileElement 헤더영역백버튼 = driver.get().findElementByAccessibilityId("Up button in TopBar");
 		wait.until(ExpectedConditions.visibilityOf(헤더영역백버튼)).click();
 		System.out.println("P# 알림함 화면_[Back] 버튼 입력"); 
@@ -130,8 +126,13 @@ public class _4_MyTribes extends _0_Automation_Main {
 		  System.out.println(" 쓰크롤 왜 안되냐 ..");
 		  */
 		 
+//		 MobileElement element = (MobileElement) driver.get().findElement(MobileBy.AndroidUIAutomator(
+//			        "new UiScrollable(new UiSelector().scrollable(true)).setMaxSearchSwipes(10)" +
+//			         ".scrollIntoView(new UiSelector().resourceIdMatches(\".*android:id/content*\").text(\"TEST\"))"));
+		 
+		 
 		
-
+		
 		Thread.sleep(2000);
 		MobileElement 러닝트라이브진입 = driver.get().findElementByXPath("(//android.view.View[@content-desc=\"블랙 투명 레이어\"])[1]");
 		wait.until(ExpectedConditions.visibilityOf(러닝트라이브진입)).click(); 
@@ -171,7 +172,7 @@ public class _4_MyTribes extends _0_Automation_Main {
 		MobileElement 트라이브입장토스트팝업 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.widget.TextView");
 		
 		if (트라이브입장토스트팝업.isDisplayed())
-		{System.out.println("M# 트라이브 홈_" + 트라이브입장토스트팝업.getText() + "토스트팝업 출력 확인");
+		{System.out.println("M# 트라이브 홈_토스트팝업 출력 확인 = " + 트라이브입장토스트팝업.getText());
 
 		}else{
 			System.out.println("M# 트라이브 홈_" + 트라이브입장토스트팝업.getText() + "토스트팝업 출력 안됨 -- Pail");
@@ -219,16 +220,18 @@ public class _4_MyTribes extends _0_Automation_Main {
 			}
 		
 		
+		Thread.sleep(2000);
 		MobileElement 이벤트탭 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[3]");
 		wait.until(ExpectedConditions.visibilityOf(이벤트탭)).click();
 		System.out.println("P# 메인화면_이벤트 탭 입력");
 		
 		
-		Thread.sleep(2000);
-		wait.until(ExpectedConditions.visibilityOf(My트라이브버튼)).click();
-		System.out.println("P# 트라이브 목록 화면_[마이트라이브] 버튼 입력 ");
+		MobileElement My트라이브버튼2 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]");
+		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(My트라이브버튼2))).click();
+		System.out.println("P# 트라이브 목록 화면_[My트라이브] 버튼 입력 ");
 		
-		 
+		
+		Thread.sleep(2000);
 		MobileElement 응모현황종료탭 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.TextView[1]");
 		wait.until(ExpectedConditions.visibilityOf(응모현황종료탭)).click();    
 		System.out.println("P# My 트라이브 화면_ 응모현황 [종료] 탭 입력");
@@ -237,10 +240,10 @@ public class _4_MyTribes extends _0_Automation_Main {
 		Thread.sleep(2000);
 		MobileElement 응모현황종료탭문구 = driver.get().findElement(By.xpath ("//*[contains( @text , '응모현황이 없습니다.')]"));
 		 if (응모현황종료탭문구.isDisplayed())
-			{System.out.println("M# My 트라이브 화면_응모 현황 종료탭 문구 =" + 응모현황종료탭문구.getText());
+			{System.out.println("M# My 트라이브 화면_응모 현황 종료탭 문구 = " + 응모현황종료탭문구.getText());
 	 			
 			}else{
-				System.out.println("M# My 트라이브 화면_응모현황 종툐탭 문구 =" + 응모현황종료탭문구.getText() + "텍스트 찾기 실패 진입 실패-- FAIL");  
+				System.out.println("M# My 트라이브 화면_응모현황 종툐탭 문구 = " + 응모현황종료탭문구.getText() + "텍스트 찾기 실패 진입 실패-- FAIL");  
 				driver.get().close();
 				
 			} 
