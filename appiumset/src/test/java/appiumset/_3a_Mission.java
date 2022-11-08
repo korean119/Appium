@@ -90,17 +90,263 @@ public class _3a_Mission extends _0_Automation_Main {
 				Thread.sleep(3000); // context 변경 할 시간 필요하기 떄문에 sleep 사용
 				System.out.println("S# Context WebView로 변경");
 				Thread.sleep(3000);
+				
+				new TouchAction(driver.get())
+				.longPress(PointOption.point(550, 1600))
+				.waitAction()
+				.moveTo(PointOption.point(550, 300))
+				.release()
+				.perform();
+				System.out.println("스크롤 동작");
+				Thread.sleep(2000);
 
-				MobileElement 시작하기버튼 = driver.get().findElementByXPath("//button[@id='mission-start-in-benefit']");
-				wait.until(ExpectedConditions.visibilityOf(시작하기버튼)).sendKeys(Keys.ENTER);
-				System.out.println("시작하기 버튼 입력");
-				Thread.sleep(3000);
 				
-				MobileElement 투표결과보기 = driver.get().findElementByXPath("//*[@id='poll-result-in-mission']");
-			
+				
 				
 			
-				if(투표결과보기.isDisplayed()) {
+				for(int i = 1; i<=3; i++ ) {
+					
+					MobileElement 시작하기버튼 = driver.get().findElementByXPath("//button[@id='mission-start-in-benefit']");
+					wait.until(ExpectedConditions.visibilityOf(시작하기버튼)).sendKeys(Keys.ENTER);
+					System.out.println("시작하기 버튼 입력");
+					Thread.sleep(3000);
+					
+					MobileElement str = driver.get().findElementByXPath("//*[@id=\"portal\"]/section/div/div/div[2]/div[1]/div[1]");
+			
+					String 문자열 = str.getText();
+					
+					switch(문자열) {
+					
+					case "꼭 확인해주세요!" :
+						
+						System.out.println("친구초대 미션 진입");
+						
+						MobileElement 초대하기버튼 = driver.get().findElementByXPath("//*[@id='invite-in-mission']");
+						
+						if(초대하기버튼.isEnabled()) {
+							
+							System.out.println("[초대하기] 버튼 활성화 확인");
+							
+							Thread.sleep(2000);
+							
+						}else {
+							
+							System.out.println("[초대하기] 버튼 비활성화 확인");
+							
+							driver.get().close();
+						}
+						
+						wait.until(ExpectedConditions.visibilityOf(초대하기버튼)).sendKeys(Keys.ENTER);
+						
+						System.out.println("[초대하기] 버튼 입력");
+						
+						Thread.sleep(2000);
+												
+						/*if(driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.TabHost/android.widget.LinearLayout").isDisplayed()) {
+
+							System.out.println("공유하기 팝업 출력 확인");
+							
+							Thread.sleep(2000);
+						}else {
+							
+							System.out.println("공유하기 팝업 미출력 이슈");
+							
+							driver.get().close();				
+													
+						}*/
+						// 좌표 수정 필요하고 친구초대 미션 종료에 대한 정의 필요함
+						new TouchAction(driver.get())
+						.press(PointOption.point(550, 1500))						
+						.release()
+						.perform();
+						System.out.println("공유하기 팝업 닫기");
+						Thread.sleep(2000);
+						
+						MobileElement xButton1 = driver.get().findElementByXPath("//*[@id=\"portal\"]/section/div/div/div[1]/div/button");
+						wait.until(ExpectedConditions.visibilityOf(xButton1)).sendKeys(Keys.ENTER);
+						System.out.println("[X] 버튼 입력");
+						Thread.sleep(2000);
+						
+						System.out.println("혜택상세 화면으로 복귀");
+						
+						break;
+						
+					case "이렇게 올려주세요" : 
+						
+						System.out.println("사진 업로드 미션 진입");
+						
+						MobileElement 사진업로드버튼 = driver.get().findElementByXPath("//*[@id='image-upload-in-mission']");
+						
+						if(사진업로드버튼.isEnabled()) {
+							
+							System.out.println("[사진 업로드 하기] 버튼 활성화 확인");
+							
+							Thread.sleep(2000);
+																				
+						}else {
+							
+							System.out.println("[사진 업로드 하기] 버튼 비활성화 이슈");
+							
+							driver.get().close();
+						}
+						
+						MobileElement 가이드이미지 = driver.get().findElement(MobileBy.AndroidUIAutomator(
+								  "new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList().flingBackward()"));
+								  
+						wait.until(ExpectedConditions.visibilityOf(사진업로드버튼)).click();
+						
+						System.out.println("[사진 업로드 하기] 버튼 입력");
+						
+						Thread.sleep(2000);
+						
+						driver.get().context("NATIVE_APP");
+						
+						MobileElement 갤러리 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.HorizontalScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.ImageView");
+						wait.until(ExpectedConditions.visibilityOf(갤러리)).click();
+						System.out.println("[갤러리] 버튼 입력");
+						Thread.sleep(3000);
+						
+						
+						MobileElement 이미지선택 = driver.get().findElementByXPath("(//android.widget.FrameLayout[@content-desc=\"버튼\"])[1]/android.widget.FrameLayout[1]/android.widget.ImageView"); 
+						wait.until(ExpectedConditions.visibilityOf(이미지선택)).click();
+						System.out.println("이미지 선택");
+						Thread.sleep(3000);
+						
+						MobileElement 사진올리기버튼 = driver.get().findElementByXPath("(//android.widget.FrameLayout[@content-desc=\"버튼\"])[1]/android.widget.FrameLayout[1]/android.widget.ImageView"); 
+						wait.until(ExpectedConditions.visibilityOf(사진올리기버튼)).click();
+						System.out.println("[사진 올리기] 버튼 입력");
+						Thread.sleep(3000);
+						
+						Set<String> contextNames = driver.get().getContextHandles();
+						for (String contextName : contextNames) {
+							System.out.println(contextName); }
+							
+					
+						driver.get().context((String) contextNames.toArray()[1]);
+						System.out.println("S# Context WebView로 변경");
+						Thread.sleep(3000);
+						
+						if(driver.get().findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div\r\n").isDisplayed()) {
+
+							System.out.println("미션 완료 팝업 출력 확인");
+							
+							Thread.sleep(3000);
+							
+							}else {
+								
+								System.out.println("미션 완료 팝업 미출력 이슈");
+								
+								driver.get().close();				
+														
+							}
+							
+							MobileElement 확인버튼1 = driver.get().findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button");
+							wait.until(ExpectedConditions.visibilityOf(확인버튼1)).sendKeys(Keys.ENTER);
+							System.out.println("미션 완료 팝업 [확인] 버튼 입력");
+							Thread.sleep(2000);
+							
+							MobileElement xButton2 = driver.get().findElementByXPath("//*[@id=\"portal\"]/section/div/div/div[1]/div/button");
+							wait.until(ExpectedConditions.visibilityOf(xButton2)).sendKeys(Keys.ENTER);
+							System.out.println("[X] 버튼 입력");
+							Thread.sleep(2000);
+							
+							System.out.println("혜택상세 화면으로 복귀");
+							
+							break;
+						
+						
+					default : 
+						
+						System.out.println("투표 미션 진입");
+						
+						MobileElement 투표결과보기버튼 = driver.get().findElementByXPath("//*[@id='poll-result-in-mission']");
+						
+						if(투표결과보기버튼.isEnabled()) {
+							
+							System.out.println("버튼 활성화 이슈");
+							
+							driver.get().close();
+							
+						}else {
+							
+							System.out.println("버튼 비활성화 확인");
+							
+							Thread.sleep(2000);
+						}
+					
+						MobileElement 투표항목1 = driver.get().findElementByXPath("//label[@aria-label='투표항목1']");
+						wait.until(ExpectedConditions.visibilityOf(투표항목1)).click();
+						System.out.println("투표항목 1 입력"); 
+						Thread.sleep(1000);
+										
+						MobileElement 투표항목2 = driver.get().findElementByXPath("//label[@aria-label='투표항목2']");
+						wait.until(ExpectedConditions.visibilityOf(투표항목2)).click();
+						System.out.println("투표항목 2 입력");
+						Thread.sleep(1000);
+
+						wait.until(ExpectedConditions.visibilityOf(투표항목1)).click();
+						System.out.println("투표항목 1 재입력"); 	
+						Thread.sleep(1000);
+						
+						wait.until(ExpectedConditions.visibilityOf(투표항목2)).click();
+						System.out.println("투표항목 2 재입력"); 
+						Thread.sleep(1000);
+										
+						if(투표결과보기버튼.isEnabled()) {
+							
+							System.out.println("버튼 활성화 확인");
+							
+							Thread.sleep(2000);
+							
+						}else {
+							
+							System.out.println("버튼 비활성화 이슈");
+							
+							driver.get().close();
+							
+						}
+										
+						MobileElement 투표항목결과보기 = driver.get().findElementByXPath("//*[@id=\"poll-result-in-mission\"]");
+						wait.until(ExpectedConditions.visibilityOf(투표항목결과보기)).click();
+						System.out.println("[투표결과보기] 버튼 입력");
+						
+						Thread.sleep(2000);
+						
+						if(driver.get().findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div\r\n").isDisplayed()) {
+
+						System.out.println("미션 완료 팝업 출력 확인");
+						
+						Thread.sleep(3000);
+						
+						}else {
+							
+							System.out.println("미션 완료 팝업 미출력 이슈");
+							
+							driver.get().close();				
+													
+						}
+						
+						MobileElement 확인버튼2 = driver.get().findElementByXPath("//*[@id=\"notification\"]/section/div[2]/div/div[2]/button");
+						wait.until(ExpectedConditions.visibilityOf(확인버튼2)).sendKeys(Keys.ENTER);
+						System.out.println("미션 완료 팝업 [확인] 버튼 입력");
+						Thread.sleep(2000);
+						
+						MobileElement xButton3 = driver.get().findElementByXPath("//*[@id=\"portal\"]/section/div/div/div[1]/div/button");
+						wait.until(ExpectedConditions.visibilityOf(xButton3)).sendKeys(Keys.ENTER);
+						System.out.println("[X] 버튼 입력");
+						Thread.sleep(2000);
+						
+						System.out.println("혜택상세 화면으로 복귀");
+						
+						break;
+					}
+					
+						/* 버튼 종류로 분류 -----------------
+	
+			
+				if(driver.get().findElementByXPath("//*[@id='poll-result-in-mission']").isDisplayed()) {
+					
+					MobileElement 투표결과보기 = driver.get().findElementByXPath("//*[@id='poll-result-in-mission']");
 					
 					if(투표결과보기.isEnabled()) {
 						
@@ -174,13 +420,23 @@ public class _3a_Mission extends _0_Automation_Main {
 					Thread.sleep(2000);
 
 				//-------------------------------------------&&&& 여기까지 했음
-				}else if(driver.get().findElementByXPath("//*[@id='invite-in-mission']").isDisplayed()){
-					
-					
 				}else if(driver.get().findElementByXPath("//*[@id='image-upload-in-mission']").isDisplayed()) {
 					
+					System.out.println("사진업로드 버튼 확인");
+					
+				}else {	
+
+					MobileElement 초대하기버튼 = driver.get().findElementByXPath("//*[@id='invite-in-mission']");
+					
+					if (초대하기버튼.isDisplayed()) {
+						System.out.println("초대하기 버튼 확인");
+					}
+					
+					
+						
 					
 				}
+			--------------------------------------- 여기까지 버튼으로 분류	*/
 			}
 			
 				
@@ -320,6 +576,6 @@ public class _3a_Mission extends _0_Automation_Main {
 	}
 
 
-		
+}		
 
 
