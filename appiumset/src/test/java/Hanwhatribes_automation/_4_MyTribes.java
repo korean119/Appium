@@ -41,7 +41,7 @@ public class _4_MyTribes extends _0_Automation_Main {
 		{System.out.println("M# My 트라이브 화면_바텀 시트 미노출 노출");
  			
 		}else{
-			System.out.println("M# My 트라이브 화면_바텀 시트 노출 노출 --FAIL");  
+			System.out.println("M# My 트라이브 화면_바텀 시트 노출 됨 --FAIL");  
 			driver.get().close();
 	
 		}
@@ -57,7 +57,7 @@ public class _4_MyTribes extends _0_Automation_Main {
 			{System.out.println("M# 알림함 화면_'알림' 텍스트 존재 확인 = " + 알림함텍스트찾기.getText());
 	 			
 			}else{
-				System.out.println("M# 알림함 화면_'알림 텍스트 찾기 실패 =" + 알림함텍스트찾기.getText() + "-- FAIL"); 
+				System.out.println("M# 알림함 화면_'알림 텍스트 찾기 실패 = " + 알림함텍스트찾기.getText() + "-- FAIL"); 
 				driver.get().close();
 		
 			}
@@ -73,7 +73,7 @@ public class _4_MyTribes extends _0_Automation_Main {
 			{System.out.println("M# My 트라이브 화면_'응모 현황' 텍스트 존재 확인 = " + MY트라이브텍스트찾기.getText());
 	 			
 			}else{
-				System.out.println("M# My 트라이브 화면_" + MY트라이브텍스트찾기.getText() + "텍스트 찾기 실패 진입 실패-- FAIL");  //@ xpath.isDisplayed로 하면 xpath 자체가 없는걸로 인식되어 fail 됨 = else 미출력 후 에러 상태 
+				System.out.println("M# My 트라이브 화면_'응모 현황' 텍스트 존재 확인 안됨 = " + MY트라이브텍스트찾기.getText() + "-- Fail");  
 				driver.get().close();
 				
 			}
@@ -94,10 +94,10 @@ public class _4_MyTribes extends _0_Automation_Main {
 		MobileElement 나의트라이브텍스트확인 = driver.get().findElement(By.xpath ("//*[contains( @text , '반가워요! 트라이브를 시작해보세요')]"));
 		
 		if (나의트라이브텍스트확인.isDisplayed())
-		{System.out.println("M# My 트라이브 화면 " + 나의트라이브텍스트확인.getText() + "나의트라이브 텍스트 확인" );
+		{System.out.println("M# My 트라이브 화면_'나의트라이브 텍스트 확인' = " + 나의트라이브텍스트확인.getText() );
 		
 		}else{
-			System.out.println("M# My 트라이브 화면_" + 나의트라이브텍스트확인.getText() + "텍스트 찾기 실패 - Fail");			
+			System.out.println("M# My 트라이브 화면_'나의 트라이브 텍스트 확인안됨 = " + 나의트라이브텍스트확인.getText() +  "-- Fail");			
 			driver.get().close();
 				
 			}
@@ -147,7 +147,7 @@ public class _4_MyTribes extends _0_Automation_Main {
 		Thread.sleep(2000);
 		 
 		 }else{
-		 System.out.println("M# 트라이브 홈_트라이브 진입 시 툴팁 노출 되지 않음 -- FAIL"); 
+		 System.out.println("M# 트라이브 홈_트라이브 진입 시 툴팁 노출 되지 않음" + 트라이브진입툴팁.getText() + "-- Fail"); 
 		 driver.get().close(); 
 		 
 		 }
@@ -157,16 +157,15 @@ public class _4_MyTribes extends _0_Automation_Main {
 		{System.out.println("M# 트라이브 홈_Out in Top 없는 상태 확인");
 		Thread.sleep(2000);
         
-        
 		MobileElement 트라이브입장버튼 = driver.get().findElementByAccessibilityId("arrow beside text in button");
 		wait.until(ExpectedConditions.visibilityOf(트라이브입장버튼)).click();    
-		
 		System.out.println("P# 트라이브 홈_없는 상태라면 [입장하기] 버튼 입력"); 	
+		
 		}else{
 			System.out.println("M# 트라이브 홈_Out in Top 존재 상태 -- FAIL"); 
 			driver.get().close();
 		}
-		
+	
 		
 		Thread.sleep(2000);
 		MobileElement 트라이브입장토스트팝업 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.widget.TextView");
@@ -175,7 +174,7 @@ public class _4_MyTribes extends _0_Automation_Main {
 		{System.out.println("M# 트라이브 홈_토스트팝업 출력 확인 = " + 트라이브입장토스트팝업.getText());
 
 		}else{
-			System.out.println("M# 트라이브 홈_" + 트라이브입장토스트팝업.getText() + "토스트팝업 출력 안됨 -- Pail");
+			System.out.println("M# 트라이브 홈_토스트팝업 출력 확인 안됨 = " + 트라이브입장토스트팝업.getText() + "-- Fail");
 			driver.get().close();
 		}
 		
@@ -214,7 +213,7 @@ public class _4_MyTribes extends _0_Automation_Main {
 		{System.out.println("M# 트라이브 목록 화면_[설정버튼] 없음 확인");
 		
 		}else{
-			System.out.println("M# 트라이브 목록 화면_[설정버튼] 없음 존재 -- FAIL"); 
+			System.out.println("M# 트라이브 목록 화면_[설정버튼] 없음 존재 -- Fail"); 
 			driver.get().close();
 				
 			}
@@ -243,7 +242,7 @@ public class _4_MyTribes extends _0_Automation_Main {
 			{System.out.println("M# My 트라이브 화면_응모 현황 종료탭 문구 = " + 응모현황종료탭문구.getText());
 	 			
 			}else{
-				System.out.println("M# My 트라이브 화면_응모현황 종툐탭 문구 = " + 응모현황종료탭문구.getText() + "텍스트 찾기 실패 진입 실패-- FAIL");  
+				System.out.println("M# My 트라이브 화면_응모현황 종툐탭 문구 없음 = " + 응모현황종료탭문구.getText() + "-- FAIL");  
 				driver.get().close();
 				
 			} 

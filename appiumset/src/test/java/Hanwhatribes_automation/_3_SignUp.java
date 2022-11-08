@@ -31,8 +31,6 @@ import io.appium.java_client.touch.offset.PointOption;
 	  public static void SignUp() throws MalformedURLException, InterruptedException {
 
 		  System.out.println("<SignUp 진행>>");
-		  
-		  Thread.sleep(2000);
 
 		  WebDriverWait wait = new WebDriverWait(driver.get(), 10);
 	

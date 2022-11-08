@@ -23,18 +23,19 @@ public class _8_Settings extends _0_Automation_Main {
 		
 		Thread.sleep(2000); 
 		MobileElement My트라이브버튼 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]");
-		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(My트라이브버튼))).click();
+		wait.until(ExpectedConditions.visibilityOf(My트라이브버튼)).click();
 		System.out.println("P# 트라이브 목록 화면_[My트라이브] 버튼 입력 ");
 	
-
-		MobileElement settinginTobBar = driver.get().findElementByAccessibilityId("setting in TopBar");
-		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(settinginTobBar))).click(); 
+		
+		Thread.sleep(2000); 
+		MobileElement settinginTopBar = driver.get().findElementByAccessibilityId("setting in TopBar");
+		wait.until(ExpectedConditions.visibilityOf(settinginTopBar)).click(); 
 		System.out.println("P# My 트라이브 화면_[settinginTobBar] 버튼 입력");
 		
 		
 		Thread.sleep(2000); 
 		MobileElement 회원정보관리 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]/android.widget.TextView\r\n");
-		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(회원정보관리))).click();
+		wait.until(ExpectedConditions.visibilityOf(회원정보관리)).click();
 		System.out.println("P# 설정 화면_[회원정보 관리] 버튼 입력");
 	
 		
@@ -44,89 +45,83 @@ public class _8_Settings extends _0_Automation_Main {
 		String a = 변경전닉네임.getText();
 		
 
-		
 		Thread.sleep(2000);
 		MobileElement 닉네임변경버튼 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.widget.Button");
-		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(닉네임변경버튼))).click();
+		wait.until(ExpectedConditions.visibilityOf(닉네임변경버튼)).click();
 		System.out.println("P# 회원정보 관리 화면_[닉네임 변경] 버튼 입력");
 		
 		
 		MobileElement 닉네임초기화버튼 = driver.get().findElementByAccessibilityId("clear input");
-		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(닉네임초기화버튼))).click(); 
-		System.out.println("닉네임 초기화");
+		wait.until(ExpectedConditions.visibilityOf(닉네임초기화버튼)).click(); 
+		System.out.println("P# 회원정보 관리 화면_[닉네임 초기화] 버튼 입력");
 		
 		
 		Thread.sleep(2000);
 		driver.get().getKeyboard().sendKeys("Automati");
 		String b = "Automati";
 	
-		System.out.println("닉네임 입력");
+		System.out.println("P# 회원정보 관리 화면_닉네임 입력");
 		
 		
 		Thread.sleep(2000);		
 		MobileElement 닉네임저장버튼 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.widget.Button"); 
-		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(닉네임저장버튼))).click();
-	    System.out.println("회원정보 관리 -> 저장");
+		wait.until(ExpectedConditions.visibilityOf(닉네임저장버튼)).click();
+	    System.out.println("P# 회원정보 관리 화면_[저장] 버튼 입력");
 		Thread.sleep(2000);
 		
 		
-		
 		MobileElement 변경후닉네임 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.EditText[1]");
-	
+		변경후닉네임.getText();
+		String c = 변경후닉네임.getText();
 		System.out.println("변경전 닉네임 = " + a );
 		
-		if(b.equals(변경후닉네임)) {
-			System.out.println("입력한 닉네임" + b + 변경후닉네임.getText() + " 일치");
+		if(b.equals(c)) {
+			System.out.println("입력한 닉네임 " + b + 변경후닉네임.getText() + " 일치");
 			
 		}else {
-			System.out.println("입력학 닉네임" + b + 변경후닉네임.getText() + " 불일치 --> Fail");
+			System.out.println("입력한 닉네임 = " + b + 변경후닉네임.getText() + " 불일치 --> Fail");
 			driver.get().close();
 		}
 		
 
 		Thread.sleep(2000);
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.widget.Button")
-		.click();
-		System.out.println("회원정보 관리 -> 닉네임 변경 버튼");
-		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(닉네임변경버튼)).click();
+		System.out.println("P# 회원정보 관리 화면_[닉네임 변경] 버튼 입력");
 		
-		
-		MobileElement nickname2 = driver.get().findElementByAccessibilityId("clear input");
-		nickname2.click(); 
+		wait.until(ExpectedConditions.visibilityOf(닉네임초기화버튼)).click();
 		System.out.println("닉네임 초기화");
+		System.out.println("P# 회원정보 관리 화면_[초기화] 버튼 입력");
 		Thread.sleep(2000);
 		
 		
 		driver.get().getKeyboard().sendKeys("def  ult");
-		System.out.println("닉네임 띄어쓰기 입력");
-		
-		
+		System.out.println("P# 회원정보 관리 화면_닉네임 띄어쓰기 포함 입력");
+	
+		Thread.sleep(2000);
 		MobileElement alert = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.EditText[1]/android.widget.TextView[2]");
 		
 		if (alert.isDisplayed())
 		{System.out.println("얼럿메세지 출력: " + alert.getText()); 	
 		
 		}else{
-			System.out.println("얼럿메세지 없음 -- 이슈");  //@ xpath.isDisplayed로 하면 xpath 자체가 없는걸로 인식되어 fail 됨 = else 미출력 후 에러 상태 
+			System.out.println("얼럿메세지 없음 -- Fail"); 
 			driver.get().close();
 		}
 		
 		
-		Thread.sleep(2000);
-		MobileElement nickname3 = driver.get().findElementByAccessibilityId("clear input");
-		nickname3.click(); 
+		
+		wait.until(ExpectedConditions.visibilityOf(닉네임초기화버튼)).click();
 		System.out.println("닉네임 초기화");
 		
 		
 		Thread.sleep(2000);
 		driver.get().getKeyboard().sendKeys("defult");
-		System.out.println("기본 닉네임 입력");
+		System.out.println("P# 회원정보 관리 화면_기본 닉네임 입력");
 		
-		
+	
 		Thread.sleep(2000);
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.widget.Button")
-		.click(); 
-		System.out.println("회원정보 관리 -> 저장");
+		wait.until(ExpectedConditions.visibilityOf(닉네임저장버튼)).click();
+	    System.out.println("P# 회원정보 관리 화면_[저장] 버튼 입력");
 		
 		
 		Thread.sleep(2000);
@@ -135,31 +130,30 @@ public class _8_Settings extends _0_Automation_Main {
 		{System.out.println("토스트 팝업 존재");
 		
 		MobileElement toastView = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.TextView");
-		String text3 = toastView.getText();
 		System.out.println(toastView.getText()); 	
 		
 		}else{
-			System.out.println("토스트 팝업 없음 -- 이슈");  //@ xpath.isDisplayed로 하면 xpath 자체가 없는걸로 인식되어 fail 됨 = else 미출력 후 에러 상태 
+			System.out.println("토스트 팝업 없음 -- 이슈");  
 			driver.get().close();
 		
 		}
 		
-		Thread.sleep(5000);
-		
-		MobileElement signout = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView[3]");
-		signout.click(); 
-		System.out.println("탈퇴 [여기] 버튼 입력");
+		Thread.sleep(2000);
+		MobileElement 회원탈퇴버튼 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView[3]");
+		wait.until(ExpectedConditions.visibilityOf(회원탈퇴버튼)).click();
+		System.out.println("P# 회원정보 관리 화면_탈퇴 [여기] 버튼 입력");
 		
 		Thread.sleep(2000);
 		
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView")
-		.click(); 
-		System.out.println("[X] 버튼 입력 -> 회원정보 관리");
+		MobileElement 회원탈퇴화면X버튼 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.widget.ImageView"); 
+		wait.until(ExpectedConditions.visibilityOf(회원탈퇴화면X버튼)).click();
+
+		System.out.println("P# 히원정보 관리 화면_ 탈퇴화면 [X] 버튼 입력");
 		
 		
-		MobileElement back5 = driver.get().findElementByAccessibilityId("Up button in TopBar");
-		back5.click(); 
-		System.out.println("[Back key] 입력 -> 설정"); 
+		MobileElement UpButtoninTopBar = driver.get().findElementByAccessibilityId("Up button in TopBar");
+		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(UpButtoninTopBar))).click();
+		System.out.println("P# 회원정보 관리 화면_UpButtoninTopBar 버튼 입력"); 
 		
 
 		

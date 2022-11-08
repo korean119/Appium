@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.appium.java_client.MobileElement;
 
 
-
 public class _2_Onboarding extends AppiumDriverManager { 
 	public static void onboarding() throws MalformedURLException, InterruptedException  {
 		

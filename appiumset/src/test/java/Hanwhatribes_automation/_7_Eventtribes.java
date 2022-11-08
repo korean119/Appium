@@ -21,7 +21,6 @@ public class _7_Eventtribes extends _0_Automation_Main {
 		wait.until(ExpectedConditions.visibilityOf(이벤트탭)).click();
 		System.out.println("P# 메인화면_이벤트 탭 입력");
 		
-	
-	}
 
+	}
 }
