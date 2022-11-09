@@ -15,7 +15,7 @@ import io.appium.java_client.MobileElement;
 public class _2_Onboarding extends AppiumDriverManager { 
 	public static void onboarding() throws MalformedURLException, InterruptedException  {
 		
-		System.out.println("<<onboarding 진행>>");
+		System.out.println("<<<<<<< Onboarding 진행 >>>>>>>");
 		
 		WebDriverWait wait = new WebDriverWait(driver.get(), 10);
 		

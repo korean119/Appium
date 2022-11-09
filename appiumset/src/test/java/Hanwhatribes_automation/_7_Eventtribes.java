@@ -1,8 +1,6 @@
 package Hanwhatribes_automation;
 
 import java.net.MalformedURLException;
-
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -12,7 +10,7 @@ public class _7_Eventtribes extends _0_Automation_Main {
 	
 	public static void Eventtribes() throws MalformedURLException, InterruptedException  {
 		
-		System.out.println("<<Event_tribes 진행>>");
+		System.out.println("<<<<<<< Event_tribes 진행 >>>>>>>");
 		
 		WebDriverWait wait = new WebDriverWait(driver.get(), 10);
 		

@@ -6,21 +6,19 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.InvalidSelectorException;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.touch.offset.PointOption;
 
 
 public class _6_Tribesdetail extends _0_Automation_Main {
 	
 	public static void Tribesdetail() throws MalformedURLException, InterruptedException {
 		
-		System.out.println("<<Tribes_detail 진행>>");
+		System.out.println("<<<<<<< Tribes_detail 진행>>>>>>>");
 		
 		WebDriverWait wait = new WebDriverWait(driver.get(), 20);
 		
@@ -30,49 +28,37 @@ public class _6_Tribesdetail extends _0_Automation_Main {
 		wait.until(ExpectedConditions.visibilityOf(러닝트라이브진입)).click(); 
 		System.out.println("P# 트라이브 목록 화면_러닝 트라이브 진입");
 		
-	
-		MobileElement 트라이브나가기버튼 = driver.get().findElementByAccessibilityId("out in TopBar");
-		wait.until(ExpectedConditions.visibilityOf(트라이브나가기버튼)).click(); 
-		System.out.println("P# 트라이브 홈 화면_[트라이브 나가기]버튼 입력"); 
 		
+		Thread.sleep(2000);
+		MobileElement 트라이브나가기버튼 = driver.get().findElementByAccessibilityId("out in TopBar");
+		
+		 if (트라이브나가기버튼.isDisplayed())
+			{System.out.println("M# 트라이브홈 화면_[트라이브 나가기] 버튼 텍스트 존재 확인");
+			
+			wait.until(ExpectedConditions.visibilityOf(트라이브나가기버튼)).click(); 
+			System.out.println("P# 트라이브 목록 화면_러닝 트라이브 진입");
+			
+			}else{
+				System.out.println("M# 트라이브 홈 화면_[트라이브 나가기] 버튼 미확인 " + "-- FAIL"); 
+				driver.get().close();
+		
+			}
+
 		
 		Thread.sleep(2000);
 		MobileElement 트라이브나가기컨펌팝업유지하기 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View[2]/android.widget.Button");
 		wait.until(ExpectedConditions.visibilityOf(트라이브나가기컨펌팝업유지하기)).click(); 
-		System.out.println("P# 트라이브 홈 화면_트라이브 컨펌팝업 [유지하기]버튼 입력");
+		System.out.println("P# 트라이브 홈 화면_트라이브 컨펌팝업 [유지하기] 버튼 입력");
 	
-		
 		wait.until(ExpectedConditions.visibilityOf(트라이브나가기버튼)).click(); 
-		System.out.println("P# 트라이브 홈 화면_[트라이브 나가기]버튼 입력"); 
+		System.out.println("P# 트라이브 홈 화면_[트라이브 나가기] 버튼 입력"); 
 		
 		
 		Thread.sleep(2000);
 		MobileElement 트라이브나가기컨펌팝업나가기버튼 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
 		wait.until(ExpectedConditions.visibilityOf(트라이브나가기컨펌팝업나가기버튼)).click(); 
-		System.out.println("P# 트라이브 홈 화면_트라이브 컨펌팝업 [나가기]버튼 입력");
+		System.out.println("P# 트라이브 홈 화면_트라이브 컨펌팝업 [나가기] 버튼 입력");
 
-		 
-		MobileElement UpbuttoninTopBar = driver.get().findElementByAccessibilityId("Up button in TopBar");
-		wait.until(ExpectedConditions.elementToBeClickable(UpbuttoninTopBar)).click();   
-		System.out.println("P# 트라이브 홈 화면_UpbuttoninTopBar 버튼 입력"); 
-			
-		 
-		Thread.sleep(2000);
-		wait.until(ExpectedConditions.visibilityOf(러닝트라이브진입)).click(); 
-		System.out.println("P# 트라이브 목록 화면_러닝 트라이브 진입");
-		
-		Thread.sleep(2000);
-		MobileElement 골프텍스트찾기 = driver.get().findElement(By.xpath ("//*[contains( @text , '골프')]"));
-		
-		 if (골프텍스트찾기.isDisplayed())
-			{System.out.println("M# 트라이브홈 화면_'골프' 텍스트 존재 확인 = " + 골프텍스트찾기.getText());
-	 			
-			}else{
-				System.out.println("M# 트라이브홈 화면_'골프' 텍스트 찾기 실패 = " +골프텍스트찾기.getText() + "-- FAIL"); 
-				driver.get().close();
-		
-			}		
-		 
 		 
 		 try {
 			    driver.get().findElement(MobileBy.AndroidUIAutomator(
@@ -131,9 +117,9 @@ public class _6_Tribesdetail extends _0_Automation_Main {
 		driver.get().context("NATIVE_APP");
 		System.out.println("S# Context NATIVE로 변경"); 
 			
-
-		MobileElement UpbuttoninTopBar1 = driver.get().findElementByAccessibilityId("Up button in TopBar");
-		wait.until(ExpectedConditions.elementToBeClickable(UpbuttoninTopBar1)).click();   
+		Thread.sleep(2000);
+		MobileElement UpbuttoninTopBar = driver.get().findElementByAccessibilityId("Up button in TopBar");
+		wait.until(ExpectedConditions.visibilityOf(UpbuttoninTopBar)).click();   
 		System.out.println("P# 트라이브 홈_UpbuttoninTopBar 버튼 입력"); 
 		
 

@@ -4,33 +4,17 @@
   import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.touch.TouchActions;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.google.common.collect.ImmutableMap;
-
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.MultiTouchAction;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidTouchAction;
-import io.appium.java_client.touch.TapOptions;
-import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.ElementOption;
-import io.appium.java_client.touch.offset.PointOption;
-  
-  
 
+  
   public class _3_SignUp extends AppiumDriverManager { 
 
 	  public static void SignUp() throws MalformedURLException, InterruptedException {
 
-		  System.out.println("<SignUp 진행>>");
+		  System.out.println("<<<<<<< SignUp 진행 >>>>>>>");
 
 		  WebDriverWait wait = new WebDriverWait(driver.get(), 10);
 	

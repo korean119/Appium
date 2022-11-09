@@ -4,23 +4,17 @@ import java.net.MalformedURLException;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.InvalidSelectorException;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.interactions.touch.TouchActions;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
-import io.appium.java_client.touch.offset.PointOption;
+
 
 public class _5_Tribeslist extends _0_Automation_Main { 
 	public static void Tribeslist() throws MalformedURLException, InterruptedException  {
 		
-		System.out.println("<<Tribes_list 진행>>");
+		System.out.println("<<<<<<< Tribes_list 진행 >>>>>>>>");
 		
 		WebDriverWait wait = new WebDriverWait(driver.get(), 10);
 	
@@ -79,7 +73,7 @@ public class _5_Tribeslist extends _0_Automation_Main {
 		 
 		MobileElement 혜택상세닫기 = driver.get().findElementByXPath("//button[@aria-label='혜택 상세 닫기']");
 		wait.until(ExpectedConditions.visibilityOf(혜택상세닫기)).sendKeys(Keys.ENTER); 
-		System.out.println("혜택상세 닫기");
+		System.out.println("P# 혜택상세 화면_혜택상세 [X] 닫기 버튼 입력");
 		
 		}else{
 			System.out.println("M# 혜택상세 화면_ 공유하기 버튼 비노출 -- Fail");
