@@ -16,6 +16,13 @@ cap.setCapability("udid", "192.168.0.130:5555");
 adb uninstall io.appium.uiautomator2.server  
 adb uninstall io.appium.uiautomator2.server.test  
 
+* 아래 이슈의 주범  
+  org.openqa.selenium.WebDriverException: Connection refused: no further information  
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'  
+System info: host: 'DESKTOP-H9VDVB7', ip: '192.168.0.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'  
+Driver info: driver.version: AppiumDriver  
+
+
 
 
 
