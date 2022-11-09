@@ -118,7 +118,7 @@ public class _8_Settings extends _0_Automation_Main {
 		driver.get().getKeyboard().sendKeys("defult");
 		System.out.println("P# 회원정보 관리 화면_기본 닉네임 입력");
 		
-	
+
 		Thread.sleep(2000);
 		wait.until(ExpectedConditions.visibilityOf(닉네임저장버튼)).click();
 	    System.out.println("P# 회원정보 관리 화면_[저장] 버튼 입력");
@@ -227,40 +227,34 @@ public class _8_Settings extends _0_Automation_Main {
 		
 		MobileElement 알림On컨펌팝업확확인버튼 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View");
 		wait.until(ExpectedConditions.visibilityOf(알림On컨펌팝업확확인버튼)).click();
-		System.out.println("컨펌 팝업 [확인] 버튼 입력");
+		System.out.println("P# 혜택 및 이벤트 알림 화면_컨펌 팝업 [확인] 버튼 입력");
 		Thread.sleep(3000);
 		
+		// @ 여기 하나 비어있음 
+		
+		
+		wait.until(ExpectedConditions.visibilityOf(UpButtoninTopBar)).click();
+		System.out.println("P# 혜택 및 이벤트 알림 화면_UpButtoninTopBar 버튼 입력"); 
 
 	
-		MobileElement back2 = driver.get().findElementByAccessibilityId("Up button in TopBar");
-		back2.click();
-		System.out.println("TopBar Back"); 
+		wait.until(ExpectedConditions.visibilityOf(UpButtoninTopBar)).click();
+		System.out.println("P# 알림 설정 화면_UpButtoninTopBar 버튼 입력"); 
+	
 
-	
-		MobileElement back3 = driver.get().findElementByAccessibilityId("Up button in TopBar");
-		back3.click();
-		System.out.println("TopBar Back"); 
-	
-	
-		MobileElement back4 = driver.get().findElementByAccessibilityId("Up button in TopBar");
-		back4.click();
 		
+		MobileElement 자주묻는질문 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]/android.widget.TextView"); 
+		wait.until(ExpectedConditions.visibilityOf(자주묻는질문)).click();
+		System.out.println("P# 설정 화면_자주 묻는 질문 진입");
+
 		
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[3]/android.widget.TextView")
-		.click(); 
-		System.out.println("설정 > 자주 묻는 질문");
-		Thread.sleep(3000);
-		
-		Set<String> contextNames1 = driver.get().getContextHandles();
-		for (String contextName : contextNames1) {
+		Set<String> contextNames = driver.get().getContextHandles();
+		for (String contextName : contextNames) {
 			System.out.println(contextName); }
 			
-	
-		driver.get().context((String) contextNames1.toArray()[1]);
-		Thread.sleep(3000); // context 변경 할 시간 필요하기 떄문에 sleep 사용
+		driver.get().context((String) contextNames.toArray()[1]);
+		Thread.sleep(2000); // context 변경 할 시간 필요하기 떄문에 sleep 사용
 		System.out.println("S# Context WebView로 변경");
-		Thread.sleep(3000);
-		
+		Thread.sleep(2000);
 		
 		MobileElement 일대일문의하기버튼 = driver.get().findElementByXPath("//a[@id='inquiry-in-faq']");
 		wait.until(ExpectedConditions.visibilityOf(일대일문의하기버튼)).sendKeys(Keys.ENTER);
@@ -279,15 +273,14 @@ public class _8_Settings extends _0_Automation_Main {
 		System.out.println("[1:1문의] Tab 입력");
 		Thread.sleep(3000);
 		
-		MobileElement photo = driver.get().findElementByXPath("//*[@id='add-inquiry-photo']");
-		photo.click();
-		
-		//wait.until(ExpectedConditions.visibilityOf(photo)).sendKeys(Keys.ENTER);
-		System.out.println("[사진 첨부하기] 버튼 입력");
-		Thread.sleep(2000);
+		MobileElement 사진첨부하기버튼 = driver.get().findElementByXPath("//*[@id='add-inquiry-photo']");
+		wait.until(ExpectedConditions.visibilityOf(사진첨부하기버튼)).sendKeys(Keys.ENTER);
+		System.out.println("P# 1:1문의 화면_[사진 첨부하기] 버튼 입력");
 		
 		driver.get().context("NATIVE_APP");
 		
+		
+		// 갤러리 영역 병렬 테스트가 가능한지 여부 확인 필요
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.drawerlayout.widget.DrawerLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.HorizontalScrollView/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.ImageView")
 		.click(); 
 		System.out.println("[갤러리] 버튼 입력");
@@ -299,23 +292,23 @@ public class _8_Settings extends _0_Automation_Main {
 		System.out.println("이미지 선택");
 		Thread.sleep(3000);
 		
-		Set<String> contextNames = driver.get().getContextHandles();
+
 		for (String contextName : contextNames) {
 			System.out.println(contextName); }
 			
-	
 		driver.get().context((String) contextNames.toArray()[1]);
 		System.out.println("S# Context WebView로 변경");
 		Thread.sleep(3000);
 		
 		MobileElement 첨부이미지삭제 = driver.get().findElementByXPath("//button[@aria-label='첨부 이미지 삭제']");
 		wait.until(ExpectedConditions.visibilityOf(첨부이미지삭제)).sendKeys(Keys.ENTER);
-		System.out.println("첨부 이미지 삭제");
+		System.out.println("P# 1:1문의 화면_[이미지 삭제] 버튼 입력");
 		Thread.sleep(3000);
 		
-		driver.get().findElementByXPath("//*[@id=\"__next\"]/div[3]/div[1]/button")
-		.click();
-		System.out.println("드롭다운 출력");
+		
+		MobileElement 문의유형드롭다운 = driver.get().findElementByXPath("//*[@id=\"__next\"]/div[3]/div[1]/button");
+		wait.until(ExpectedConditions.visibilityOf(문의유형드롭다운)).sendKeys(Keys.ENTER);
+		System.out.println("P# 1:1문의 화면_문의유형 드롭다운 선택");
 		Thread.sleep(3000);
 		
 		MobileElement box = driver.get().findElementByXPath("//*[@id=\"portal\"]/section/div[2]/div/div/div/ul/li[1]/label");
@@ -354,7 +347,7 @@ public class _8_Settings extends _0_Automation_Main {
 		}else{
 			System.out.println("토스트 팝업 없음 -- 이슈");  //@ xpath.isDisplayed로 하면 xpath 자체가 없는걸로 인식되어 fail 됨 = else 미출력 후 에러 상태 
 			driver.get().close();
-	
+			
 		}
 		
 		Thread.sleep(6000);
@@ -364,20 +357,17 @@ public class _8_Settings extends _0_Automation_Main {
 		System.out.println("[뒤로가기] 버튼 입력 -> 설정 **(이슈)** ");
 		Thread.sleep(3000);
 		
-		
-		  //driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
-		 // .click();
-		//  System.out.println("자주 묻는 질문 > 설정"); Thread.sleep(2000);
-		 
-		
 		driver.get().context("NATIVE_APP");
 		Thread.sleep(3000);
+		
 		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[4]")
 		.click(); 
 		System.out.println("공지사항 진입");
 		Thread.sleep(2000);
 				
+		//@ 공지사항 선택, x 추가 필요 
+		
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
 		.click(); 
 		System.out.println("[뒤로가기] 버튼 입력");

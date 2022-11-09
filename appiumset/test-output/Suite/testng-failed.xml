@@ -18,4 +18,21 @@
       </class> <!-- Hanwhatribes_automation._0_Automation_Main -->
     </classes>
   </test> <!-- Device2(failed) -->
+  <test thread-count="2" parallel="tests" name="Device1(failed)">
+    <parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"/>
+    <parameter name="platformVersion" value="12"/>
+    <parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"/>
+    <parameter name="appiumServer" value="http://0.0.0.0:4720/wd/hub"/>
+    <parameter name="platformName" value="Android"/>
+    <parameter name="device" value="R3CRB0JNBQA"/>
+    <parameter name="systemPort" value="8208"/>
+    <classes>
+      <class name="Hanwhatribes_automation._0_Automation_Main">
+        <methods>
+          <include name="Deviceinfo"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- Hanwhatribes_automation._0_Automation_Main -->
+    </classes>
+  </test> <!-- Device1(failed) -->
 </suite> <!-- Failed suite [Suite] -->
