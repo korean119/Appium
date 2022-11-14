@@ -360,29 +360,40 @@ public class _8_Settings extends _0_Automation_Main {
 		driver.get().context("NATIVE_APP");
 		Thread.sleep(3000);
 		
+		MobileElement 공지사항버튼 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[4]");
+		wait.until(ExpectedConditions.visibilityOf(공지사항버튼)).sendKeys(Keys.ENTER);
+		System.out.println("P# 설정 화면_[공지사항] 진입");
+
 		
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[4]")
-		.click(); 
-		System.out.println("공지사항 진입");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
+		MobileElement 공지사항항목선택 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.widget.Button[1]");
+		wait.until(ExpectedConditions.visibilityOf(공지사항항목선택)).sendKeys(Keys.ENTER);
+		System.out.println("P# 공지사항 화면_공지사항 항목 진입");
+		
+		
+		Thread.sleep(3000);
+		MobileElement 공지사항상세화면X버튼 = driver.get().findElementByXPath("//*[@id=\"portal\"]/section/div/div/div[1]/div/button/svg");
+		wait.until(ExpectedConditions.visibilityOf(공지사항상세화면X버튼)).sendKeys(Keys.ENTER);
+		System.out.println("P# 공지사항 화면_공지사항 상세화면 [X] 버튼 입력 ");
 				
-		//@ 공지사항 선택, x 추가 필요 
+				
+		Thread.sleep(3000);
+		MobileElement 공지사항목록화면Back버튼 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button");
+		wait.until(ExpectedConditions.visibilityOf(공지사항목록화면Back버튼)).sendKeys(Keys.ENTER);
+		System.out.println("P# 공지사항 화면_[Back]버튼 입력");
+
+		Thread.sleep(3000);
+		MobileElement 약관및정책진입 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[5]");
+		wait.until(ExpectedConditions.visibilityOf(약관및정책진입)).sendKeys(Keys.ENTER);
+		System.out.println("P# 설정 화면_약관 및 정책 진입");
 		
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
-		.click(); 
-		System.out.println("[뒤로가기] 버튼 입력");
-		Thread.sleep(2000);
-		
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[5]")
-		.click(); 
-		System.out.println("약관 및 정책 진입");
-		Thread.sleep(2000);
-		
-		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.TextView")
-		.click(); 
-		System.out.println("서비스 이용약관 진입");
-		Thread.sleep(2000);
-		
+		Thread.sleep(3000);
+		MobileElement 서비스이용약관진입 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.TextView");
+		wait.until(ExpectedConditions.visibilityOf(서비스이용약관진입)).sendKeys(Keys.ENTER);
+		System.out.println("P# 약관 및 정책 화면_서비스 이용약관 진입");
+
+		//@ 여기까지 진행. 근데 진행하다보니 해당 부분 context 변경 구간 적용 안되어 있어서.. 다시 생각해보니.. 설정 부분은 자동화 전략 다시 수립 필요할 듯..
+		//@ 이유 : 웹뷰 <-> 네이티브 변환 구간이 너무 많음. 계속해서 변환하면서 테스트 할 필요성이 있는지.. 직접 하는게 자동화 보다 훨씬 빠를 것으로 예상됨 
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
 		.click(); 
 		System.out.println("[X] 버튼 입력");

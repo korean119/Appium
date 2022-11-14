@@ -60,9 +60,9 @@ public class _5_Tribeslist extends _0_Automation_Main {
 		Set<String> contextNames = driver.get().getContextHandles();
 		  for (String contextName : contextNames) 
 		  {System.out.println(contextName); }
+		  Thread.sleep(3000); // context 변경 할 시간 필요하기 떄문에 sleep 사용 
 		
 		driver.get().context((String) contextNames.toArray()[1]);
-		Thread.sleep(3000); // context 변경 할 시간 필요하기 떄문에 sleep 사용 
 		System.out.println("S# Context WebView로 변경");  
 		
 		MobileElement 혜택공유하기 = driver.get().findElementByXPath("//button[@aria-label='혜택 공유하기']"); 
