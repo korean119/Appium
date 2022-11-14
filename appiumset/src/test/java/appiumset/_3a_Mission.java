@@ -101,8 +101,6 @@ public class _3a_Mission extends _0_Automation_Main {
 				Thread.sleep(2000);
 
 				
-				
-				//aaa
 			
 				for(int i = 1; i<=3; i++ ) {
 					
