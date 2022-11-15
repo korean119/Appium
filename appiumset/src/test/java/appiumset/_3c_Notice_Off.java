@@ -27,7 +27,7 @@ public class _3c_Notice_Off extends _0_Automation_Main {
 				System.out.println("<<< Notice_off 진행 >>>");
 				
 				//OS알림 Off 상태
-				// 고기, 뭉티기-강남, 회, 조개구이, 양
+				// 고기, 뭉티기-강남, 회, 조개구이, 양o
 
 				MobileElement 설정버튼 = driver.get().findElementByAccessibilityId("setting in TopBar");
 				wait.until(ExpectedConditions.visibilityOf(설정버튼)).click();    

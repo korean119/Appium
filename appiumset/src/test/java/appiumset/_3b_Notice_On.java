@@ -23,7 +23,7 @@ public class _3b_Notice_On extends _0_Automation_Main{
 		
 		System.out.println("<<< 노티 b 진행 >>>");
 		
-		System.out.println(" a ");
+		System.out.println(" a l");
 		Thread.sleep(3000);
 		
 	}
