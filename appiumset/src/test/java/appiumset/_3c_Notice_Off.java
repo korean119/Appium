@@ -23,7 +23,12 @@ public class _3c_Notice_Off extends _0_Automation_Main {
 		
 		WebDriverWait wait = new WebDriverWait(driver.get(), 10);
 //------------------------------------------------------------------
+		//----------------바텀시트
+		MobileElement Sheetclose = driver.get().findElementByAccessibilityId("시트 닫기");
+		wait.until(ExpectedConditions.visibilityOf(Sheetclose)).click();    
+		System.out.println("P# 메인화면_시트 닫기 동작");
 		
+//----------------바텀시트
 				System.out.println("<<< Notice_off 진행 >>>");
 				
 				//OS알림 Off 상태
@@ -41,7 +46,7 @@ public class _3c_Notice_Off extends _0_Automation_Main {
 				
 				Thread.sleep(3000);
 				
-				/*------------ 여기부터 OS권한
+			//	/*------------ 여기부터 OS권한
 				if(driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]/android.widget.TextView")
 						.isDisplayed()){
 					
@@ -88,7 +93,7 @@ public class _3c_Notice_Off extends _0_Automation_Main {
 				driver.get().close();
 				
 				
-				여기까지가 OS권한 */
+			//	여기까지가 OS권한 */
 				
 				MobileElement OS알림켜기버튼 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]/android.view.View");
 				OS알림켜기버튼.click();
