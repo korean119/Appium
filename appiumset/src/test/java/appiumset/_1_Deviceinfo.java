@@ -33,8 +33,8 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 	
 		cap.setCapability("automationName", "UiAutomator2");
 
-		cap.setCapability("noReset","true");
-		cap.setCapability("FullReset","false");
+		cap.setCapability("noReset","true"); //캐시와 같은 앱 데이터 제거
+		cap.setCapability("FullReset","false"); // 앱 제거 -> 온보딩부터 출력
 		cap.setCapability("autoGrantPermissions", "true");// 자동 권한 부여 
 		
 		cap.setCapability("APP_WAIT_ACTIVITY", "*");
