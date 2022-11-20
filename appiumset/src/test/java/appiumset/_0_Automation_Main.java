@@ -23,8 +23,8 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 		//_2_Onboarding a02 = new _2_Onboarding();
 		//_3_SignUp a03 = new _3_SignUp();
 		//_3a_Mission a03_1 = new _3a_Mission();
-		//_3b_Notice_On a03_2 = new _3b_Notice_On();
-		_3c_Notice_Off a03_3 = new _3c_Notice_Off();
+		_3b_Notice_On a03_2 = new _3b_Notice_On();
+		//_3c_Notice_Off a03_3 = new _3c_Notice_Off();
 		_4_Tribeslist a04 = new _4_Tribeslist();
 		//_5_Tribesdetail a05 = new _5_Tribesdetail();
 		//_6_Tribeshome a06 = new _6_Tribeshome(); 
@@ -51,8 +51,8 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 					
 				}
 				//a03_1.Mission();
-				//a03_2.Notice_On();
-				a03_3.Notice_Off();
+				a03_2.Notice_On();
+				//a03_3.Notice_Off();
 				a04.tribeslist();
 				//a05.tribesdetail();
 				//a06.tribeshome(); 

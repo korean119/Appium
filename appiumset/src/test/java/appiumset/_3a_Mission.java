@@ -73,8 +73,7 @@ public class _3a_Mission extends _0_Automation_Main {
 				System.out.println("스크롤 동작");
 				Thread.sleep(2000);
 				
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("	\r\n"
-						+ "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.TextView")))
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.TextView")))
 				.click();    
 				System.out.println("P# 트라이브 홈 화면_[자세히 보기] 버튼 입력");
 				Thread.sleep(3000);
