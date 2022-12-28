@@ -3,19 +3,19 @@
 <suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="2" parallel="tests" name="Device2(failed)">
     <parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"/>
-    <parameter name="platformVersion" value="11"/>
+    <parameter name="platformVersion" value="9"/>
     <parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"/>
     <parameter name="appiumServer" value="http://0.0.0.0:4824/wd/hub"/>
     <parameter name="platformName" value="Android"/>
     <parameter name="device" value="ce0617163a36ce2401"/>
     <parameter name="systemPort" value="8209"/>
     <classes>
-      <class name="appiumset._0_Automation_Main">
+      <class name="Hanwhatribes_automation._0_Automation_Main">
         <methods>
-          <include name="main"/>
           <include name="Deviceinfo"/>
+          <include name="main"/>
         </methods>
-      </class> <!-- appiumset._0_Automation_Main -->
+      </class> <!-- Hanwhatribes_automation._0_Automation_Main -->
     </classes>
   </test> <!-- Device2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

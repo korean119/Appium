@@ -1,4 +1,4 @@
-package appiumset;
+package Hanwhatribes_automation;
 
 import static org.testng.Assert.assertEquals;
 
@@ -18,7 +18,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class _3a_Mission extends _0_Automation_Main {
+public class _A_Mission extends _0_Automation_Main {
 
 	public static void Mission() throws MalformedURLException, InterruptedException {
 		
@@ -28,20 +28,18 @@ public class _3a_Mission extends _0_Automation_Main {
 		WebDriverWait wait = new WebDriverWait(driver.get(), 10);
 		
 				//my 트라이브 입장> 바텀시트 출력
-		
+
 				MobileElement Sheetclose = driver.get().findElementByAccessibilityId("시트 닫기");
 				wait.until(ExpectedConditions.visibilityOf(Sheetclose)).click();    
 				System.out.println("P# 메인화면_시트 닫기 동작");
 				
 				//트라이브 목록
-				
 				Thread.sleep(3000);
 				MobileElement 트라이브목록탭 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]");
 				트라이브목록탭.click();
 				System.out.println("P# 메인화면_트라이브 목록 탭");
 				
-				//골프 트라이브 진입
-								
+				//골프 트라이브 진입	
 				  new TouchAction(driver.get()) .longPress(PointOption.point(550, 1340))
 				  .waitAction() .moveTo(PointOption.point(550, 60)) .release() .perform();
 				  System.out.println("S# 트라이브 목록 화면_스크롤 동작"); Thread.sleep(3000);
@@ -339,6 +337,8 @@ public class _3a_Mission extends _0_Automation_Main {
 				
 			}
 			
+				
+				//@@ 이후에 사용 할 샘플코드 작성
 				
 				/*
 				String tkfkd = "포토갤러리";

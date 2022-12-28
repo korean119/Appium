@@ -3,12 +3,12 @@
 	[
 		{
 			"browserName": "Android",
-			"platformVersion": "11",
+			"platformVersion": "9",
 			"maxInstances": 1,
 			"platformName": "Android",
 			"automationName": "UiAutomator2",
 			"systemPort": "8209",
-			"devcieName": "R39M20CG24R"
+			"devcieName": "ce0617163a36ce2401"
 		}
 	],
 	"configuration":
@@ -23,7 +23,7 @@
 		"register": true,
 		"registerCycle": 5000,
 		"hubPort": 4822,
-		"hubHost": "192.168.0.118",
+		"hubHost": "192.168.0.83",
 		"hubProtocol": "http"
 	}
 }

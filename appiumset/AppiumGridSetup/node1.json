@@ -8,7 +8,7 @@
 			"platformName": "Android",
 			"automationName": "UiAutomator2",
 			"systemPort": "8208",
-			"devcieName": "R3CN90RNF8M"
+			"devcieName": "R3CRB0JNBQA"
 		}
 	],
 	"configuration":
@@ -23,7 +23,7 @@
 		"register": true,
 		"registerCycle": 5000,
 		"hubPort": 4822,
-		"hubHost": "192.168.219.102",
+		"hubHost": "192.168.0.83",
 		"hubProtocol": "http"
 	}
 }

@@ -3,12 +3,66 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="appiumset._5_Tribesdetail">
+      <class name="Hanwhatribes_automation._6_Tribeshome">
         <methods>
-          <include name="main"/>
           <include name="Deviceinfo"/>
+          <include name="main"/>
         </methods>
-      </class> <!-- appiumset._5_Tribesdetail -->
+      </class> <!-- Hanwhatribes_automation._6_Tribeshome -->
+      <class name="Hanwhatribes_automation._4_Tribeslist">
+        <methods>
+          <include name="Deviceinfo"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- Hanwhatribes_automation._4_Tribeslist -->
+      <class name="Hanwhatribes_automation._5_Tribesdetail">
+        <methods>
+          <include name="Deviceinfo"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- Hanwhatribes_automation._5_Tribesdetail -->
+      <class name="Hanwhatribes_automation._7_Settings">
+        <methods>
+          <include name="Deviceinfo"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- Hanwhatribes_automation._7_Settings -->
+      <class name="Hanwhatribes_automation._0_Automation_Main">
+        <methods>
+          <include name="Deviceinfo"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- Hanwhatribes_automation._0_Automation_Main -->
+      <class name="Hanwhatribes_automation._B_Notice_On">
+        <methods>
+          <include name="Deviceinfo"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- Hanwhatribes_automation._B_Notice_On -->
+      <class name="Hanwhatribes_automation._A_Mission">
+        <methods>
+          <include name="Deviceinfo"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- Hanwhatribes_automation._A_Mission -->
+      <class name="Hanwhatribes_automation._9_Logout">
+        <methods>
+          <include name="Deviceinfo"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- Hanwhatribes_automation._9_Logout -->
+      <class name="Hanwhatribes_automation._8_Eventtribes">
+        <methods>
+          <include name="Deviceinfo"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- Hanwhatribes_automation._8_Eventtribes -->
+      <class name="Hanwhatribes_automation._C_Notice_Off">
+        <methods>
+          <include name="Deviceinfo"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- Hanwhatribes_automation._C_Notice_Off -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

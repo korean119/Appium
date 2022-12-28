@@ -1,4 +1,4 @@
-package appiumset;
+package Hanwhatribes_automation;
 
 import java.net.MalformedURLException;
 
@@ -12,15 +12,17 @@ public class _8_Eventtribes extends _0_Automation_Main {
 		.click(); 
 		System.out.println("이벤트 탭");
 	
-		/*
-		 * driver.get().findElementByXPath(
-		 * "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View/android.widget.TextView")
-		 * .click(); System.out.println("진행 예정");
-		 * 
-		 * driver.get().findElementByXPath(
-		 * "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View/android.widget.TextView")
-		 * .click(); System.out.println("종료");
-		 */
+		
+		  driver.get().findElementByXPath(
+		  "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[2]/android.view.View/android.widget.TextView")
+		  .click(); System.out.println("진행 예정");
+		  
+		  
+		  driver.get().findElementByXPath(
+		  "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View[3]/android.view.View/android.widget.TextView")
+		  .click(); System.out.println("종료");
+		 
+		  
 		driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]")
 		.click(); 
 		System.out.println("트라이브 홈 탭 ");

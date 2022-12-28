@@ -1,4 +1,4 @@
-package appiumset;
+package Hanwhatribes_automation;
 
 import java.net.MalformedURLException;
 
@@ -15,7 +15,7 @@ public class _6_Tribeshome extends _0_Automation_Main {
 		.click(); 
 		System.out.println("트라이브 홈 탭");
 		Thread.sleep(2000);
-		/*
+		
 		
 		if (driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View/android.widget.TextView")
 				.isDisplayed())
@@ -156,7 +156,7 @@ public class _6_Tribeshome extends _0_Automation_Main {
 		back1.click();
 		System.out.println("TopBar Back"); 
 		
-		*/
+		
 	}
 	
 }

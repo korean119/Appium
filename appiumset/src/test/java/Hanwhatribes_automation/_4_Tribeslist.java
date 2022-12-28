@@ -1,4 +1,4 @@
-package appiumset;
+package Hanwhatribes_automation;
 
 import java.net.MalformedURLException;
 
@@ -38,15 +38,6 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		back_UpbuttoninTopBar.click();
 		System.out.println("P# 알림함 화면_[Back] 버튼 입력"); 
 		
-		/*
-		//@ 원하는 추천 혜택에 들어가서 정합성 여부 판단 필요
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View/android.view.View")))
-		.click();    
-		System.out.println("P# 트라이브 목록 화면_추천혜택 영역 탭");
-		Thread.sleep(2000); // H/K 사용 Sleep 사용 
-		
-		*/
-		
 		driver.get().navigate().back();
 		System.out.println("S# 트라이브 목록 화면_안드로이드 H/K Back");
 		Thread.sleep(2000);
@@ -66,7 +57,6 @@ public class _4_Tribeslist extends _0_Automation_Main {
 		.click();    
 		System.out.println("P# 트라이브 목록 화면_러닝 트라이브 진입");
 	
-
 		
 		 if (driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.TextView")
 		 .isDisplayed()) { System.out.println("M# 트라이브 홈_트라이브 진입 시 툴팁 노출");

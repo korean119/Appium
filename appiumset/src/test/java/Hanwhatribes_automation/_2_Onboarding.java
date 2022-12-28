@@ -1,4 +1,4 @@
-package appiumset;
+package Hanwhatribes_automation;
 
 import java.net.MalformedURLException;
 
