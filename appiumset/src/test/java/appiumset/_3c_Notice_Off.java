@@ -26,9 +26,8 @@ public class _3c_Notice_Off extends _0_Automation_Main {
 		
 				System.out.println("<<< Notice_off 진행 >>>");
 				
-				//OS알림 Off 상태 고정
-				// 고기, 뭉티기-강남, 회, 조개구이, 양o
-
+				// default: OS알림 Off 상태 
+	
 				MobileElement 설정버튼 = driver.get().findElementByAccessibilityId("setting in TopBar");
 				wait.until(ExpectedConditions.visibilityOf(설정버튼)).click();    
 				System.out.println(" [설정]버튼 입력 ");
@@ -107,8 +106,9 @@ public class _3c_Notice_Off extends _0_Automation_Main {
 				System.out.println("S# 트라이브 목록 화면_안드로이드 H/K Back");
 				Thread.sleep(2000);
 				
-			//	여기까지가 OS권한 */
-				//* 서비스 알림
+			//	여기까지가 OS권한 종료
+				
+				//* 서비스 알림 영역
 				MobileElement 서비스알림 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]/android.view.View");
 				서비스알림.click(); 
 				System.out.println(" 서비스 알림 입력 ");
@@ -149,8 +149,9 @@ public class _3c_Notice_Off extends _0_Automation_Main {
 				back_UpbuttoninTopBar.click();
 				System.out.println("P# [Back] 버튼 입력"); 
 				Thread.sleep(1000);
-				//서비스 알림*/
+				//서비스 알림 영역 종료
 				
+				//혜택 및 이벤트 알림 영역
 				MobileElement 혜택및이벤트알림 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[2]/android.view.View");
 				혜택및이벤트알림.click(); 
 				System.out.println(" 혜택 및 이벤트 알림 입력 ");
@@ -177,6 +178,8 @@ public class _3c_Notice_Off extends _0_Automation_Main {
 				
 				
 			/* 혜택 및 이벤트 알림, 개인정보 수집 및 이용 동의 -> xpath가 switch가 아닌 Textview로 되어있어 on/off 변경 시 속성 값의 변경이 안 잡힘
+			 추후에 수정 된다면 해당 코드 사용 예정
+			 
 				if(마수동.getAttribute("checked").equals("true")) {
 					
 					System.out.println("혜택 및 이벤트 알림 스위치 활성화 확인");
@@ -227,6 +230,7 @@ public class _3c_Notice_Off extends _0_Automation_Main {
 				
 				혜택 및 이벤트 알림, 개인정보 수집 및 이용 동의 */
 				
+				//혜택 및 이벤트 알림, 개인정보 수집 및 이용 동의 -> xpath 문제로 해당 코드 임시 사용
 				마수동.click();
 				System.out.println(" 혜택 및 이벤트 알림 스위치 입력 ");
 				Thread.sleep(2000);

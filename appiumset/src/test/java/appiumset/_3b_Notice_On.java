@@ -21,7 +21,7 @@ public class _3b_Notice_On extends _0_Automation_Main{
 	
 	public static void Notice_On() throws MalformedURLException, InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver.get(), 10);
-//------------------------------------------------------------------
+
 		
 		System.out.println("<<< Notice_On 진행 >>>");
 		
@@ -116,6 +116,8 @@ public class _3b_Notice_On extends _0_Automation_Main{
 			
 		}else {
 		
+		//스위치 on/off 상태 별 조건문
+			
 		MobileElement TextView = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[2]/android.widget.TextView[1]");
 		System.out.println("출력된 값 : " + TextView.getText());
 		
@@ -351,7 +353,6 @@ public class _3b_Notice_On extends _0_Automation_Main{
 
 		
 			System.out.println(" << Notice_On 종료 >>");
-
 		
 	}
 	
