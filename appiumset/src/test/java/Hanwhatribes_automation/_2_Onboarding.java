@@ -54,7 +54,7 @@ public class _2_Onboarding extends AppiumDriverManager {
 		}
 	    
 		
-	    wait.until(ExpectedConditions.visibilityOf(arrow)).click();
+	    wait.until(ExpectedConditions.visibilityOf(arrow)).click(); 
 	 	System.out.println("P# 온보딩 화면_[>] 버튼3 입력");
 	 	Thread.sleep(2000); 
 	 	
@@ -67,7 +67,7 @@ public class _2_Onboarding extends AppiumDriverManager {
 			{System.out.println("M# 로그인&회원가입 화면_카카오로 시작하기 버튼 노출");
 	 			
 			}else{
-				System.out.println("M# 로그인&회원가입 화면_카카오로 시작하기 버튼 비노출 -- FAIL");  //@ xpath.isDisplayed로 하면 xpath 자체가 없는걸로 인식되어 fail 됨 = else 미출력 후 에러 상태 
+				System.out.println("M# 로그인&회원가입 화면_카카오로 시작하기 버튼 비노출 -- FAIL");  
 				driver.get().close();
 		
 			}
@@ -76,7 +76,7 @@ public class _2_Onboarding extends AppiumDriverManager {
 			{System.out.println("M# 로그인&회원가입 화면_본인인증 으로 계속하기버튼 노출");
 	 			
 			}else{
-				System.out.println("M# 로그인&회원가입 화면_본인인증 으로 계속하기버튼 비노출 -- FAIL");  //@ xpath.isDisplayed로 하면 xpath 자체가 없는걸로 인식되어 fail 됨 = else 미출력 후 에러 상태 
+				System.out.println("M# 로그인&회원가입 화면_본인인증 으로 계속하기버튼 비노출 -- FAIL");  
 				driver.get().close();
 		
 			}
@@ -85,7 +85,7 @@ public class _2_Onboarding extends AppiumDriverManager {
 			{System.out.println("M# 로그인&회원가입 화면_Apple로 계속하기 버튼 노출");
 	 			
 			}else{
-				System.out.println("M# 로그인&회원가입 화면_Apple로 계속하기 버튼 비노출 -- FAIL");  //@ xpath.isDisplayed로 하면 xpath 자체가 없는걸로 인식되어 fail 됨 = else 미출력 후 에러 상태 
+				System.out.println("M# 로그인&회원가입 화면_Apple로 계속하기 버튼 비노출 -- FAIL");   
 				driver.get().close();
 		
 			}

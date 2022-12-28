@@ -10,8 +10,6 @@ import io.appium.java_client.AppiumDriver;
 
 public class _0_Automation_Main extends _1_Deviceinfo{
 	
-
-	
 	@Test
 	public static void main(/* String[] args */) {
 	
@@ -25,7 +23,6 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 		_9_Logout a09 = new _9_Logout();
 
 		int count = 0;
-		
 		
 		try {
 			_2_Onboarding.onboarding();
@@ -58,10 +55,6 @@ public class _0_Automation_Main extends _1_Deviceinfo{
 		}
 		
 	}
-
-		
-		
-		
 }
 		 
 		

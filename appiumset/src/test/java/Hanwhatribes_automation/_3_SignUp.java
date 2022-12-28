@@ -21,8 +21,7 @@ import io.appium.java_client.MobileElement;
 		  MobileElement 카카오로시작하기버튼 = driver.get().findElementByAccessibilityId("카카오로 시작하기 로고");
 		  wait.until(ExpectedConditions.visibilityOf(카카오로시작하기버튼)).click();      
 		  System.out.println("P# 로그인&회원가입 화면_[카카오 시작하기 로고] 버튼 입력");
-		  Thread.sleep(3000);
-
+		
 		  
 		  Set<String> contextNames = driver.get().getContextHandles();
 		  for (String contextName : contextNames) {

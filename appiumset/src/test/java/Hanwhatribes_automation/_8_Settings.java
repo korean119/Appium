@@ -48,13 +48,8 @@ public class _8_Settings extends _0_Automation_Main {
 		MobileElement 닉네임변경버튼 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View/android.widget.Button");
 		wait.until(ExpectedConditions.visibilityOf(닉네임변경버튼)).click();
 		System.out.println("P# 회원정보 관리 화면_[닉네임 변경] 버튼 입력");
-		
-		
-		MobileElement 닉네임초기화버튼 = driver.get().findElementByAccessibilityId("clear input");
-		wait.until(ExpectedConditions.visibilityOf(닉네임초기화버튼)).click(); 
-		System.out.println("P# 회원정보 관리 화면_[닉네임 초기화] 버튼 입력");
-		
-		
+	
+	
 		Thread.sleep(2000);
 		driver.get().getKeyboard().sendKeys("Automati");
 		String b = "Automati";
@@ -84,6 +79,7 @@ public class _8_Settings extends _0_Automation_Main {
 		
 
 		Thread.sleep(2000);
+		MobileElement 닉네임초기화버튼 = driver.get().findElementByAccessibilityId("clear input");
 		wait.until(ExpectedConditions.visibilityOf(닉네임변경버튼)).click();
 		System.out.println("P# 회원정보 관리 화면_[닉네임 변경] 버튼 입력");
 		

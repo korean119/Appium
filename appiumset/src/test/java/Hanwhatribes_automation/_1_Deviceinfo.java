@@ -41,7 +41,7 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 		//cap.setCapability("networkSpeed", "gsm");
 	
 		//@ 권한을 자동으로 결정하고 설치 시 앱에 부여 합니다 -- 준오 적용되는지는 잘 모르게음
-		//cap.setCapability("ATUO_GRANT_REMISSIONS", "true");
+		cap.setCapability("AUTOGRANTPERMISSIONS", "true");
 	
 		//@ 버전 체크 후 설치, 재설치 판단 -- fail 버전 같을 시 재설치 안함
 		//cap.setCapability("enforceAppinstall", "fail");
@@ -63,10 +63,12 @@ public class _1_Deviceinfo extends AppiumDriverManager {
 	//	AppiumDriverManager.removeDriver();
 		
 	}
-    }
-	
-/*
- * @AfterMethod public void tearDown() { if (AppiumDriverManager.getDriver() !=
- * null) AppiumDriverManager.getDriver().quit(); //
- * AppiumDriverManager.removeDriver(); } }
- */
+}
+
+//	@AfterMethod 
+//	public void tearDown() { 
+//	 if (AppiumDriverManager.getDriver() != null) AppiumDriverManager.getDriver().quit(); //
+//	 AppiumDriverManager.removeDriver(); 
+//	 } 
+//	}
+// 

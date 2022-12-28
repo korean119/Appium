@@ -117,7 +117,8 @@ public class _6_Tribesdetail extends _0_Automation_Main {
 		driver.get().context("NATIVE_APP");
 		System.out.println("S# Context NATIVE로 변경"); 
 			
-		Thread.sleep(2000);
+		
+		Thread.sleep(3000);
 		MobileElement UpbuttoninTopBar = driver.get().findElementByAccessibilityId("Up button in TopBar");
 		wait.until(ExpectedConditions.visibilityOf(UpbuttoninTopBar)).click();   
 		System.out.println("P# 트라이브 홈_UpbuttoninTopBar 버튼 입력"); 

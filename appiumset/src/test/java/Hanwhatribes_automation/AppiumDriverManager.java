@@ -1,6 +1,9 @@
 package Hanwhatribes_automation;
 
 
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
@@ -20,7 +23,27 @@ public class AppiumDriverManager {
         return this.driver.get();
         
 	}
+
 	
+	@AfterMethod
+	public void fetchMostRecentTestResult(ITestResult result) {
+
+	    int status = result.getStatus();
+
+	    switch (status) {
+	        case ITestResult.SUCCESS:
+	            //do something
+	            break;
+	        case ITestResult.FAILURE:
+	            //do something else
+	            break;
+	        case ITestResult.SKIP:
+	            //and something else
+	            break;
+	        default:
+	            throw new RuntimeException("Invalid status");
+	    }
+	}
 }
 
 

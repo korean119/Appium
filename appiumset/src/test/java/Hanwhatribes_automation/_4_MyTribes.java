@@ -16,9 +16,9 @@ public class _4_MyTribes extends _0_Automation_Main {
 		WebDriverWait wait = new WebDriverWait(driver.get(), 10);
 		
 		//@ 닫기 버튼으로 정합성 필요 -- id 없음
-		MobileElement 바텀시트영역외닫기 = driver.get().findElementByAccessibilityId("시트 닫기");
-		wait.until(ExpectedConditions.visibilityOf(바텀시트영역외닫기)).click();    
-		System.out.println("P# My 트라이브 화면_[바텀 시트 닫기(외부영역선택)] 입력");
+		//MobileElement 바텀시트영역외닫기 = driver.get().findElementByAccessibilityId("시트 닫기");
+		//wait.until(ExpectedConditions.visibilityOf(바텀시트영역외닫기)).click();    
+		//System.out.println("P# My 트라이브 화면_[바텀 시트 닫기(외부영역선택)] 입력");
 		
 		
 		Thread.sleep(2000); 
