@@ -364,7 +364,7 @@ public class _8_Settings extends _0_Automation_Main {
 		Thread.sleep(3000);
 		MobileElement 공지사항항목선택 = driver.get().findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.widget.Button[1]");
 		wait.until(ExpectedConditions.visibilityOf(공지사항항목선택)).sendKeys(Keys.ENTER);
-		System.out.println("P# 공지사항 화면_공지사항 항목 진입");
+		System.out.println("P# 공지사항 화면_공지사항 항목 진입.");
 		
 		
 		Thread.sleep(3000);
