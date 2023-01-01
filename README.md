@@ -21,10 +21,3 @@ adb uninstall io.appium.uiautomator2.server.test
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'  
 System info: host: 'DESKTOP-H9VDVB7', ip: '192.168.0.83', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'  
 Driver info: driver.version: AppiumDriver  
-
-
-
-
-
-< AWS Device Farm >   
-https://docs.aws.amazon.com/ko_kr/devicefarm/latest/developerguide/test-types-appium.html  
